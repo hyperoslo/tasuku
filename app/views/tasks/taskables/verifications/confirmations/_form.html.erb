@@ -1,0 +1,5 @@
+<%= form_for confirmation, url: tasks.verification_confirmations_path(verification_id: confirmation.verification.id), method: :post do |form| %>
+  <%= form.hidden_field :author_type, value: author.class.name %>
+  <%= form.hidden_field :author_id, value: author.id %>
+  <%= form.submit t('tasks.taskables.verifications.confirmations.confirm') %>
+<% end %>

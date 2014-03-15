@@ -1,0 +1,6 @@
+en:
+  tasks:
+    taskables:
+      verifications:
+        confirmations:
+          confirm: 'Confirm'

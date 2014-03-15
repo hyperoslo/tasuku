@@ -8,6 +8,10 @@ module Tasks
       has_many :confirmations
 
       submissions are: :confirmations
+
+      def to_s
+        verifiable
+      end
     end
   end
 end
