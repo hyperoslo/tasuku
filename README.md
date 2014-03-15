@@ -48,4 +48,4 @@ and if you're using this library we probably want to hire you.
 
 ## License
 
-Mingle is available under the MIT license. See the LICENSE file for more info.
+Tasks is available under the MIT license. See the LICENSE file for more info.
