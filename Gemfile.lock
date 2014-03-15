@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     tasks (0.0.1)
-      rails (~> 4.1.0.rc1)
+      rails (~> 4.0)
 
 GEM
   remote: https://rubygems.org/
@@ -109,6 +109,7 @@ PLATFORMS
 
 DEPENDENCIES
   factory_girl_rails
+  rails (= 4.1.0.rc1)
   rspec-rails
   sqlite3
   tasks!
