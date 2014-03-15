@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315151838) do
+ActiveRecord::Schema.define(version: 20140315153512) do
+
+  create_table "tasks_taskables_verification_confirmations", force: true do |t|
+    t.integer  "verification_id"
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks_taskables_verification_confirmations", ["author_id", "author_type"], name: "tasks_taskable_verification_confirmation_author", unique: true
+  add_index "tasks_taskables_verification_confirmations", ["verification_id"], name: "tasks_taskable_verification_confirmation_verification"
+
+  create_table "tasks_taskables_verifications", force: true do |t|
+    t.integer  "verifiable_id"
+    t.string   "verifiable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks_taskables_verifications", ["verifiable_id", "verifiable_type"], name: "index_tasks_taskable_verifications_verifiable", unique: true
 
   create_table "tasks_tasks", force: true do |t|
     t.integer  "taskable_id"
