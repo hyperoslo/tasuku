@@ -1,5 +1,5 @@
 require "tasks/engine"
-require "tasks/concerns"
 
 module Tasks
+  require "tasks/concerns"
 end
