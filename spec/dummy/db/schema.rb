@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315153512) do
+ActiveRecord::Schema.define(version: 20140315162017) do
 
   create_table "tasks_taskables_verification_confirmations", force: true do |t|
     t.integer  "verification_id"
@@ -41,5 +41,10 @@ ActiveRecord::Schema.define(version: 20140315153512) do
   end
 
   add_index "tasks_tasks", ["taskable_id", "taskable_type"], name: "index_tasks_tasks_on_taskable_id_and_taskable_type"
+
+  create_table "users", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
