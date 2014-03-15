@@ -4,6 +4,10 @@ module Tasks::Concerns::Models::Task
   included do
     belongs_to :taskable, polymorphic: true
 
+    # TODO: These should be SQL. But that's hard.
+    scope :completed_by,  ->(author) { all.select { |task| task.completed_by? author }}
+    scope :incomplete_by, ->(author) { all.reject { |task| task.completed_by? author }}
+
     delegate :submissions, to: :taskable
 
     # Determine whether the task has been completed by the given author.
