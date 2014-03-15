@@ -11,6 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140315151838) do
+
+  create_table "tasks_tasks", force: true do |t|
+    t.integer  "taskable_id"
+    t.string   "taskable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks_tasks", ["taskable_id", "taskable_type"], name: "index_tasks_tasks_on_taskable_id_and_taskable_type"
 
 end
