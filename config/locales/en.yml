@@ -4,3 +4,6 @@ en:
       verifications:
         confirmations:
           confirm: 'Confirm'
+      questions:
+        answers:
+          submit: 'Submit'

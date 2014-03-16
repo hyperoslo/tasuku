@@ -1,0 +1,10 @@
+<div class="text"><%= question.text %></div>
+
+<%= form_for question.answers.build, url: tasks.question_answers_path(question_id: question.id), method: :post do |form| %>
+  <% question.options.each do |option| %>
+    <%= form.radio_button :option_id, option.id %>
+    <%= form.label :option_id, option.text, value: option.id %>
+  <% end %>
+
+  <%= form.submit t('tasks.taskables.questions.answers.submit') %>
+<% end %>
