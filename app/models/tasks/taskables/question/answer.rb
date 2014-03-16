@@ -4,5 +4,6 @@ module Tasks
     belongs_to :author, polymorphic: true
 
     validates :option_id, presence: true
+    validates :author_id, :author_type, presence: true
   end
 end

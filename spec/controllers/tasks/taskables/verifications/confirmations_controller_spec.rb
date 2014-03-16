@@ -20,10 +20,9 @@ module Tasks
         before do
           request.env['HTTP_REFERER'] = 'http://example.org'
 
-          post :create, verification_id: verification.id, taskables_verification_confirmation: {
-            author_type: user.class.name,
-            author_id: user.id
-          }
+          expect(subject).to receive(:current_user).and_return(user)
+
+          post :create, verification_id: verification.id
         end
 
         it 'should redirect' do

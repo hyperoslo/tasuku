@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     tasks (0.0.1)
+      configatron (~> 3.0)
       rails (~> 4.0)
 
 GEM
@@ -42,6 +43,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    configatron (3.0.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     factory_girl (4.4.0)

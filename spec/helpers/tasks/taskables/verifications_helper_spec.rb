@@ -9,12 +9,11 @@ module Tasks
       it 'renders a partial' do
         expect(helper).to receive(:render).with(
           partial: 'tasks/taskables/verifications/confirmations/form.html.erb', locals: {
-            confirmation: an_instance_of(Taskables::Verification::Confirmation),
-            author: user
+            confirmation: an_instance_of(Taskables::Verification::Confirmation)
           }
         )
 
-        helper.confirm verification, for: user
+        helper.confirm verification
       end
     end
   end

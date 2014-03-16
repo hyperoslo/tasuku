@@ -21,9 +21,9 @@ module Tasks
         before do
           request.env['HTTP_REFERER'] = 'http://example.org'
 
+          expect(subject).to receive(:current_user).and_return(user)
+
           post :create, question_id: question.id, taskables_question_answer: {
-            author_type: user.class.name,
-            author_id: user.id,
             option_id: option.id
           }
         end
