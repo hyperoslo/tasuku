@@ -5,6 +5,7 @@ module Tasks
     initializer 'tasks.action_controller' do |app|
       ActiveSupport.on_load :action_controller do
         helper Tasks::ApplicationHelper
+        helper Tasks::Taskables::VerificationsHelper
       end
     end
 
