@@ -5,7 +5,7 @@ module Tasks
     before_action :set_verification
 
     def create
-      confirmation = @verification.confirmations.new author: author
+      confirmation = @verification.confirmations.new confirmation_params
 
       respond_to do |format|
         if confirmation.save
@@ -17,14 +17,6 @@ module Tasks
     end
 
     private
-
-    def author
-      author_class.find confirmation_params[:author_id]
-    end
-
-    def author_class
-      confirmation_params[:author_type].constantize
-    end
 
     def confirmation_params
       params.require(:taskables_verification_confirmation).permit(:author_id, :author_type)
