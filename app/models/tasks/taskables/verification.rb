@@ -7,7 +7,7 @@ module Tasks
       belongs_to :verifiable, polymorphic: true
       has_many :confirmations
 
-      validates :verifiable_id, uniqueness: { scope: [:verifiable_type] }
+      validates :verifiable_id, allow_blank: true, uniqueness: { scope: [:verifiable_type] }
 
       submissions are: :confirmations
 
