@@ -31,6 +31,7 @@ module Tasks
         end
 
         it 'creates a new confirmation' do
+          expect(verification.confirmations.count).to eq 1
         end
       end
     end
