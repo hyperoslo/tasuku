@@ -1,7 +1,7 @@
 module Tasks
   module Taskables
     class Verification < ActiveRecord::Base
-      extend Taskable
+      include Taskable
 
       has_one :task, as: :taskable
       belongs_to :verifiable, polymorphic: true

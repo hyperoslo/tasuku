@@ -1,7 +1,7 @@
 module Tasks
   module Taskables
     class Question < ActiveRecord::Base
-      extend Taskable
+      include Taskable
 
       has_one :task, as: :taskable
       has_many :options

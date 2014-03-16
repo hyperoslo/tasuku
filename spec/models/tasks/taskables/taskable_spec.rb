@@ -3,7 +3,7 @@ require 'spec_helper'
 module Tasks
   describe Taskables::Taskable do
     class Question
-      extend Taskables::Taskable
+      include Taskables::Taskable
 
       def answers
         ['foo', 'bar', 'baz']
