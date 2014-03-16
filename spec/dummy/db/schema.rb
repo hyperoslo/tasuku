@@ -11,9 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315185502) do
+ActiveRecord::Schema.define(version: 20140316204119) do
 
   create_table "articles", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks_taskables_question_answers", force: true do |t|
+    t.integer  "option_id"
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks_taskables_question_answers", ["author_id", "author_type"], name: "tasks_taskable_question_answers_author", unique: true
+  add_index "tasks_taskables_question_answers", ["option_id"], name: "index_tasks_taskables_question_answers_on_option_id"
+
+  create_table "tasks_taskables_question_options", force: true do |t|
+    t.text     "text"
+    t.integer  "question_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks_taskables_question_options", ["question_id"], name: "index_tasks_taskables_question_options_on_question_id"
+
+  create_table "tasks_taskables_questions", force: true do |t|
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
