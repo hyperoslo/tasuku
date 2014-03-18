@@ -1,0 +1,41 @@
+nb:
+  activerecord:
+    models:
+      tasks/task:
+        one: Oppgave
+        other: Oppgaver
+      tasks/taskables/question:
+        one: Spørsmål
+        other: Spørsmål
+      tasks/taskables/question/option:
+        one: Valg
+        other: Valg
+      tasks/taskables/question/answer:
+        one: Svar
+        other: Svar
+      tasks/taskables/verification:
+        one: Verifisering
+        other: Verifiseringer
+    attributes:
+      tasks/task:
+        taskable_type: Oppgavetype
+        taskable: Oppgave
+        created_at: Opprettet
+        updated_at: Oppdatert
+      tasks/taskables/question:
+        text: Tekst
+        created_at: Opprettet
+        updated_at: Oppdatert
+      tasks/taskables/question/option:
+        text: Tekst
+        created_at: Opprettet
+        updated_at: Oppdatert
+      tasks/taskables/question/answer:
+        option: Valg
+        author: Forfatter
+        created_at: Opprettet
+        updated_at: Oppdatert
+      tasks/taskables/verification:
+        verifiable: Verifisering
+        created_at: Opprettet
+        updated_at: Oppdatert
