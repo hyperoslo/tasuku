@@ -1,1 +1,3 @@
-<%= render task.taskable %>
+<div class="<%= task.taskable.class.name.demodulize.underscore %> task">
+  <%= render task.taskable %>
+</div>
