@@ -6,7 +6,7 @@ module Tasks
       belongs_to :verification
       belongs_to :author, polymorphic: true
 
-      submissions of: :verification
+      request is: :verification
     end
   end
 end

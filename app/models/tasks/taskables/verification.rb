@@ -9,7 +9,7 @@ module Tasks
 
       validates :verifiable_id, allow_blank: true, uniqueness: { scope: [:verifiable_type] }
 
-      submissions are: :confirmations
+      responses are: :confirmations
 
       def to_s
         verifiable.to_s

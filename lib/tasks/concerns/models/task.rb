@@ -16,7 +16,7 @@ module Tasks::Concerns::Models::Task
     #
     # Returns a Boolean.
     def completed_by? author
-      !!taskable.submissions.find_by(author: author)
+      !!taskable.responses.find_by(author: author)
     end
   end
 end

@@ -9,7 +9,7 @@ module Tasks
         'foo'
       end
 
-      submissions of: :question
+      request is: :question
     end
 
     describe '.request' do

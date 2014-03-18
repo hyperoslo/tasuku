@@ -5,15 +5,15 @@ module Tasks
     delegate :completed_by?, to: :task
 
     module ClassMethods
-      # Declare the relation for submissions.
+      # Declare the relation for responses.
       #
       # are - A model that represents submissions.
       #
       # This method really only aliases the name of the taskable's join model
-      # between authors and tasks to 'submissions' so as to promote a common interface
+      # between authors and tasks to 'responses' so as to promote a common interface
       # for any taskable.
-      def submissions are: nil
-        alias_method :submissions, are
+      def responses are: nil
+        alias_method :responses, are
       end
     end
   end

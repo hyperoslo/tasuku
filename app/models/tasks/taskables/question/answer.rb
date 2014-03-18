@@ -15,7 +15,7 @@ module Tasks
 
       validate :can_only_answer_each_question_once
 
-      submissions of: :question
+      request is: :question
 
       private
 

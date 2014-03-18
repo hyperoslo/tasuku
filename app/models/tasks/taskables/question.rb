@@ -9,7 +9,7 @@ module Tasks
 
       accepts_nested_attributes_for :options, allow_destroy: true
 
-      submissions are: :answers
+      responses are: :answers
 
       def to_s
         text

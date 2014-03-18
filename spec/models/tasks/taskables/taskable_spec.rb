@@ -9,13 +9,13 @@ module Tasks
         ['foo', 'bar', 'baz']
       end
 
-      submissions are: :answers
+      responses are: :answers
     end
 
     describe '.submissions' do
 
-      it 'aliases a given relation to submissions' do
-        expect(Question.new.submissions).to eq ['foo', 'bar', 'baz']
+      it 'aliases a given relation to responses' do
+        expect(Question.new.responses).to eq ['foo', 'bar', 'baz']
       end
 
     end
