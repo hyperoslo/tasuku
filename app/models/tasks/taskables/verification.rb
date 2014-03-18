@@ -12,7 +12,7 @@ module Tasks
       submissions are: :confirmations
 
       def to_s
-        verifiable
+        verifiable.to_s
       end
     end
   end
