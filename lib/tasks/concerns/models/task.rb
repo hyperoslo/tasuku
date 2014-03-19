@@ -18,5 +18,9 @@ module Tasks::Concerns::Models::Task
     def completed_by? author
       !!taskable.responses.find_by(author: author)
     end
+
+    def to_s
+      taskable.to_s
+    end
   end
 end
