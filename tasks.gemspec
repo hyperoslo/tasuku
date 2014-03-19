@@ -7,11 +7,11 @@ require "tasks/version"
 Gem::Specification.new do |s|
   s.name        = "tasks"
   s.version     = Tasks::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Tasks."
-  s.description = "TODO: Description of Tasks."
+  s.authors     = ["Johannes Gorset"]
+  s.email       = ["johannes@hyper.no"]
+  s.homepage    = "http://github.com/hyperoslo/tasks"
+  s.summary     = "Easily set up custom solvable tasks in your Rails app"
+  s.description = "Easily set up custom solvable tasks in your Ruby on Rails app."
   s.license     = "MIT"
 
   s.files      = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
