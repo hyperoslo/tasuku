@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140316221703) do
+ActiveRecord::Schema.define(version: 20140320123047) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20140316221703) do
     t.datetime "updated_at"
   end
 
-  add_index "tasks_taskables_verification_confirmations", ["author_id", "author_type"], name: "tasks_taskable_verification_confirmation_author", unique: true
+  add_index "tasks_taskables_verification_confirmations", ["author_id", "author_type"], name: "tasks_taskable_verification_confirmation_author"
   add_index "tasks_taskables_verification_confirmations", ["verification_id"], name: "tasks_taskable_verification_confirmation_verification"
 
   create_table "tasks_taskables_verifications", force: true do |t|
