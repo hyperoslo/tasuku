@@ -5,7 +5,7 @@ module Tasks
 
       has_one :task, as: :taskable
       belongs_to :verifiable, polymorphic: true
-      has_many :confirmations
+      has_many :confirmations, dependent: :destroy
 
       validates :verifiable_id, allow_blank: true, uniqueness: { scope: [:verifiable_type] }
 
