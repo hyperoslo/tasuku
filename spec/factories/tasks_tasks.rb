@@ -1,11 +1,11 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :tasks_task, aliases: [:task], class: 'Tasks::Task' do
     taskable nil
 
-    factory :verification_task do
-      after(:create) { |task| create :verification, task: task }
+    trait :with_verification do
+      after(:build) do |task|
+        task.taskable = create :verification, task: nil
+      end
     end
   end
 end

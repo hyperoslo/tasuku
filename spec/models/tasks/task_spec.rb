@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Tasks
   describe Task do
-    let(:task) { create :verification_task }
+    let(:task) { create :tasks_task, :with_verification }
     let(:user) { create :user }
 
     describe '#completed_by?' do
