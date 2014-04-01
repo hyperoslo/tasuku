@@ -3,7 +3,7 @@ module Tasks
     class Verification < ActiveRecord::Base
       include Taskable
 
-      has_one :task, as: :taskable
+      has_one :task, as: :taskable, dependent: :destroy
       belongs_to :verifiable, polymorphic: true
       has_many :confirmations, dependent: :destroy
 
