@@ -4,6 +4,10 @@ module Tasks
 
     delegate :completed_by?, to: :task
 
+    included do
+      has_one :task, as: :taskable, class_name: '::Tasks::Task', dependent: :destroy
+    end
+
     module ClassMethods
       # Declare the relation for responses.
       #
