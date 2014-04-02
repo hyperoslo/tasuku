@@ -3,6 +3,13 @@ require 'spec_helper'
 module Tasks
   describe Taskables::Taskable::Submission do
     class Answer
+
+      # This is probably a bad idea, but otherwise Ruby will complain that there's
+      # no 'has_one' method on my stub and I don't really care about that.
+      class << self
+        def method_missing *args; end
+      end
+
       include Taskables::Taskable::Submission
 
       def question

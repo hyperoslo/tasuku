@@ -20,4 +20,12 @@ RSpec.configure do |config|
   config.order = 'random'
 
   config.include FactoryGirl::Syntax::Methods
+  config.include ActionDispatch::TestProcess
+
+  config.fixture_path = "#{File.dirname(__FILE__)}/fixtures"
+end
+
+CarrierWave.configure do |config|
+  config.storage = :file
+  config.enable_processing = false
 end

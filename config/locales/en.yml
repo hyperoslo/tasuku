@@ -7,3 +7,7 @@ en:
       questions:
         answers:
           submit: 'Submit'
+      images:
+        responses:
+          already_uploaded: 'You have already uploaded an image'
+          upload: 'Upload'
