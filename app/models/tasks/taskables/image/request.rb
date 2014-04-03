@@ -6,6 +6,10 @@ module Tasks
       has_many :responses
 
       responses are: :responses
+
+      def to_s
+        text
+      end
     end
   end
 end
