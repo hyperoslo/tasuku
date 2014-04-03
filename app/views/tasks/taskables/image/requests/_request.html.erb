@@ -2,13 +2,13 @@
 
 <% if request.completed_by? current_author %>
   <%= t 'tasks.taskables.images.responses.already_uploaded' %>
-  <div class="answer">
+  <div class="response">
     <% request.responses.by(current_user).each do |response| %>
       <%= image_tag response.image %>
     <% end %>
   </div>
 <% else %>
-  <div class="options">
+  <div class="form">
     <%= render partial: 'tasks/taskables/image/responses/form', locals: { request: request } %>
   </div>
 <% end %>
