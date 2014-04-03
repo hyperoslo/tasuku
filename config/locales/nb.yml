@@ -18,10 +18,10 @@ nb:
         other: Verifiseringer
       tasks/taskables/image/request:
         one: Bildeforespørsel
-        other: Bildeforespørseler
+        other: Bildeforespørsler
       tasks/taskables/image/response:
         one: Svar på bildeforespørsel
-        other: Svar på bildeforespørseler
+        other: Svar på bildeforespørsler
     attributes:
       tasks/task:
         taskable_type: Oppgavetype
