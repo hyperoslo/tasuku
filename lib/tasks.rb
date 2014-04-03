@@ -2,6 +2,7 @@ require "tasks/engine"
 require "tasks/concerns"
 
 require "configatron/core"
+require "carrierwave"
 
 module Tasks
   class << self

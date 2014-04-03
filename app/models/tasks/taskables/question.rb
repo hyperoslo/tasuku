@@ -3,7 +3,6 @@ module Tasks
     class Question < ActiveRecord::Base
       include Taskable
 
-      has_one :task, as: :taskable, dependent: :destroy
       has_many :options
       has_many :answers, through: :options
 

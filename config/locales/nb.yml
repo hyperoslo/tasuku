@@ -16,6 +16,12 @@ nb:
       tasks/taskables/verification:
         one: Verifisering
         other: Verifiseringer
+      tasks/taskables/image/request:
+        one: Bildeforespørsel
+        other: Bildeforespørsler
+      tasks/taskables/image/response:
+        one: Svar på bildeforespørsel
+        other: Svar på bildeforespørsler
     attributes:
       tasks/task:
         taskable_type: Oppgavetype
@@ -39,3 +45,19 @@ nb:
         verifiable: Verifisering
         created_at: Opprettet
         updated_at: Oppdatert
+      tasks/taskables/image/request:
+        text: Tekst
+      tasks/taskables/image/response:
+        image: Bilde
+  tasks:
+    taskables:
+      verifications:
+        confirmations:
+          confirm: 'Bekreft'
+      questions:
+        answers:
+          submit: 'Svar'
+      images:
+        responses:
+          already_uploaded: 'Du har allerede lastet opp et bilde'
+          upload: 'Last opp'

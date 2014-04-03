@@ -6,8 +6,6 @@ module Tasks
       belongs_to :option
       belongs_to :author, polymorphic: true
 
-      scope :by, ->(author) { where author: author }
-
       has_one :question, through: :option
 
       validates :option_id, presence: true

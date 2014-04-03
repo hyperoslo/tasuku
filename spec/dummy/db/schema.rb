@@ -11,12 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140320123047) do
+ActiveRecord::Schema.define(version: 20140403090537) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "tasks_taskables_image_requests", force: true do |t|
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks_taskables_image_responses", force: true do |t|
+    t.string   "image"
+    t.integer  "request_id"
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks_taskables_image_responses", ["author_id", "author_type"], name: "tasks_taskable_image_responses_author"
+  add_index "tasks_taskables_image_responses", ["request_id"], name: "index_tasks_taskables_image_responses_on_request_id"
 
   create_table "tasks_taskables_question_answers", force: true do |t|
     t.integer  "option_id"

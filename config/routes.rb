@@ -13,5 +13,11 @@ Tasks::Engine.routes.draw do
         resources :answers, only: [:create]
       end
     end
+
+    namespace :image do
+      resources :requests, only: [] do
+        resources :responses, only: [:create]
+      end
+    end
   end
 end

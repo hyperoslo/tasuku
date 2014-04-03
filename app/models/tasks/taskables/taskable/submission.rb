@@ -2,6 +2,10 @@ module Tasks
   module Taskables::Taskable::Submission
     extend ActiveSupport::Concern
 
+    included do
+      scope :by, ->(author) { where author: author }
+    end
+
     module ClassMethods
       # Declare the relation the response belongs to.
       #
