@@ -1,15 +1,4 @@
 nb:
-  taskables:
-    verifications:
-      confirmations:
-        confirm: 'Bekreft'
-    questions:
-      answers:
-        submit: 'Svar'
-    images:
-      responses:
-        already_uploaded: 'Du har allerede lastet opp et bilde'
-        upload: 'Last opp'
   activerecord:
     models:
       tasks/task:
@@ -60,3 +49,15 @@ nb:
         text: Tekst
       tasks/taskables/image/response:
         image: Bilde
+  tasks:
+    taskables:
+      verifications:
+        confirmations:
+          confirm: 'Bekreft'
+      questions:
+        answers:
+          submit: 'Svar'
+      images:
+        responses:
+          already_uploaded: 'Du har allerede lastet opp et bilde'
+          upload: 'Last opp'
