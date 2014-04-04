@@ -30,6 +30,7 @@ nb:
         updated_at: Oppdatert
       tasks/taskables/question:
         text: Tekst
+        description: Beskrivelse
         created_at: Opprettet
         updated_at: Oppdatert
       tasks/taskables/question/option:
@@ -47,6 +48,7 @@ nb:
         updated_at: Oppdatert
       tasks/taskables/image/request:
         text: Tekst
+        description: Beskrivelse
       tasks/taskables/image/response:
         image: Bilde
   tasks:
