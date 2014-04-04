@@ -2,7 +2,14 @@ module Tasks
   module Taskables::Taskable
     extend ActiveSupport::Concern
 
-    delegate :completed_by?, to: :task
+    # Determine whether the task has been completed by the given author.
+    #
+    # author - Any model that can complete tasks.
+    #
+    # Returns a Boolean.
+    def completed_by? author
+      !!responses.find_by(author: author)
+    end
 
     included do
       has_one :task, as: :taskable, class_name: '::Tasks::Task', dependent: :destroy
