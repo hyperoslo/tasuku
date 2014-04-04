@@ -1,7 +1,8 @@
 # Tasks
 
-[![Code Climate](https://codeclimate.com/github/hyperoslo/tasks.png)](https://codeclimate.com/github/hyperoslo/tasks)
-[![Build Status](https://travis-ci.org/hyperoslo/tasks.png)](https://travis-ci.org/hyperoslo/tasks)
+[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/tasks.svg)](https://codeclimate.com/github/hyperoslo/tasks)
+[![Build Status](https://img.shields.io/travis/hyperoslo/tasks.svg)](https://travis-ci.org/hyperoslo/tasks)
+[![Gem Version](https://img.shields.io/gem/v/tasks.svg)](https://rubygems.org/gems/tasks)
 
 ## Installation
 
