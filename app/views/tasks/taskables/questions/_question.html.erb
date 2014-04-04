@@ -1,4 +1,5 @@
 <div class="text"><%= question.text %></div>
+<div class="description"><%= question.description %></div>
 
 <% if question.completed_by? current_author %>
   <%= t 'tasks.taskables.questions.answers.already_answered' %>
