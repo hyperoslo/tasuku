@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404113158) do
+ActiveRecord::Schema.define(version: 20140404130151) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140404113158) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   create_table "tasks_taskables_image_responses", force: true do |t|
