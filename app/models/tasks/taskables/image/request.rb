@@ -1,15 +1,7 @@
 module Tasks
   module Taskables
     class Image::Request < ActiveRecord::Base
-      include Taskable
-
-      has_many :responses
-
-      responses are: :responses
-
-      def to_s
-        text
-      end
+      include Concerns::Models::Taskables::Image::Request
     end
   end
 end

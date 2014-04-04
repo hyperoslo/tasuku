@@ -1,18 +1,7 @@
 module Tasks
   module Taskables
     class Verification < ActiveRecord::Base
-      include Taskable
-
-      belongs_to :verifiable, polymorphic: true
-      has_many :confirmations, dependent: :destroy
-
-      validates :verifiable_id, allow_blank: true, uniqueness: { scope: [:verifiable_type] }
-
-      responses are: :confirmations
-
-      def to_s
-        verifiable.to_s
-      end
+      include Tasks::Concerns::Models::Taskables::Verification
     end
   end
 end
