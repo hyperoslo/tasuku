@@ -21,7 +21,7 @@ Or install it yourself as:
 Install the migrations:
 
     rake tasks:install:migrations
-    
+
 Run the migrations:
 
     rake db:migrate
