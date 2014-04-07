@@ -2,6 +2,8 @@ require_dependency "tasks/application_controller"
 
 module Tasks
   class Taskables::Image::ResponsesController < ApplicationController
+    include Concerns::Redirectable
+
     before_action :set_request
 
     def create
@@ -10,7 +12,7 @@ module Tasks
 
       respond_to do |format|
         if response.save
-          format.html { redirect_to :back }
+          format.html { redirect_to redirect_path }
         else
           format.html { render text: response.errors.full_messages, status: :unprocessable_entity }
         end

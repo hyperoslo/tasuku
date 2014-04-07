@@ -17,22 +17,19 @@ module Tasks
         let(:user)     { create :user }
         let(:question) { create :question }
         let(:option)   { create :question_option, question: question }
+        let(:params)   { { question_id: question.id, taskables_question_answer: { option_id: option.id } } }
 
-        before do
-          request.env['HTTP_REFERER'] = 'http://example.org'
+        before { request.env['HTTP_REFERER'] = 'http://example.org' }
+        before { expect(subject).to receive(:current_user).and_return(user) }
 
-          expect(subject).to receive(:current_user).and_return(user)
-
-          post :create, question_id: question.id, taskables_question_answer: {
-            option_id: option.id
-          }
-        end
-
-        it 'should redirect' do
-          expect(response).to be_redirect
+        it_behaves_like 'redirectable' do
+          let(:action) { :create }
+          let(:verb)   { :post }
         end
 
         it 'creates a new answer' do
+          post :create, params
+
           expect(question.answers.count).to eq 1
         end
       end

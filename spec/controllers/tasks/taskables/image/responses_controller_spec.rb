@@ -16,22 +16,19 @@ module Tasks
       context 'with a response' do
         let(:user)          { create :user }
         let(:image_request) { create :image_request }
+        let(:params)        { { request_id: image_request.id, taskables_image_response: { image: fixture_file_upload('doge.jpg', 'image/jpg') } } }
 
-        before do
-          request.env['HTTP_REFERER'] = 'http://example.org'
+        before { request.env['HTTP_REFERER'] = 'http://example.org' }
+        before { expect(subject).to receive(:current_user).and_return(user) }
 
-          expect(subject).to receive(:current_user).and_return(user)
-
-          post :create, request_id: image_request.id, taskables_image_response: {
-            image: fixture_file_upload('doge.jpg', 'image/jpg')
-          }
-        end
-
-        it 'should redirect' do
-          expect(response).to be_redirect
+        it_behaves_like 'redirectable' do
+          let(:action) { :create }
+          let(:verb)   { :post }
         end
 
         it 'creates a new response' do
+          post :create, params
+
           expect(image_request.responses.count).to eq 1
         end
       end

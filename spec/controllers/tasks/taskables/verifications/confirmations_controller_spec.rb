@@ -16,20 +16,19 @@ module Tasks
       context 'with a confirmation' do
         let(:user)         { create :user }
         let(:verification) { create :verification }
+        let(:params)       { { verification_id: verification.id } }
 
-        before do
-          request.env['HTTP_REFERER'] = 'http://example.org'
+        before { request.env['HTTP_REFERER'] = 'http://example.org' }
+        before { expect(subject).to receive(:current_user).and_return(user) }
 
-          expect(subject).to receive(:current_user).and_return(user)
-
-          post :create, verification_id: verification.id
-        end
-
-        it 'should redirect' do
-          expect(response).to be_redirect
+        it_behaves_like 'redirectable' do
+          let(:action) { :create }
+          let(:verb)   { :post }
         end
 
         it 'creates a new confirmation' do
+          post :create, params
+
           expect(verification.confirmations.count).to eq 1
         end
       end

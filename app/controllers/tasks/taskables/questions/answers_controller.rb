@@ -2,6 +2,8 @@ require_dependency "tasks/application_controller"
 
 module Tasks
   class Taskables::Questions::AnswersController < ApplicationController
+    include Concerns::Redirectable
+
     before_action :set_question
 
     def create
@@ -10,9 +12,9 @@ module Tasks
 
       respond_to do |format|
         if answer.save
-          format.html { redirect_to :back }
+          format.html { redirect_to redirect_path } 
         else
-          format.html { render text: 'Failed to answer question', status: :unprocessable_entity }
+          format.html { render text: answer.errors.full_messages, status: :unprocessable_entity }
         end
       end
     end
