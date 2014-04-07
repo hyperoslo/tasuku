@@ -11,9 +11,7 @@ module Tasks
     end
 
     def config
-      @config ||= Configatron::Store.new
-
-      @config.author = :current_user
+      @config ||= Configatron::Store.new author: :current_user, after_completion_path: nil
 
       @config
     end
