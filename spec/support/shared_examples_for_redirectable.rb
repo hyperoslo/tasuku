@@ -7,35 +7,29 @@ shared_examples 'redirectable' do
   context 'with redirect_to set' do
     before do
       params[:redirect_to] = explicit_redirect
-      send(verb, action, params)
     end
 
     it 'redirects to the given url' do
+      send(verb, action, params)
       expect(response).to redirect_to explicit_redirect
     end
   end
 
   context 'without redirect_to set' do
-    before do
-      send(verb, action, params)
-    end
-
-    context 'without after_completion_path configured' do
+    context 'without after_completion_path defined' do
       it 'redirects back' do
+        send(verb, action, params)
         expect(response).to redirect_to implicit_redirect
       end
     end
 
-    context 'with after_completion_path configured' do
+    context 'with after_completion_path defined' do
       let(:after_completion_path ) { 'http://after_completion_path.org' }
 
-      around do |example|
-        Tasks.config.after_completion_path = after_completion_path
-        example.run
-        Tasks.config.after_completion_path = nil
-      end
+      before { expect(subject).to receive(:after_completion_path).and_return after_completion_path }
 
       it 'redirects to the configured url' do
+        send(verb, action, params)
         expect(response).to redirect_to after_completion_path
       end
     end
