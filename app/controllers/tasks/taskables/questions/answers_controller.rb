@@ -12,7 +12,7 @@ module Tasks
 
       respond_to do |format|
         if answer.save
-          format.html { redirect_to redirect_path } 
+          format.html { redirect_to redirect_path_for(answer) }
         else
           format.html { render text: answer.errors.full_messages, status: :unprocessable_entity }
         end

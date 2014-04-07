@@ -2,7 +2,7 @@ module Tasks
   class ApplicationController < ::ApplicationController
     private
 
-    def after_completion_path
+    def after_completion_path_for resource
       if defined? super
         super
       else

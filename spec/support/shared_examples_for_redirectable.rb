@@ -26,7 +26,7 @@ shared_examples 'redirectable' do
     context 'with after_completion_path defined' do
       let(:after_completion_path ) { 'http://after_completion_path.org' }
 
-      before { expect(subject).to receive(:after_completion_path).and_return after_completion_path }
+      before { expect(subject).to receive(:after_completion_path_for).and_return after_completion_path }
 
       it 'redirects to the configured url' do
         send(verb, action, params)

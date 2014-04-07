@@ -12,7 +12,7 @@ module Tasks
 
       respond_to do |format|
         if confirmation.save
-          format.html { redirect_to redirect_path }
+          format.html { redirect_to redirect_path_for(confirmation) }
         else
           format.html { render text: 'Failed to confirm verification', status: :unprocessable_entity }
         end
