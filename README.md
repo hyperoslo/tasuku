@@ -1,7 +1,10 @@
 # Tasks
 
-[![Code Climate](https://codeclimate.com/github/hyperoslo/tasks.png)](https://codeclimate.com/github/hyperoslo/tasks)
-[![Build Status](https://travis-ci.org/hyperoslo/tasks.png)](https://travis-ci.org/hyperoslo/tasks)
+[![Gem Version](https://img.shields.io/gem/v/tasks.svg)](https://rubygems.org/gems/tasks)
+[![Build Status](https://img.shields.io/travis/hyperoslo/tasks.svg)](https://travis-ci.org/hyperoslo/tasks)
+[![Dependency Status](https://img.shields.io/gemnasium/hyperoslo/tasks.svg)](https://gemnasium.com/hyperoslo/tasks)
+[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/tasks.svg)](https://codeclimate.com/github/hyperoslo/tasks)
+[![Coverage Status](https://img.shields.io/coveralls/hyperoslo/tasks.svg)](https://coveralls.io/r/hyperoslo/tasks)
 
 ## Installation
 
@@ -20,7 +23,7 @@ Or install it yourself as:
 Install the migrations:
 
     rake tasks:install:migrations
-    
+
 Run the migrations:
 
     rake db:migrate
