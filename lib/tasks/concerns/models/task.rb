@@ -8,6 +8,8 @@ module Tasks::Concerns::Models::Task
     scope :completed_by,  ->(author) { all.select { |task| task.completed_by? author }}
     scope :incomplete_by, ->(author) { all.reject { |task| task.completed_by? author }}
 
+    validates :taskable, presence: true
+
     delegate :completed_by?, :submissions, to: :taskable
 
     def to_s
