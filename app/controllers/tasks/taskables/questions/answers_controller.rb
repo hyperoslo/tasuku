@@ -16,7 +16,7 @@ module Tasks
         if answer.save
           format.html { redirect_to redirect_path_for(answer) }
         else
-          format.html { render text: answer.errors.full_messages, status: :unprocessable_entity }
+          format.html { redirect_to :back, alert: answer.errors.full_messages.to_sentence }
         end
       end
     end

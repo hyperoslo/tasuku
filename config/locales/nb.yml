@@ -13,6 +13,9 @@ nb:
       tasks/taskables/question/answer:
         one: Svar
         other: Svar
+      tasks/taskables/question/option:
+        one: Valg
+        other: Valg
       tasks/taskables/verification:
         one: Verifisering
         other: Verifiseringer
@@ -40,6 +43,7 @@ nb:
       tasks/taskables/question/answer:
         option: Valg
         author: Forfatter
+        option_id: Valg
         created_at: Opprettet
         updated_at: Oppdatert
       tasks/taskables/verification:
