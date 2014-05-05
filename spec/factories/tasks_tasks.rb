@@ -1,11 +1,7 @@
 FactoryGirl.define do
   factory :tasks_task, aliases: [:task], class: 'Tasks::Task' do
-    taskable nil
+    association :taskable, factory: :verification
 
-    trait :with_verification do
-      after(:build) do |task|
-        task.taskable = create :verification, task: nil
-      end
-    end
+    trait(:with_verification) { association :taskable, factory: :verification }
   end
 end

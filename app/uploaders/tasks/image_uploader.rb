@@ -26,7 +26,14 @@ class Tasks::ImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   process :resize_to_limit => [1000, nil]
+  process :auto_orient
 
+  def auto_orient
+    manipulate! do |img|
+      img.tap(&:auto_orient)
+    end
+  end
+  
   # def scale(width, height)
   #   # do something
   # end

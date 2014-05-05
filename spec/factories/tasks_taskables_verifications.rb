@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :tasks_taskables_verification, aliases: [:verification], class: 'Tasks::Taskables::Verification' do
-    verifiable nil
+    association :verifiable, factory: :tasks_taskables_question
   end
 end
