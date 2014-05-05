@@ -26,7 +26,7 @@ module Tasks
     end
 
     def set_question
-      @question  = Taskables::Question.find params[:question_id]
+      @question = Taskables::Question.find params[:question_id]
     end
   end
 end
