@@ -1,4 +1,6 @@
 <%= form_for question.answers.build, url: tasks.question_answers_path(question_id: question.id), method: :post do |form| %>
+  <%= form.hidden_field :option_id, value: 0 %>
+
   <% question.options.each do |option| %>
     <div class="question option">
       <%= form.radio_button :option_id, option.id %>
