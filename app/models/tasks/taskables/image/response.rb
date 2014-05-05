@@ -9,6 +9,7 @@ module Tasks
       belongs_to :author, polymorphic: true
 
       validates :author_id, :author_type, presence: true
+      validates :image, presence: true
 
       request is: :request
     end
