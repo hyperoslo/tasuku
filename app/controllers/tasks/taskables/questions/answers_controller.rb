@@ -7,8 +7,10 @@ module Tasks
     before_action :set_question
 
     def create
-      answer = @question.answers.new answer_params
-      answer.author = send Tasks.config.author
+      answer = Taskables::Question::Answer.new answer_params
+
+      answer.question = @question
+      answer.author   = send Tasks.config.author
 
       respond_to do |format|
         if answer.save
