@@ -22,7 +22,7 @@ module Tasks
     private
 
     def answer_params
-      params.permit(:taskables_question_answer).permit(:option_id, :author_id, :author_type)
+      params.require(:taskables_question_answer).permit(:option_id, :author_id, :author_type)
     end
 
     def set_question
