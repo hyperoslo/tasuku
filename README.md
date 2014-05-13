@@ -28,6 +28,17 @@ Run the migrations:
 
     rake db:migrate
 
+Configure your routes:
+
+```ruby
+# config/routes.rb
+Rails.application.routes.draw do
+  [...]
+
+  mount Tasks::Engine, at: '/tasks'
+end
+```
+
 ## Usage
 
 ...
