@@ -7,10 +7,13 @@ module Tasks
     before_action :set_question
 
     def create
-      answer = Taskables::Question::Answer.new answer_params
+      answer = Taskables::Question::Answer.new
 
-      answer.question = @question
-      answer.author   = send Tasks.config.author
+      answer_params[:option_ids].each do |num|
+        answer.votes.build option_id: num
+      end
+
+      answer.author = send Tasks.config.author
 
       respond_to do |format|
         if answer.save
@@ -24,7 +27,7 @@ module Tasks
     private
 
     def answer_params
-      params.require(:taskables_question_answer).permit(:option_id, :author_id, :author_type)
+      params.require(:taskables_question_answer).permit(option_ids: [])
     end
 
     def set_question

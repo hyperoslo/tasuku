@@ -74,6 +74,8 @@ nb:
       questions:
         answers:
           submit: 'Svar'
+          already_answered: 'Du har allerede svart på spørsmålet'
+          can_only_vote_once: 'Du kan kun avgi ett svar'
       images:
         responses:
           already_uploaded: 'Du har allerede lastet opp et bilde'

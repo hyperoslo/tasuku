@@ -3,9 +3,12 @@
 FactoryGirl.define do
   factory :tasks_taskables_question, aliases: [:question], class: 'Tasks::Taskables::Question' do
     text "MyText"
+    multiple true
 
     factory :tasks_taskables_question_with_options, aliases: [:question_with_options] do
-      after(:create) { |question| create_list :question_option, 3, question: question }
+      after :build do |question, evaluator|
+        3.times { |n| question.options.build text: "Option #{n}" }
+      end
     end
   end
 end
