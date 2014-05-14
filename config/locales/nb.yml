@@ -67,3 +67,7 @@ nb:
         responses:
           already_uploaded: 'Du har allerede lastet opp et bilde'
           upload: 'Last opp'
+      urls:
+        responses:
+          already_answered: 'Du har allerede oppgitt en addresse'
+          answer: 'Svar'
