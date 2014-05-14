@@ -5,7 +5,7 @@ module Tasks
     included do
       include ::Tasks::Taskables::Taskable
 
-      has_many :responses
+      has_many :responses, dependent: :destroy
 
       responses are: :responses
 
