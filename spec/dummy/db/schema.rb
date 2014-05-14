@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404130151) do
+ActiveRecord::Schema.define(version: 20140514082143) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -63,6 +63,24 @@ ActiveRecord::Schema.define(version: 20140404130151) do
     t.datetime "updated_at"
     t.text     "description"
   end
+
+  create_table "tasks_taskables_text_requests", force: true do |t|
+    t.text     "text"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks_taskables_text_responses", force: true do |t|
+    t.text     "text"
+    t.integer  "request_id"
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks_taskables_text_responses", ["author_id", "author_type"], name: "tasks_taskable_text_responses_author", unique: true
 
   create_table "tasks_taskables_verification_confirmations", force: true do |t|
     t.integer  "verification_id"

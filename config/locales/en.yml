@@ -11,3 +11,7 @@ en:
         responses:
           already_uploaded: 'You have already uploaded an image'
           upload: 'Upload'
+      texts:
+        responses:
+          already_responded: 'You have already submitted a text'
+          respond: 'Submit'

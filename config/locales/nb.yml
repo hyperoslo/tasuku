@@ -25,6 +25,12 @@ nb:
       tasks/taskables/image/response:
         one: Svar på bildeforespørsel
         other: Svar på bildeforespørsler
+      tasks/taskables/text/request:
+        one: Tekstforespørsel
+        other: Tekstforespørsler
+      tasks/taskables/text/response:
+        one: Svar på tekstforespørsler
+        other: Svar på tekstforespørsler
     attributes:
       tasks/task:
         taskable_type: Oppgavetype
@@ -55,6 +61,11 @@ nb:
         description: Beskrivelse
       tasks/taskables/image/response:
         image: Bilde
+      tasks/taskables/text/request:
+        text: Tekst
+        description: Beskrivelse
+      tasks/taskables/text/response:
+        text: Svartekst
   tasks:
     taskables:
       verifications:
@@ -67,3 +78,7 @@ nb:
         responses:
           already_uploaded: 'Du har allerede lastet opp et bilde'
           upload: 'Last opp'
+      texts:
+        responses:
+          already_responded: 'Du har allerede sendt inn svartekst'
+          response: 'Svar'
