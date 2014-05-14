@@ -1,0 +1,5 @@
+<%= form_for request.responses.build, url: tasks.url_request_responses_path(request_id: request.id), method: :post, html: { multipart: true } do |form| %>
+  <%= form.text_field :url %>
+
+  <%= form.submit t('tasks.taskables.urls.responses.answer') %>
+<% end %>

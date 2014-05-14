@@ -1,0 +1,15 @@
+<div class="text"><%= request.text %></div>
+<div class="description"><%= request.description %></div>
+
+<% if request.completed_by? current_author %>
+  <%= t 'tasks.taskables.urls.responses.already_answered' %>
+  <div class="response">
+    <% request.responses.by(current_user).each do |response| %>
+      <%= response.url %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="form">
+    <%= render partial: 'tasks/taskables/url/responses/form', locals: { request: request } %>
+  </div>
+<% end %>
