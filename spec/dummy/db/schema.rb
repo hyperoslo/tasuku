@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404130151) do
+ActiveRecord::Schema.define(version: 20140512131526) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20140404130151) do
   add_index "tasks_taskables_image_responses", ["request_id"], name: "index_tasks_taskables_image_responses_on_request_id"
 
   create_table "tasks_taskables_question_answers", force: true do |t|
-    t.integer  "option_id"
     t.integer  "author_id"
     t.string   "author_type"
     t.datetime "created_at"
@@ -46,7 +45,6 @@ ActiveRecord::Schema.define(version: 20140404130151) do
   end
 
   add_index "tasks_taskables_question_answers", ["author_id", "author_type"], name: "tasks_taskable_question_answers_author"
-  add_index "tasks_taskables_question_answers", ["option_id"], name: "index_tasks_taskables_question_answers_on_option_id"
 
   create_table "tasks_taskables_question_options", force: true do |t|
     t.text     "text"
@@ -57,11 +55,22 @@ ActiveRecord::Schema.define(version: 20140404130151) do
 
   add_index "tasks_taskables_question_options", ["question_id"], name: "index_tasks_taskables_question_options_on_question_id"
 
+  create_table "tasks_taskables_question_votes", force: true do |t|
+    t.integer  "answer_id"
+    t.integer  "option_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks_taskables_question_votes", ["answer_id"], name: "index_tasks_taskables_question_votes_on_answer_id"
+  add_index "tasks_taskables_question_votes", ["option_id"], name: "index_tasks_taskables_question_votes_on_option_id"
+
   create_table "tasks_taskables_questions", force: true do |t|
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
+    t.boolean  "multiple"
   end
 
   create_table "tasks_taskables_verification_confirmations", force: true do |t|
