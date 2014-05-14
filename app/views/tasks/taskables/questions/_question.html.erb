@@ -5,7 +5,11 @@
   <%= t 'tasks.taskables.questions.answers.already_answered' %>
   <div class="answer">
     <% question.answers.by(current_user).each do |answer| %>
-      <%= answer.option.text %>
+      <ul>
+	  	<% answer.votes.each do |vote| %>
+        <%= vote.option.text %>
+      <% end %>
+      </ul>
     <% end %>
   </div>
 <% else %>

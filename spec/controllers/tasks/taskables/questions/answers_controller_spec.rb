@@ -17,7 +17,7 @@ module Tasks
         let(:user)     { create :user }
         let(:question) { create :question }
         let(:option)   { create :question_option, question: question }
-        let(:params)   { { question_id: question.id, taskables_question_answer: { option_id: option.id } } }
+        let(:params)   { { question_id: question.id, taskables_question_answer: { option_ids: [option.id] } } }
 
         before { request.env['HTTP_REFERER'] = 'http://example.org' }
         before { expect(subject).to receive(:current_user).and_return(user) }
