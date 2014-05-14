@@ -22,7 +22,7 @@ module Tasks
     private
 
     def response_params
-      params.require(:taskables_image_response).permit(:text)
+      params.require(:taskables_text_response).permit(:text)
     end
 
     def set_request
