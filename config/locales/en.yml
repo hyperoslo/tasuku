@@ -17,3 +17,8 @@ en:
         responses:
           already_responded: 'You have already submitted a text'
           respond: 'Submit'
+
+      urls:
+        responses:
+          already_answered: 'You have already answered'
+          answer: 'Answer'

@@ -25,5 +25,11 @@ Tasks::Engine.routes.draw do
         resources :responses, only: [:create]
       end
     end
+
+    namespace :url do
+      resources :requests, only: [] do
+        resources :responses, only: [:create]
+      end
+    end
   end
 end
