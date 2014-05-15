@@ -39,6 +39,26 @@ Rails.application.routes.draw do
 end
 ```
 
+Configure the method to use in deriving the current user:
+
+```ruby
+# config/initializers/tasks.rb
+Tasks.configure do |config|
+  config.author = :current_user
+end
+```
+
+Include our helpers:
+
+```ruby
+# app/controllers/application_controller.rb
+class ApplicationController < ActionController::Base
+  [...]
+
+  helper Tasks::Engine.helpers
+end
+```
+
 ## Usage
 
 ...
