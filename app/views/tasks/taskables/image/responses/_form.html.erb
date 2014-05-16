@@ -2,5 +2,7 @@
   <%= form.hidden_field :image, value: 0 %>
   <%= form.file_field :image %>
 
-  <%= form.submit t('tasks.taskables.images.responses.upload') %>
+  <%= form.submit t('tasks.taskables.images.responses.upload'), data: {
+    disable_with: t('tasks.taskables.images.responses.uploading')
+  } %>
 <% end %>
