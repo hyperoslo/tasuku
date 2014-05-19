@@ -3,9 +3,9 @@
 
 <% if request.completed_by? current_author %>
   <%= t 'tasks.taskables.urls.responses.already_answered' %>
-  <div class="response">
+  <div class="response url">
     <% request.responses.by(current_user).each do |response| %>
-      <%= embed(response, Tasks.config.video_width, Tasks.config.video_height) %>
+      <%= embed_video(response, Tasks.config.video_width, Tasks.config.video_height) %>
     <% end %>
   </div>
 <% else %>
