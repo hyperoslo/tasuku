@@ -1,4 +1,4 @@
-class CreateTasksTaskablesUrlResponses < ActiveRecord::Migration
+class CreateTasksTaskablesURLResponses < ActiveRecord::Migration
   def change
     create_table :tasks_taskables_url_responses do |t|
       t.text :url

@@ -80,6 +80,7 @@ nb:
         responses:
           already_uploaded: 'Du har allerede lastet opp et bilde'
           upload: 'Last opp'
+          uploading: 'Laster opp...'
       texts:
         responses:
           already_responded: 'Du har allerede sendt inn svartekst'
