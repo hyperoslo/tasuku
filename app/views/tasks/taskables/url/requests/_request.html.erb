@@ -5,7 +5,7 @@
   <%= t 'tasks.taskables.urls.responses.already_answered' %>
   <div class="response">
     <% request.responses.by(current_user).each do |response| %>
-      <%= embed(response, "1000px", "500px") %>
+      <%= embed(response, Tasks.config.video_width, Tasks.config.video_height) %>
     <% end %>
   </div>
 <% else %>
