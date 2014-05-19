@@ -7,6 +7,12 @@ PATH
       mini_magick (~> 3.7)
       rails (~> 4.0)
 
+PATH
+  remote: ../embeddable/
+  specs:
+    embeddable (0.0.5)
+      activesupport (~> 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -51,7 +57,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
     coderay (1.1.0)
-    configatron (3.0.2)
+    configatron (3.2.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     factory_girl (4.4.0)
@@ -141,6 +147,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  embeddable!
   factory_girl_rails
   faker
   pry
