@@ -2,6 +2,9 @@ module Tasks
   module Taskables
     class URL::Response < ActiveRecord::Base
       include Taskable::Submission
+      include Embeddable
+
+      embeddable :video, from: :url
 
       belongs_to :request
       belongs_to :author, polymorphic: true

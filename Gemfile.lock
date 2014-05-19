@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/str1fe/embeddable
+  revision: 6487d49139966888d8e135e3427c7624fb318ea7
+  branch: view-helpers
+  specs:
+    embeddable (0.0.5)
+      activesupport (~> 4.0)
+
 PATH
   remote: .
   specs:
@@ -6,12 +14,6 @@ PATH
       configatron (~> 3.0)
       mini_magick (~> 3.7)
       rails (~> 4.0)
-
-PATH
-  remote: ../embeddable/
-  specs:
-    embeddable (0.0.5)
-      activesupport (~> 4.0)
 
 GEM
   remote: https://rubygems.org/

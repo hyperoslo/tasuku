@@ -5,7 +5,7 @@
   <%= t 'tasks.taskables.urls.responses.already_answered' %>
   <div class="response">
     <% request.responses.by(current_user).each do |response| %>
-      <%= response.url %>
+      <%= embed(response, "1000px", "500px") %>
     <% end %>
   </div>
 <% else %>
