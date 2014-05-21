@@ -11,9 +11,10 @@
       <% end %>
       </ul>
     <% end %>
+    <%= render 'tasks/taskables/questions/answers/statistics', question: question %>
   </div>
 <% else %>
   <div class="options">
-    <%= render partial: 'tasks/taskables/questions/answers/form', locals: { question: question } %>
+    <%= render 'tasks/taskables/questions/answers/form', question: question %>
   </div>
 <% end %>
