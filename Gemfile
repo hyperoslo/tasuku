@@ -6,7 +6,6 @@ source "https://rubygems.org"
 gemspec
 
 gem 'rails', '4.1.0.rc1'
-gem 'embeddable', git: 'git://github.com/str1fe/embeddable', branch: 'view-helpers'
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
