@@ -11,7 +11,10 @@
       <% end %>
       </ul>
     <% end %>
-    <%= render 'tasks/taskables/questions/answers/statistics', question: question %>
+
+    <% if question.show_statistics? %>
+      <%= render 'tasks/taskables/questions/answers/statistics', question: question %>
+    <% end %>
   </div>
 <% else %>
   <div class="options">
