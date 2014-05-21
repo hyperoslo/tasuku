@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520122938) do
+ActiveRecord::Schema.define(version: 20140521134515) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20140520122938) do
     t.datetime "updated_at"
     t.text     "description"
     t.boolean  "multiple"
+    t.boolean  "show_statistics", default: true
   end
 
   create_table "tasks_taskables_text_requests", force: true do |t|
