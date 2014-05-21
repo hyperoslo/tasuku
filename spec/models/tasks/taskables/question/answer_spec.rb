@@ -41,5 +41,44 @@ module Tasks
         end
       end
     end
+
+    describe '#correct?' do
+      let(:question) { create :question_with_options, multiple: true, options_count: 3 }
+      let(:first_option) { question.options[0] }
+      let(:second_option) { question.options[1] }
+
+      context 'multiple correct options' do
+        it 'should return true if all votes are correct' do
+          first_option.update_attributes!(correct: true)
+          second_option.update_attributes!(correct: true)
+          answer = create :question_answer, options: [first_option, second_option]
+          expect(answer).to be_correct
+        end
+
+        it 'should return false unless all votes are true' do
+          first_option.update_attributes!(correct: true)
+          answer = create :question_answer, options: [first_option, second_option]
+          expect(answer).not_to be_correct
+        end
+      end
+      context 'one correct option' do
+        it 'should return true if all votes are correct' do
+          first_option.update_attributes!(correct: true)
+          answer = create :question_answer, options: [first_option]
+          expect(answer).to be_correct
+        end
+        it 'should return false unless all votes are true' do
+          first_option.update_attributes!(correct: true)
+          answer = create :question_answer, options: [first_option, second_option]
+          expect(answer).not_to be_correct
+        end
+      end
+      context 'no correct options' do
+        it 'should always return false' do
+          answer = create :question_answer, options: [first_option]
+          expect(answer).not_to be_correct
+        end
+      end
+    end
   end
 end

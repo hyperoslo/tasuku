@@ -11,9 +11,13 @@
       <% end %>
       </ul>
     <% end %>
+
+    <% if question.show_statistics? %>
+      <%= render 'tasks/taskables/questions/answers/statistics', question: question %>
+    <% end %>
   </div>
 <% else %>
   <div class="options">
-    <%= render partial: 'tasks/taskables/questions/answers/form', locals: { question: question } %>
+    <%= render 'tasks/taskables/questions/answers/form', question: question %>
   </div>
 <% end %>

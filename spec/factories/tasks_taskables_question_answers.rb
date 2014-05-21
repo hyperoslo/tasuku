@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :tasks_taskables_question_answer, aliases: [:question_answer], class: 'Tasks::Taskables::Question::Answer' do
-    author nil
+    author { User.create }
 
     ignore do
       options []
