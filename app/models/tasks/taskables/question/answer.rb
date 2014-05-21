@@ -22,10 +22,7 @@ module Tasks
       request is: :question
 
       def correct?
-        votes.each do |vote|
-          return false unless vote.option.correct?
-        end
-        true
+        votes.all? { |vote| vote.option.correct? }
       end
 
       private
