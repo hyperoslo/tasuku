@@ -21,6 +21,13 @@ module Tasks
 
       request is: :question
 
+      def correct?
+        votes.each do |vote|
+          return false unless vote.option.correct?
+        end
+        true
+      end
+
       private
 
       def can_only_answer_each_question_once
