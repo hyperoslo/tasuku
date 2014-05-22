@@ -3,6 +3,7 @@ require "tasks/concerns"
 
 require "configatron/core"
 require "carrierwave"
+require "embeddable"
 
 module Tasks
   class << self
