@@ -5,7 +5,7 @@ require "tasks/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "tasks"
+  s.name        = "tasuku"
   s.version     = Tasks::VERSION
   s.authors     = ["Johannes Gorset"]
   s.email       = ["johannes@hyper.no"]
