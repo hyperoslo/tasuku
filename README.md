@@ -28,7 +28,7 @@ Run the migrations:
 
     rake db:migrate
 
-Then you can chang the default configurations:
+Then you can change the default configurations:
 
 ```ruby
 # config/routes.rb
@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   mount Tasks::Engine, at: '/tasks'
 end
 ```
+
 And the method to use in deriving the current user:
 
 ```ruby
