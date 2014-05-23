@@ -20,42 +20,28 @@ Or install it yourself as:
 
     $ gem install tasks
 
-Install the migrations:
+Install the gem:
 
-    rake tasks:install:migrations
+    rails g tasks:install
 
 Run the migrations:
 
     rake db:migrate
 
-Configure your routes:
+Then you can chang the default configurations:
 
 ```ruby
 # config/routes.rb
 Rails.application.routes.draw do
-  [...]
-
   mount Tasks::Engine, at: '/tasks'
 end
 ```
-
-Configure the method to use in deriving the current user:
+And the method to use in deriving the current user:
 
 ```ruby
 # config/initializers/tasks.rb
 Tasks.configure do |config|
   config.author = :current_user
-end
-```
-
-Include our helpers:
-
-```ruby
-# app/controllers/application_controller.rb
-class ApplicationController < ActionController::Base
-  [...]
-
-  helper Tasks::Engine.helpers
 end
 ```
 

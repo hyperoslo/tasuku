@@ -1,0 +1,58 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Concerns	lib/tasks/concerns/controllers.rb	/^  module Concerns::Controllers$/;"	m	class:Tasks
+Concerns	lib/tasks/concerns/controllers/tasks_controller.rb	/^  module Concerns::Controllers::TasksController$/;"	m	class:Tasks
+Concerns	lib/tasks/concerns/models/taskables/image/request.rb	/^  module Concerns::Models::Taskables::Image::Request$/;"	m	class:Tasks
+Concerns	lib/tasks/concerns/models/taskables/question.rb	/^  module Concerns::Models::Taskables::Question$/;"	m	class:Tasks
+Concerns	lib/tasks/concerns/models/taskables/text/request.rb	/^  module Concerns::Models::Taskables::Text::Request$/;"	m	class:Tasks
+Concerns	lib/tasks/concerns/models/taskables/url/request.rb	/^  module Concerns::Models::Taskables::URL::Request$/;"	m	class:Tasks
+Concerns	lib/tasks/concerns/models/taskables/verification.rb	/^  module Concerns::Models::Taskables::Verification$/;"	m	class:Tasks
+Engine	lib/tasks/engine.rb	/^  class Engine < ::Rails::Engine$/;"	c	class:Tasks
+Generators	lib/generators/tasks/install/install_generators.rb	/^  module Generators$/;"	m	class:Tasks
+Generators	lib/generators/tasks/install_generators.rb	/^  module Generators$/;"	m	class:Tasks
+InstallGenerators	lib/generators/tasks/install/install_generators.rb	/^    class InstallGenerators < ::Rails::Generators::Base$/;"	c	class:Tasks.Generators
+InstallGenerators	lib/generators/tasks/install_generators.rb	/^    class InstallGenerators < ::Rails::Generators::Base$/;"	c	class:Tasks.Generators
+Tasks	lib/generators/tasks/install/install_generators.rb	/^module Tasks$/;"	m
+Tasks	lib/generators/tasks/install_generators.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks/concerns.rb	/^module Tasks::Concerns$/;"	m
+Tasks	lib/tasks/concerns/controllers.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks/concerns/controllers/tasks_controller.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks/concerns/models.rb	/^module Tasks::Concerns::Models$/;"	m
+Tasks	lib/tasks/concerns/models/task.rb	/^module Tasks::Concerns::Models::Task$/;"	m
+Tasks	lib/tasks/concerns/models/taskables.rb	/^module Tasks::Concerns::Models::Taskables$/;"	m
+Tasks	lib/tasks/concerns/models/taskables/image.rb	/^module Tasks::Concerns::Models::Taskables::Image$/;"	m
+Tasks	lib/tasks/concerns/models/taskables/image/request.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks/concerns/models/taskables/question.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks/concerns/models/taskables/text.rb	/^module Tasks::Concerns::Models::Taskables::Text$/;"	m
+Tasks	lib/tasks/concerns/models/taskables/text/request.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks/concerns/models/taskables/url.rb	/^module Tasks::Concerns::Models::Taskables::URL$/;"	m
+Tasks	lib/tasks/concerns/models/taskables/url/request.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks/concerns/models/taskables/verification.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks/concerns/redirectable.rb	/^module Tasks::Concerns::Redirectable$/;"	m
+Tasks	lib/tasks/concerns/verifiable.rb	/^module Tasks::Concerns::Verifiable$/;"	m
+Tasks	lib/tasks/engine.rb	/^module Tasks$/;"	m
+Tasks	lib/tasks/version.rb	/^module Tasks$/;"	m
+add_helpers	lib/generators/tasks/install/install_generators.rb	/^      def add_helpers$/;"	f	class:Tasks.Generators.InstallGenerators
+add_helpers	lib/generators/tasks/install_generators.rb	/^      def add_helpers$/;"	f	class:Tasks.Generators.InstallGenerators
+add_route	lib/generators/tasks/install/install_generators.rb	/^      def add_route$/;"	f	class:Tasks.Generators.InstallGenerators
+add_route	lib/generators/tasks/install_generators.rb	/^      def add_route$/;"	f	class:Tasks.Generators.InstallGenerators
+answers	lib/tasks/concerns/models/taskables/question.rb	/^      def answers$/;"	f	class:Tasks.Concerns
+config	lib/tasks.rb	/^    def config$/;"	f	class:Tasks
+configure	lib/tasks.rb	/^    def configure$/;"	f	class:Tasks
+copy_initializer	lib/generators/tasks/install/install_generators.rb	/^      def copy_initializer$/;"	f	class:Tasks.Generators.InstallGenerators
+copy_initializer	lib/generators/tasks/install_generators.rb	/^      def copy_initializer$/;"	f	class:Tasks.Generators.InstallGenerators
+redirect_path_for	lib/tasks/concerns/redirectable.rb	/^    def redirect_path_for(resource)$/;"	f	class:Tasks
+set_task	lib/tasks/concerns/controllers/tasks_controller.rb	/^      def set_task$/;"	f	class:Tasks.Concerns
+show	lib/tasks/concerns/controllers/tasks_controller.rb	/^      def show$/;"	f	class:Tasks.Concerns
+single?	lib/tasks/concerns/models/taskables/question.rb	/^      def single?$/;"	f	class:Tasks.Concerns
+to_s	lib/tasks/concerns/models/task.rb	/^    def to_s$/;"	f	class:Tasks
+to_s	lib/tasks/concerns/models/taskables/image/request.rb	/^      def to_s$/;"	f	class:Tasks.Concerns
+to_s	lib/tasks/concerns/models/taskables/question.rb	/^      def to_s$/;"	f	class:Tasks.Concerns
+to_s	lib/tasks/concerns/models/taskables/text/request.rb	/^      def to_s$/;"	f	class:Tasks.Concerns
+to_s	lib/tasks/concerns/models/taskables/url/request.rb	/^      def to_s$/;"	f	class:Tasks.Concerns
+to_s	lib/tasks/concerns/models/taskables/verification.rb	/^      def to_s$/;"	f	class:Tasks.Concerns
