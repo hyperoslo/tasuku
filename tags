@@ -12,11 +12,10 @@ Concerns	lib/tasks/concerns/models/taskables/text/request.rb	/^  module Concerns
 Concerns	lib/tasks/concerns/models/taskables/url/request.rb	/^  module Concerns::Models::Taskables::URL::Request$/;"	m	class:Tasks
 Concerns	lib/tasks/concerns/models/taskables/verification.rb	/^  module Concerns::Models::Taskables::Verification$/;"	m	class:Tasks
 Engine	lib/tasks/engine.rb	/^  class Engine < ::Rails::Engine$/;"	c	class:Tasks
-Generators	lib/generators/tasks/install/install_generators.rb	/^  module Generators$/;"	m	class:Tasks
 Generators	lib/generators/tasks/install_generators.rb	/^  module Generators$/;"	m	class:Tasks
-InstallGenerators	lib/generators/tasks/install/install_generators.rb	/^    class InstallGenerators < ::Rails::Generators::Base$/;"	c	class:Tasks.Generators
+InstallGenerators	lib/generators/tasks/install/install_generators.rb	/^class InstallGenerators < ::Rails::Generators::Base$/;"	c
 InstallGenerators	lib/generators/tasks/install_generators.rb	/^    class InstallGenerators < ::Rails::Generators::Base$/;"	c	class:Tasks.Generators
-Tasks	lib/generators/tasks/install/install_generators.rb	/^module Tasks$/;"	m
+Tasks	lib/generators/tasks/install/install_generator.rb	/^class Tasks::InstallGenerator < Rails::Generators::Base$/;"	c
 Tasks	lib/generators/tasks/install_generators.rb	/^module Tasks$/;"	m
 Tasks	lib/tasks.rb	/^module Tasks$/;"	m
 Tasks	lib/tasks/concerns.rb	/^module Tasks::Concerns$/;"	m
@@ -37,15 +36,19 @@ Tasks	lib/tasks/concerns/redirectable.rb	/^module Tasks::Concerns::Redirectable$
 Tasks	lib/tasks/concerns/verifiable.rb	/^module Tasks::Concerns::Verifiable$/;"	m
 Tasks	lib/tasks/engine.rb	/^module Tasks$/;"	m
 Tasks	lib/tasks/version.rb	/^module Tasks$/;"	m
-add_helpers	lib/generators/tasks/install/install_generators.rb	/^      def add_helpers$/;"	f	class:Tasks.Generators.InstallGenerators
+add_helpers	lib/generators/tasks/install/install_generator.rb	/^  def add_helpers$/;"	f	class:Tasks
+add_helpers	lib/generators/tasks/install/install_generators.rb	/^  def add_helpers$/;"	f	class:InstallGenerators
 add_helpers	lib/generators/tasks/install_generators.rb	/^      def add_helpers$/;"	f	class:Tasks.Generators.InstallGenerators
-add_route	lib/generators/tasks/install/install_generators.rb	/^      def add_route$/;"	f	class:Tasks.Generators.InstallGenerators
+add_route	lib/generators/tasks/install/install_generator.rb	/^  def add_route$/;"	f	class:Tasks
+add_route	lib/generators/tasks/install/install_generators.rb	/^  def add_route$/;"	f	class:InstallGenerators
 add_route	lib/generators/tasks/install_generators.rb	/^      def add_route$/;"	f	class:Tasks.Generators.InstallGenerators
 answers	lib/tasks/concerns/models/taskables/question.rb	/^      def answers$/;"	f	class:Tasks.Concerns
 config	lib/tasks.rb	/^    def config$/;"	f	class:Tasks
 configure	lib/tasks.rb	/^    def configure$/;"	f	class:Tasks
-copy_initializer	lib/generators/tasks/install/install_generators.rb	/^      def copy_initializer$/;"	f	class:Tasks.Generators.InstallGenerators
+copy_initializer	lib/generators/tasks/install/install_generator.rb	/^  def copy_initializer$/;"	f	class:Tasks
+copy_initializer	lib/generators/tasks/install/install_generators.rb	/^  def copy_initializer$/;"	f	class:InstallGenerators
 copy_initializer	lib/generators/tasks/install_generators.rb	/^      def copy_initializer$/;"	f	class:Tasks.Generators.InstallGenerators
+copy_migrations	lib/generators/tasks/install/install_generator.rb	/^  def copy_migrations$/;"	f	class:Tasks
 redirect_path_for	lib/tasks/concerns/redirectable.rb	/^    def redirect_path_for(resource)$/;"	f	class:Tasks
 set_task	lib/tasks/concerns/controllers/tasks_controller.rb	/^      def set_task$/;"	f	class:Tasks.Concerns
 show	lib/tasks/concerns/controllers/tasks_controller.rb	/^      def show$/;"	f	class:Tasks.Concerns
