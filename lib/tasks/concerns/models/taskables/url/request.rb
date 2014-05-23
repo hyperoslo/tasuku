@@ -4,6 +4,7 @@ module Tasks
 
     included do
       include ::Tasks::Taskables::Taskable
+      include ::Tasks::Concerns::Illustratable
 
       has_many :responses, dependent: :destroy
 

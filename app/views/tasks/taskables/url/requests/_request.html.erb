@@ -1,3 +1,7 @@
+<% if request.image? %>
+  <div class="image"><%= image_tag request.image %></div>
+<% end %>
+
 <div class="text"><%= request.text %></div>
 <div class="description"><%= request.description %></div>
 
