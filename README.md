@@ -22,11 +22,11 @@ Or install it yourself as:
 
 Install the gem:
 
-    rails g tasks:install
+    $ rails generate tasks:install
 
 Run the migrations:
 
-    rake db:migrate
+    $ rake db:migrate
 
 Then you can change the default configurations:
 
