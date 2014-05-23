@@ -4,6 +4,7 @@ module Tasks
 
     included do
       include ::Tasks::Taskables::Taskable
+      include ::Tasks::Concerns::Illustratable
 
       has_many :options
       has_many :votes, through: :options

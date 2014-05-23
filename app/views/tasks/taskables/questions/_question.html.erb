@@ -1,10 +1,14 @@
+<% if question.image? %>
+  <div class="image"><%= image_tag question.image %></div>
+<% end %>
+
 <div class="text"><%= question.text %></div>
 <div class="description"><%= question.description %></div>
 
 <% if question.completed_by? current_author %>
   <%= t 'tasks.taskables.questions.answers.already_answered' %>
   <div class="answer">
-    <% question.answers.by(current_user).each do |answer| %>
+    <% question.answers.by(current_author).each do |answer| %>
       <ul>
 	  	<% answer.votes.each do |vote| %>
         <%= vote.option.text %>
