@@ -13,9 +13,8 @@ class Tasks::InstallGenerator < Rails::Generators::Base
 
   def add_helpers
     inject_into_file 'app/controllers/application_controller.rb',
-      'helper Tasks::Engine.helpers',
-      after: 'class ApplicationController < '\
-      'ActionController::Base\n'
+                     "\n  helper Tasks::Engine.helpers",
+                     after: 'protect_from_forgery with: :exception'
   end
 
   def copy_migrations
