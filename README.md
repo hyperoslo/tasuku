@@ -1,4 +1,4 @@
-# Tasks
+# Tasuku
 
 [![Gem Version](https://img.shields.io/gem/v/tasks.svg)](https://rubygems.org/gems/tasks)
 [![Build Status](https://img.shields.io/travis/hyperoslo/tasks.svg)](https://travis-ci.org/hyperoslo/tasks)
@@ -10,7 +10,7 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'tasks'
+    gem 'tasuku'
 
 And then execute:
 
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install tasks
+    $ gem install tasuku
 
 Install the gem:
 
