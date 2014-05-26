@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe Taskables::Question do
     let!(:user)     { create :user }
     let!(:question) { create :question_with_options }

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe Taskables::Question::Option do
   end
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe Taskables::Taskable::Submission do
     class Answer
 

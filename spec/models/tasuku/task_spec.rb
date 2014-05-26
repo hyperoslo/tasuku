@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe Task do
-    let(:task) { create :tasks_task, :with_verification }
+    let(:task) { create :tasuku_task, :with_verification }
     let(:user) { create :user }
 
     describe '#completed_by?' do

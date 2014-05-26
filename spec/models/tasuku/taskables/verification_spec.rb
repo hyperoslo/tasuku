@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe Taskables::Verification do
     describe 'uniqueness validation on verifiable' do
       let(:article)      { create :article }

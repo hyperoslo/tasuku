@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe Taskables::Question::Answer do
     let(:user)     { create :user }
 
@@ -24,7 +24,7 @@ module Tasks
         end
 
         it 'should have errors' do
-          expect(duplicate_answer.errors_on(:base)).to eq [I18n.t('tasks.taskables.questions.answers.already_answered')]
+          expect(duplicate_answer.errors_on(:base)).to eq [I18n.t('tasuku.taskables.questions.answers.already_answered')]
         end
       end
 
@@ -37,7 +37,7 @@ module Tasks
         end
 
         it 'should have errors' do
-          expect(answer.errors_on(:base)).to eq [I18n.t('tasks.taskables.questions.answers.can_only_vote_once')]
+          expect(answer.errors_on(:base)).to eq [I18n.t('tasuku.taskables.questions.answers.can_only_vote_once')]
         end
       end
     end
