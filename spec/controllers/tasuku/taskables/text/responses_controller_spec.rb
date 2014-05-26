@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe Taskables::Text::ResponsesController do
-    routes { Tasks::Engine.routes }
+    routes { Tasuku::Engine.routes }
 
     describe "POST 'create'" do
       it 'routes' do
         expect(post: '/text/requests/1/responses').to route_to(
           action: 'create',
-          controller: 'tasks/taskables/text/responses',
+          controller: 'tasuku/taskables/text/responses',
           request_id: '1'
         )
       end

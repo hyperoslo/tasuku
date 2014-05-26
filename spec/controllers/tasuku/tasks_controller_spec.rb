@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe TasksController do
-    routes { Tasks::Engine.routes }
+    routes { Tasuku::Engine.routes }
 
     describe "GET 'show'" do
       let(:task) { create :task }
