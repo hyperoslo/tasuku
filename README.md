@@ -46,6 +46,14 @@ Tasks.configure do |config|
 end
 ```
 
+### Installing views
+
+you can install tasuku views in order to customize them with the command
+
+```
+rails generate tasks:views
+```
+
 ## Usage
 
 ...
