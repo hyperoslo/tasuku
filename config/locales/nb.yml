@@ -1,72 +1,72 @@
 nb:
   activerecord:
     models:
-      tasks/task:
+      tasuku/task:
         one: Oppgave
         other: Oppgaver
-      tasks/taskables/question:
+      tasuku/taskables/question:
         one: Spørsmål
         other: Spørsmål
-      tasks/taskables/question/option:
+      tasuku/taskables/question/option:
         one: Valg
         other: Valg
-      tasks/taskables/question/answer:
+      tasuku/taskables/question/answer:
         one: Svar
         other: Svar
-      tasks/taskables/question/option:
+      tasuku/taskables/question/option:
         one: Valg
         other: Valg
-      tasks/taskables/verification:
+      tasuku/taskables/verification:
         one: Verifisering
         other: Verifiseringer
-      tasks/taskables/image/request:
+      tasuku/taskables/image/request:
         one: Bildeforespørsel
         other: Bildeforespørsler
-      tasks/taskables/image/response:
+      tasuku/taskables/image/response:
         one: Svar på bildeforespørsel
         other: Svar på bildeforespørsler
-      tasks/taskables/text/request:
+      tasuku/taskables/text/request:
         one: Tekstforespørsel
         other: Tekstforespørsler
-      tasks/taskables/text/response:
+      tasuku/taskables/text/response:
         one: Svar på tekstforespørsler
         other: Svar på tekstforespørsler
     attributes:
-      tasks/task:
+      tasuku/task:
         taskable_type: Oppgavetype
         taskable: Oppgave
         created_at: Opprettet
         updated_at: Oppdatert
-      tasks/taskables/question:
+      tasuku/taskables/question:
         text: Tekst
         description: Beskrivelse
         created_at: Opprettet
         updated_at: Oppdatert
-      tasks/taskables/question/option:
+      tasuku/taskables/question/option:
         text: Tekst
         created_at: Opprettet
         updated_at: Oppdatert
-      tasks/taskables/question/answer:
+      tasuku/taskables/question/answer:
         option: Valg
         author: Forfatter
         option_id: Valg
         created_at: Opprettet
         updated_at: Oppdatert
-      tasks/taskables/verification:
+      tasuku/taskables/verification:
         verifiable: Verifisering
         created_at: Opprettet
         updated_at: Oppdatert
-      tasks/taskables/image/request:
+      tasuku/taskables/image/request:
         text: Tekst
         description: Beskrivelse
-      tasks/taskables/image/response:
+      tasuku/taskables/image/response:
         image: Bilde
-      tasks/taskables/text/request:
+      tasuku/taskables/text/request:
         text: Tekst
         description: Beskrivelse
-      tasks/taskables/text/response:
+      tasuku/taskables/text/response:
         text: Svartekst
-  tasks:
+  tasuku:
     taskables:
       verifications:
         confirmations:
