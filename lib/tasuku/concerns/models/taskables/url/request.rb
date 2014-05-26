@@ -1,5 +1,5 @@
-module Tasks
-  module Concerns::Models::Taskables::Text::Request
+module Tasuku
+  module Concerns::Models::Taskables::URL::Request
     extend ActiveSupport::Concern
 
     included do

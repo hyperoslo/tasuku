@@ -1,4 +1,4 @@
-module Tasks::Concerns::Redirectable
+module Tasuku::Concerns::Redirectable
   extend ActiveSupport::Concern
 
   included do

@@ -1,14 +1,14 @@
-module Tasks
+module Tasuku
   class Engine < ::Rails::Engine
-    isolate_namespace Tasks
+    isolate_namespace Tasuku
 
-    initializer 'tasks.factories', after: 'factory_girl.set_factory_paths' do
+    initializer 'tasuku.factories', after: 'factory_girl.set_factory_paths' do
       FactoryGirl.definition_file_paths << File.expand_path('../../../spec/factories', __FILE__) if defined?(FactoryGirl)
     end
 
-    initializer 'tasks.inflections' do
+    initializer 'tasuku.inflections' do
       ActiveSupport::Inflector.inflections do |inflect|
-        inflect.acronym "URL"
+        inflect.acronym 'URL'
       end
     end
 

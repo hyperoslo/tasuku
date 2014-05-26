@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   module Concerns::Models::Taskables::Verification
     extend ActiveSupport::Concern
 

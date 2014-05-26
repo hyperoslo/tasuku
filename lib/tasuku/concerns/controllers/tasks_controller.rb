@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   module Concerns::Controllers::TasksController
     extend ActiveSupport::Concern
 

@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   module Concerns::Illustratable
     extend ActiveSupport::Concern
 

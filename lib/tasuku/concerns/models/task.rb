@@ -1,4 +1,4 @@
-module Tasks::Concerns::Models::Task
+module Tasuku::Concerns::Models::Task
   extend ActiveSupport::Concern
 
   included do
