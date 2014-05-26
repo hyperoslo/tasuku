@@ -1,7 +1,7 @@
-require_dependency "tasks/application_controller"
+require_dependency 'tasuku/application_controller'
 
-module Tasks
-  class Taskables::Image::ResponsesController < ApplicationController
+module Tasuku
+  class Taskables::URL::ResponsesController < ApplicationController
     include Concerns::Redirectable
 
     before_action :set_request
@@ -22,11 +22,11 @@ module Tasks
     private
 
     def response_params
-      params.require(:taskables_image_response).permit(:image)
+      params.require(:taskables_url_response).permit(:url)
     end
 
     def set_request
-      @request = Taskables::Image::Request.find params[:request_id]
+      @request = Taskables::URL::Request.find params[:request_id]
     end
   end
 end

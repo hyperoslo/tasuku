@@ -1,6 +1,6 @@
-require_dependency "tasks/application_controller"
+require_dependency 'tasuku/application_controller'
 
-module Tasks
+module Tasuku
   class TasksController < ApplicationController
     include Concerns::Controllers::TasksController
   end

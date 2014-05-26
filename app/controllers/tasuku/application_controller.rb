@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   class ApplicationController < ::ApplicationController
     private
 

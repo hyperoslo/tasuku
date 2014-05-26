@@ -1,6 +1,6 @@
-require_dependency "tasks/application_controller"
+require_dependency 'tasuku/application_controller'
 
-module Tasks
+module Tasuku
   class Taskables::Questions::AnswersController < ApplicationController
     include Concerns::Redirectable
 
