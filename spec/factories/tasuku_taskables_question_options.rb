@@ -3,7 +3,7 @@
 require 'faker'
 
 FactoryGirl.define do
-  factory :tasks_taskables_question_option, aliases: [:question_option], class: 'Tasks::Taskables::Question::Option' do
+  factory :tasuku_taskables_question_option, aliases: [:question_option], class: 'Tasuku::Taskables::Question::Option' do
     text Faker::Lorem.word
     question nil
   end
