@@ -1,7 +1,7 @@
-module Tasks
+module Tasuku
   module Taskables::Image
     def self.table_name_prefix
-      'tasks_taskables_image_'
+      'tasuku_taskables_image_'
     end
   end
 end

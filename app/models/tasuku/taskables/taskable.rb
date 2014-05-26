@@ -1,4 +1,4 @@
-module Tasks
+module
   module Taskables::Taskable
     extend ActiveSupport::Concern
 
@@ -12,7 +12,7 @@ module Tasks
     end
 
     included do
-      has_one :task, as: :taskable, class_name: '::Tasks::Task', dependent: :destroy
+      has_one :task, as: :taskable, class_name: '::Tasuku::Task', dependent: :destroy
     end
 
     module ClassMethods

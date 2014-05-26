@@ -1,13 +1,15 @@
-module Tasks
+module Tasuku
   module Taskables
-    class Text::Response < ActiveRecord::Base
+    class Image::Response < ActiveRecord::Base
       include Taskable::Submission
+
+      mount_uploader :image, ImageUploader
 
       belongs_to :request
       belongs_to :author, polymorphic: true
 
       validates :author_id, :author_type, presence: true
-      validates :text, presence: true
+      validates :image, presence: true
 
       request is: :request
     end

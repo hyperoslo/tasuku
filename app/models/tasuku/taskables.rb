@@ -1,7 +1,7 @@
-module Tasks
+module Tasuku
   module Taskables
     def self.table_name_prefix
-      'tasks_taskables_'
+      'tasuku_taskables_'
     end
   end
 end

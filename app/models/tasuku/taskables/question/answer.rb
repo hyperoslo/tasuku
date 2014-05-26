@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   module Taskables
     class Question::Answer < ActiveRecord::Base
       include Taskable::Submission
@@ -28,11 +28,11 @@ module Tasks
       private
 
       def can_only_answer_each_question_once
-        errors.add :base, I18n.t('tasks.taskables.questions.answers.already_answered') if question.answers.find_by author: author
+        errors.add :base, I18n.t('tasuku.taskables.questions.answers.already_answered') if question.answers.find_by author: author
       end
 
       def can_only_vote_once_for_single_choice_questions
-        errors.add :base, I18n.t('tasks.taskables.questions.answers.can_only_vote_once') if question.single? && votes.many?
+        errors.add :base, I18n.t('tasuku.taskables.questions.answers.can_only_vote_once') if question.single? && votes.many?
       end
     end
   end

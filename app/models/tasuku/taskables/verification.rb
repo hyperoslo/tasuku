@@ -1,7 +1,7 @@
-module Tasks
+module Tasuku
   module Taskables
     class Verification < ActiveRecord::Base
-      include Tasks::Concerns::Models::Taskables::Verification
+      include Tasuku::Concerns::Models::Taskables::Verification
     end
   end
 end

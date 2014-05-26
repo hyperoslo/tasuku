@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   module Taskables
     class Verification::Confirmation < ActiveRecord::Base
       include Taskable::Submission

@@ -1,7 +1,7 @@
-module Tasks
+module Tasuku
   module Taskables::URL
     def self.table_name_prefix
-      'tasks_taskables_url_'
+      'tasuku_taskables_url_'
     end
   end
 end

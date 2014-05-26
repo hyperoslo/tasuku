@@ -1,16 +1,13 @@
-module Tasks
+module Tasuku
   module Taskables
-    class URL::Response < ActiveRecord::Base
+    class Text::Response < ActiveRecord::Base
       include Taskable::Submission
-      include Embeddable
-
-      embeddable :video, from: :url
 
       belongs_to :request
       belongs_to :author, polymorphic: true
 
       validates :author_id, :author_type, presence: true
-      validates :url, presence: true
+      validates :text, presence: true
 
       request is: :request
     end

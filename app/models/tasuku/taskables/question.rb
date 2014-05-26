@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   module Taskables
     class Question < ActiveRecord::Base
       include Concerns::Models::Taskables::Question

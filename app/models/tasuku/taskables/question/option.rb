@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   class Taskables::Question::Option < ActiveRecord::Base
     belongs_to :question
     has_many :votes

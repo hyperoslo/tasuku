@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   module Taskables::Taskable::Submission
     extend ActiveSupport::Concern
 
