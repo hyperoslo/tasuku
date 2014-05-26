@@ -46,9 +46,9 @@ Tasks.configure do |config|
 end
 ```
 
-### Installing views
+### Views
 
-you can install tasuku views in order to customize them with the command
+Tasuku ships with views, but you can copy them to customize things to your liking:
 
 ```
 rails generate tasks:views
