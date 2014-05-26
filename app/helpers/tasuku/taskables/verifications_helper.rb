@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   module Taskables::VerificationsHelper
 
     # Render a button to confirm the given verification.
@@ -10,7 +10,7 @@ module Tasks
     #   confirm terms_of_service.verification
     #
     def confirm verification
-      render partial: 'tasks/taskables/verifications/confirmations/form.html.erb', locals: {
+      render partial: 'tasuku/taskables/verifications/confirmations/form.html.erb', locals: {
         confirmation: verification.confirmations.build
       }
     end

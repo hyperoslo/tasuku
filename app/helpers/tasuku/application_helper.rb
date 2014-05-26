@@ -1,4 +1,4 @@
-module Tasks
+module Tasuku
   module ApplicationHelper
     def current_author
       send Tasks.config.author
