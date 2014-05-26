@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe Taskables::VerificationsHelper do
     describe '#confirm' do
       let(:user)         { create :user }
@@ -8,7 +8,7 @@ module Tasks
 
       it 'renders a partial' do
         expect(helper).to receive(:render).with(
-          partial: 'tasks/taskables/verifications/confirmations/form.html.erb', locals: {
+          partial: 'tasuku/taskables/verifications/confirmations/form.html.erb', locals: {
             confirmation: an_instance_of(Taskables::Verification::Confirmation)
           }
         )

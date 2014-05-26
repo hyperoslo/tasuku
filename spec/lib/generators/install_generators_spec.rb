@@ -12,7 +12,7 @@ describe 'rails g tasuku:install', wip: true do
   end
 
   it 'adds the initializer to the project' do
-    assert_file 'config/initializers/tasks.rb'
+    assert_file 'config/initializers/tasuku.rb'
   end
 
   it 'copies the migration files' do

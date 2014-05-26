@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Tasks
+module Tasuku
   describe Concerns::Verifiable do
     let!(:user)         { create :user }
     let!(:article)      { create :article }
