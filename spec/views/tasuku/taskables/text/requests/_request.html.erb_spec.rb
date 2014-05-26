@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe 'tasks/taskables/text/requests/_request.html.erb' do
+describe 'tasuku/taskables/text/requests/_request.html.erb' do
   let(:user) { create :user }
 
   context 'for text requests that have an image' do
     let(:text_request) { create :text_request, image: fixture("doge.jpg") }
 
     before do
-      render partial: 'tasks/taskables/text/requests/request.html.erb', locals: {
+      render partial: 'tasuku/taskables/text/requests/request.html.erb', locals: {
         request: text_request,
         current_author: user
       }
@@ -22,7 +22,7 @@ describe 'tasks/taskables/text/requests/_request.html.erb' do
     let(:text_request) { create :text_request }
 
     before do
-      render partial: 'tasks/taskables/text/requests/request.html.erb', locals: {
+      render partial: 'tasuku/taskables/text/requests/request.html.erb', locals: {
         request: text_request,
         current_author: user
       }

@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe 'tasks/taskables/questions/_question.html.erb' do
+describe 'tasuku/taskables/questions/_question.html.erb' do
   let(:user)     { create :user }
 
   context 'for questions that have an image' do
     let(:question) { create :question_with_options, image: fixture("doge.jpg") }
 
     before do
-      render partial: 'tasks/taskables/questions/question.html.erb', locals: {
+      render partial: 'tasuku/taskables/questions/question.html.erb', locals: {
         question: question,
         current_author: user
       }
@@ -22,7 +22,7 @@ describe 'tasks/taskables/questions/_question.html.erb' do
     let(:question) { create :question_with_options }
 
     before do
-      render partial: 'tasks/taskables/questions/question.html.erb', locals: {
+      render partial: 'tasuku/taskables/questions/question.html.erb', locals: {
         question: question,
         current_author: user
       }

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'tasks/taskables/verifications/confirmations/_form.html.erb' do
+describe 'tasuku/taskables/verifications/confirmations/_form.html.erb' do
   let(:user)         { create :user }
   let(:verification) { create :verification }
   let(:confirmation) { build :verification_confirmation, verification: verification }
@@ -9,7 +9,7 @@ describe 'tasks/taskables/verifications/confirmations/_form.html.erb' do
   before do
     assign :confirmation, confirmation
 
-    render partial: 'tasks/taskables/verifications/confirmations/form.html.erb', locals: {
+    render partial: 'tasuku/taskables/verifications/confirmations/form.html.erb', locals: {
       confirmation: confirmation,
       author: user
     }
