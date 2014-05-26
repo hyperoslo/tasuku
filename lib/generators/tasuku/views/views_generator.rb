@@ -1,4 +1,4 @@
-class Tasks::ViewsGenerator < Rails::Generators::Base
+class Tasuku::ViewsGenerator < Rails::Generators::Base
   source_root File.expand_path('../../../../../', __FILE__)
 
   desc 'Copies the tasks view files'

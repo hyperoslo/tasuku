@@ -1,0 +1,5 @@
+Description:
+    Install the default configurations for Tasks
+
+Example:
+    rails generate tasuku:install
