@@ -51,7 +51,7 @@ end
 Tasuku ships with views, but you can copy them to customize things to your liking:
 
 ```
-rails generate tasks:views
+$ rails generate tasks:views
 ```
 
 ## Usage
