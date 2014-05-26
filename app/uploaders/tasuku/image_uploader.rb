@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class Tasks::ImageUploader < CarrierWave::Uploader::Base
+class Tasuku::ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -33,7 +33,7 @@ class Tasks::ImageUploader < CarrierWave::Uploader::Base
       img.tap(&:auto_orient)
     end
   end
-  
+
   # def scale(width, height)
   #   # do something
   # end

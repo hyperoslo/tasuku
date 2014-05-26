@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Install the gem:
 
-    $ rails generate tasks:install
+    $ rails generate tasuku:install
 
 Run the migrations:
 
@@ -51,7 +51,7 @@ end
 Tasuku ships with views, but you can copy them to customize things to your liking:
 
 ```
-$ rails generate tasks:views
+$ rails generate tasuku:views
 ```
 
 ## Usage
