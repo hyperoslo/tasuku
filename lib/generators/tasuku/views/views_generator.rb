@@ -4,6 +4,6 @@ class Tasuku::ViewsGenerator < Rails::Generators::Base
   desc 'Copies the tasks view files'
 
   def copy_view_files
-    directory 'app/views/tasks'
+    directory 'app/views/tasuku'
   end
 end
