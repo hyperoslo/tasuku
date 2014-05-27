@@ -1,4 +1,4 @@
-module
+module Tasuku
   module Taskables::Taskable
     extend ActiveSupport::Concern
 

@@ -2,6 +2,7 @@ class RemoveOptionIdFromQuestions < ActiveRecord::Migration
   class Tasks::Taskables::Question < ActiveRecord::Base; end
 
   class Tasks::Taskables::Question::Answer < ActiveRecord::Base
+    self.table_name = "tasks_taskables_question_answers"
     has_many :votes
     belongs_to :option
   end
