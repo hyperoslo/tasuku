@@ -6,14 +6,14 @@
 <div class="description"><%= request.description %></div>
 
 <% if request.completed_by? current_author %>
-  <%= t 'tasks.taskables.urls.responses.already_answered' %>
+  <%= t 'tasuku.taskables.urls.responses.already_answered' %>
   <div class="response url">
     <% request.responses.by(current_user).each do |response| %>
-      <%= embed_video(response, Tasks.config.video_width, Tasks.config.video_height) %>
+      <%= embed_video(response, Tasuku.config.video_width, Tasuku.config.video_height) %>
     <% end %>
   </div>
 <% else %>
   <div class="form">
-    <%= render partial: 'tasks/taskables/url/responses/form', locals: { request: request } %>
+    <%= render partial: 'tasuku/taskables/url/responses/form', locals: { request: request } %>
   </div>
 <% end %>

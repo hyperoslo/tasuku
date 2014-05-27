@@ -1,4 +1,4 @@
-<%= form_for Tasks::Taskables::Question::Answer.new, url: tasks.question_answers_path(question_id: question.id), method: :post do |form| %>
+<%= form_for Tasuku::Taskables::Question::Answer.new, url: tasuku.question_answers_path(question_id: question.id), method: :post do |form| %>
   <% question.options.each do |option| %>
     <div class="question option">
       <% if question.multiple? %>
@@ -7,8 +7,8 @@
         <%= radio_button_tag 'taskables_question_answer[option_ids][]', option.id %>
       <% end %>
       <%= form.label :option_id, option.text, value: option.id %>
-    </div>  
+    </div>
   <% end %>
 
-  <%= form.submit t('tasks.taskables.questions.answers.submit') %>
+  <%= form.submit t('tasuku.taskables.questions.answers.submit') %>
 <% end %>

@@ -6,7 +6,7 @@
 <div class="description"><%= request.description %></div>
 
 <% if request.completed_by? current_author %>
-  <%= t 'tasks.taskables.texts.responses.already_responded' %>
+  <%= t 'tasuku.taskables.texts.responses.already_responded' %>
   <div class="response">
     <% request.responses.by(current_user).each do |response| %>
       <%= response.text %>
@@ -14,6 +14,6 @@
   </div>
 <% else %>
   <div class="form">
-    <%= render partial: 'tasks/taskables/text/responses/form', locals: { request: request } %>
+    <%= render partial: 'tasuku/taskables/text/responses/form', locals: { request: request } %>
   </div>
 <% end %>

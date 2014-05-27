@@ -1,8 +1,8 @@
-<%= form_for request.responses.build, url: tasks.image_request_responses_path(request_id: request.id), method: :post, html: { multipart: true } do |form| %>
+<%= form_for request.responses.build, url: tasuku.image_request_responses_path(request_id: request.id), method: :post, html: { multipart: true } do |form| %>
   <%= form.hidden_field :image, value: 0 %>
   <%= form.file_field :image %>
 
-  <%= form.submit t('tasks.taskables.images.responses.upload'), data: {
-    disable_with: t('tasks.taskables.images.responses.uploading')
+  <%= form.submit t('tasuku.taskables.images.responses.upload'), data: {
+    disable_with: t('tasuku.taskables.images.responses.uploading')
   } %>
 <% end %>

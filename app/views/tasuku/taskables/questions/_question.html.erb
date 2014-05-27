@@ -6,7 +6,7 @@
 <div class="description"><%= question.description %></div>
 
 <% if question.completed_by? current_author %>
-  <%= t 'tasks.taskables.questions.answers.already_answered' %>
+  <%= t 'tasuku.taskables.questions.answers.already_answered' %>
   <div class="answer">
     <% question.answers.by(current_author).each do |answer| %>
       <ul>
@@ -17,11 +17,11 @@
     <% end %>
 
     <% if question.show_statistics? %>
-      <%= render 'tasks/taskables/questions/answers/statistics', question: question %>
+      <%= render 'tasuku/taskables/questions/answers/statistics', question: question %>
     <% end %>
   </div>
 <% else %>
   <div class="options">
-    <%= render 'tasks/taskables/questions/answers/form', question: question %>
+    <%= render 'tasuku/taskables/questions/answers/form', question: question %>
   </div>
 <% end %>
