@@ -1,3 +1,0 @@
-require 'tasuku'
-
-Tasks = Tasuku

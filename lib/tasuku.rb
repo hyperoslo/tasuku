@@ -17,3 +17,5 @@ module Tasuku
     end
   end
 end
+
+Tasks = Tasuku
