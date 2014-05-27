@@ -1,7 +1,7 @@
 class Tasuku::InstallGenerator < Rails::Generators::Base
   source_root File.expand_path('../templates', __FILE__)
 
-  desc 'Install the default configurations for Tasks'
+  desc 'Install the default configurations for Tasuku'
 
   def copy_initializer
     template 'tasuku.rb', 'config/initializers/tasuku.rb'

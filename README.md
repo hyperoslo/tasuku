@@ -33,15 +33,15 @@ Then you can change the default configurations:
 ```ruby
 # config/routes.rb
 Rails.application.routes.draw do
-  mount Tasks::Engine, at: '/tasks'
+  mount Tasuku::Engine, at: '/tasks'
 end
 ```
 
 And the method to use in deriving the current user:
 
 ```ruby
-# config/initializers/tasks.rb
-Tasks.configure do |config|
+# config/initializers/tasuku.rb
+Tasuku.configure do |config|
   config.author = :current_user
 end
 ```
@@ -77,4 +77,4 @@ and if you're using this library we probably want to hire you.
 
 ## License
 
-Tasks is available under the MIT license. See the LICENSE file for more info.
+Tasuku is available under the MIT license. See the LICENSE file for more info.
