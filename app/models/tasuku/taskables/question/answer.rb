@@ -12,11 +12,7 @@ module Tasuku
       validate :can_only_vote_once_for_single_choice_questions
 
       def question
-        if votes.any?
-          votes.first.option.question
-        else
-          raise StandardError, "Cannot derive question for #{self}, as it has no votes"
-        end
+        votes.first.option.question if votes.any?
       end
 
       request is: :question
@@ -28,11 +24,11 @@ module Tasuku
       private
 
       def can_only_answer_each_question_once
-        errors.add :base, I18n.t('tasuku.taskables.questions.answers.already_answered') if question.answers.find_by author: author
+        errors.add :base, I18n.t('tasuku.taskables.questions.answers.already_answered') if question && question.answers.find_by(author: author)
       end
 
       def can_only_vote_once_for_single_choice_questions
-        errors.add :base, I18n.t('tasuku.taskables.questions.answers.can_only_vote_once') if question.single? && votes.many?
+        errors.add :base, I18n.t('tasuku.taskables.questions.answers.can_only_vote_once') if question && question.single? && votes.many?
       end
     end
   end
