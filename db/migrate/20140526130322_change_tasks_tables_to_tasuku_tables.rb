@@ -1,5 +1,31 @@
 class ChangeTasksTablesToTasukuTables < ActiveRecord::Migration
   def change
-    # TODO: implement this
+    rename_table 'tasks_taskables_image_requests', 'tasuku_taskables_image_requests'
+    rename_table 'tasks_taskables_image_responses', 'tasuku_taskables_image_responses'
+    rename_table 'tasks_taskables_question_answers', 'tasuku_taskables_question_answers'
+    rename_table 'tasks_taskables_question_options', 'tasuku_taskables_question_options'
+    rename_table 'tasks_taskables_question_votes', 'tasuku_taskables_question_votes'
+    rename_table 'tasks_taskables_questions', 'tasuku_taskables_questions'
+    rename_table 'tasks_taskables_text_requests', 'tasuku_taskables_text_requests'
+    rename_table 'tasks_taskables_text_responses', 'tasuku_taskables_text_responses'
+    rename_table 'tasks_taskables_url_requests', 'tasuku_taskables_url_requests'
+    rename_table 'tasks_taskables_url_responses', 'tasuku_taskables_url_responses'
+    rename_table 'tasks_taskables_verification_confirmations', 'tasuku_taskables_verification_confirmations'
+    rename_table 'tasks_taskables_verifications', 'tasuku_taskables_verifications'
+    rename_table 'tasks_tasks', 'tasuku_tasks'
+
+    rename_index 'tasuku_taskables_image_responses', 'tasks_taskable_image_responses_author', 'tasuku_taskable_image_responses_author'
+    rename_index 'tasuku_taskables_image_responses', 'index_tasks_taskables_image_responses_on_request_id', 'index_tasuku_taskables_image_responses_on_request_id'
+    rename_index 'tasuku_taskables_question_answers', 'tasks_taskable_question_answers_author', 'tasuku_taskable_question_answers_author'
+    rename_index 'tasuku_taskables_question_options', 'index_tasks_taskables_question_options_on_question_id', 'index_tasuku_taskables_question_options_on_question_id'
+    rename_index 'tasuku_taskables_question_votes', 'index_tasks_taskables_question_votes_on_answer_id', 'index_tasuku_taskables_question_votes_on_answer_id'
+    rename_index 'tasuku_taskables_question_votes', 'index_tasks_taskables_question_votes_on_option_id', 'index_tasuku_taskables_question_votes_on_option_id'
+    rename_index 'tasuku_taskables_text_responses', 'tasks_taskable_text_responses_author', 'tasuku_taskable_text_responses_author'
+    rename_index 'tasuku_taskables_url_responses', 'tasks_taskable_url_responses_author', 'tasuku_taskable_url_responses_author'
+    rename_index 'tasuku_taskables_url_responses', 'index_tasks_taskables_url_responses_on_request_id', 'index_tasuku_taskables_url_responses_on_request_id'
+    rename_index 'tasuku_taskables_verification_confirmations', 'tasks_taskable_verification_confirmation_author', 'tasuku_taskable_verification_confirmation_author'
+    rename_index 'tasuku_taskables_verification_confirmations', 'tasks_taskable_verification_confirmation_verification', 'tasuku_taskable_verification_confirmation_verification'
+    rename_index 'tasuku_taskables_verifications', 'index_tasks_taskable_verifications_verifiable', 'index_tasuku_taskable_verifications_verifiable'
+    rename_index 'tasuku_tasks', 'index_tasuku_tasks_on_taskable_id_and_taskable_type', 'index_tasks_tasks_on_taskable_id_and_taskable_type'
   end
 end
