@@ -115,6 +115,7 @@ nb:
         responses:
           already_responded: 'Du har allerede sendt inn svartekst'
           response: 'Svar'
+          respond: 'Svar'
       urls:
         responses:
           already_answered: 'Du har allerede oppgitt en addresse'
