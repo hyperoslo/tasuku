@@ -54,6 +54,8 @@ Tasuku ships with views, but you can copy them to customize things to your likin
 $ rails generate tasks:views
 ```
 
+Tasuku defaults to using your application's layout, so you'll need to prefix your own route helpers with `main_app` so Ruby on Rails knows where to look.
+
 ## Usage
 
 ...
