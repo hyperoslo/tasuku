@@ -1,10 +1,10 @@
 # Tasuku
 
-[![Gem Version](https://img.shields.io/gem/v/tasks.svg)](https://rubygems.org/gems/tasks)
-[![Build Status](https://img.shields.io/travis/hyperoslo/tasks.svg)](https://travis-ci.org/hyperoslo/tasks)
-[![Dependency Status](https://img.shields.io/gemnasium/hyperoslo/tasks.svg)](https://gemnasium.com/hyperoslo/tasks)
-[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/tasks.svg)](https://codeclimate.com/github/hyperoslo/tasks)
-[![Coverage Status](https://img.shields.io/coveralls/hyperoslo/tasks.svg)](https://coveralls.io/r/hyperoslo/tasks)
+[![Gem Version](https://img.shields.io/gem/v/tasuku.svg)](https://rubygems.org/gems/tasuku)
+[![Build Status](https://img.shields.io/travis/hyperoslo/tasuku.svg)](https://travis-ci.org/hyperoslo/tasuku)
+[![Dependency Status](https://img.shields.io/gemnasium/hyperoslo/tasuku.svg)](https://gemnasium.com/hyperoslo/tasuku)
+[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/tasuku.svg)](https://codeclimate.com/github/hyperoslo/tasuku)
+[![Coverage Status](https://img.shields.io/coveralls/hyperoslo/tasuku.svg)](https://coveralls.io/r/hyperoslo/tasuku)
 
 ## Installation
 
