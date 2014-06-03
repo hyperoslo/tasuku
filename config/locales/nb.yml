@@ -8,14 +8,14 @@ nb:
         one: Spørsmål
         other: Spørsmål
       tasks/taskables/question/option:
-        one: Valg
-        other: Valg
+        one: Alternativ
+        other: Alternativer
+      tasks/taskables/question/vote:
+        one: Stemme
+        other: Stemmer
       tasks/taskables/question/answer:
         one: Svar
         other: Svar
-      tasks/taskables/question/option:
-        one: Valg
-        other: Valg
       tasks/taskables/verification:
         one: Verifisering
         other: Verifiseringer
@@ -31,41 +31,71 @@ nb:
       tasks/taskables/text/response:
         one: Svar på tekstforespørsler
         other: Svar på tekstforespørsler
+      tasks/taskables/verification/confirmation:
+        one: Bekreftelse
+        other: Bekreftelser
+      tasks/taskables/url/request:
+        one: URL-forespørsel
+        other: URL-forespørsler
+      tasks/taskables/url/response:
+        one: Svar på URL-forespørsel
+        other: Svar på URL-forespørsler
     attributes:
+      defaults: &DEFAULT_ATTRS
+        created_at: Opprettet
+        updated_at: Oppdatert
+        text: Tekst
+        verification: Verifisering
+        task: Oppgave
+        request: Forespørsel
+        responses: Svar
+        votes: Stemmer
+        description: Beskrivelse
       tasks/task:
+        <<: *DEFAULT_ATTRS
         taskable_type: Oppgavetype
         taskable: Oppgave
-        created_at: Opprettet
-        updated_at: Oppdatert
       tasks/taskables/question:
-        text: Tekst
+        <<: *DEFAULT_ATTRS
         description: Beskrivelse
-        created_at: Opprettet
-        updated_at: Oppdatert
+        multiple: Flere svar mulig?
+        show_statistics: Vis statistikk
+        options: Alternativer
       tasks/taskables/question/option:
-        text: Tekst
-        created_at: Opprettet
-        updated_at: Oppdatert
+        <<: *DEFAULT_ATTRS
+        question: Spørsmål
+        correct: Korrekt?
+        answers: Svar
+      tasks/taskables/question/vote:
+        <<: *DEFAULT_ATTRS
+        option: Alternativ
+        answer: Svar
       tasks/taskables/question/answer:
-        option: Valg
+        <<: *DEFAULT_ATTRS
+        option: Alternativ
         author: Forfatter
-        option_id: Valg
-        created_at: Opprettet
-        updated_at: Oppdatert
+        option_id: Alternativ
       tasks/taskables/verification:
+        <<: *DEFAULT_ATTRS
         verifiable: Verifisering
-        created_at: Opprettet
-        updated_at: Oppdatert
+        confirmations: Bekreftelser
+      tasks/taskables/verification/confirmation:
+        <<: *DEFAULT_ATTRS
       tasks/taskables/image/request:
-        text: Tekst
-        description: Beskrivelse
+        <<: *DEFAULT_ATTRS
       tasks/taskables/image/response:
+        <<: *DEFAULT_ATTRS
         image: Bilde
       tasks/taskables/text/request:
-        text: Tekst
-        description: Beskrivelse
+        <<: *DEFAULT_ATTRS
       tasks/taskables/text/response:
+        <<: *DEFAULT_ATTRS
         text: Svartekst
+      tasks/taskables/url/request:
+        <<: *DEFAULT_ATTRS
+      tasks/taskables/url/response:
+        <<: *DEFAULT_ATTRS
+
   tasks:
     taskables:
       verifications:
@@ -85,6 +115,7 @@ nb:
         responses:
           already_responded: 'Du har allerede sendt inn svartekst'
           response: 'Svar'
+          respond: 'Svar'
       urls:
         responses:
           already_answered: 'Du har allerede oppgitt en addresse'
