@@ -141,7 +141,7 @@ ActiveRecord::Schema.define(version: 20140604075046) do
     t.string   "taskable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "obligatory",    default: false
+    t.boolean  "obligatory",    default: false, null: false
   end
 
   add_index "tasks_tasks", ["taskable_id", "taskable_type"], name: "index_tasks_tasks_on_taskable_id_and_taskable_type"
