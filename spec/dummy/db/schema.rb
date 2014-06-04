@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140523091152) do
+ActiveRecord::Schema.define(version: 20140604075046) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -141,6 +141,7 @@ ActiveRecord::Schema.define(version: 20140523091152) do
     t.string   "taskable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "obligatory",    default: false
   end
 
   add_index "tasks_tasks", ["taskable_id", "taskable_type"], name: "index_tasks_tasks_on_taskable_id_and_taskable_type"
