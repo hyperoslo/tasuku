@@ -7,7 +7,7 @@
         <%= radio_button_tag 'taskables_question_answer[option_ids][]', option.id %>
       <% end %>
       <%= form.label :option_id, option.text, value: option.id %>
-    </div>  
+    </div>
   <% end %>
 
   <%= form.submit t('tasks.taskables.questions.answers.submit') %>
