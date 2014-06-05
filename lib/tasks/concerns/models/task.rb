@@ -3,9 +3,8 @@ module Tasks::Concerns::Models::Task
 
   included do
     belongs_to :taskable, polymorphic: true
-    has_many   :responses
+    has_many   :responses, class_name: '::Tasks::Taskables::Taskable::Response'
 
-    # TODO: These should be SQL. But that's hard.
     scope :completed_by,  ->(author) do
       joins(:responses).where(
         "tasks_taskables_taskable_responses.author_id = ? and
