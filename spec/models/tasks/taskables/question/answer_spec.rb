@@ -81,12 +81,11 @@ module Tasks
       end
     end
 
-    # it_behaves_like "trackable submission" do
-    #   let!(:task) {create(:question_task)}
-    #   let!(:subject) do
-    #    create :question_answer, author: user,
-    #           request: task.taskable.request, options: [task.taskable.options.first]
-    #   end
-    # end
+    it_behaves_like "trackable submission" do
+      let!(:task) {create(:question_task)}
+      let!(:subject) do
+        create :question_answer, author: user, options: [task.taskable.options.first]
+      end
+    end
   end
 end
