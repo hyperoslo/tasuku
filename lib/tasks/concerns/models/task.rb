@@ -3,9 +3,16 @@ module Tasks::Concerns::Models::Task
 
   included do
     belongs_to :taskable, polymorphic: true
+    has_many   :responses
 
     # TODO: These should be SQL. But that's hard.
-    scope :completed_by,  ->(author) { all.select { |task| task.completed_by? author }}
+    scope :completed_by,  ->(author) do
+      joins(:responses).where(
+        "tasks_taskables_taskable_responses.author_id = ? and
+         tasks_taskables_taskable_responses.author_type = ?",
+         author.id, author.class.name
+       )
+    end
     scope :incomplete_by, ->(author) { all.reject { |task| task.completed_by? author }}
 
     validates :taskable, presence: true

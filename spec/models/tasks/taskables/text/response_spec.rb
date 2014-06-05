@@ -5,7 +5,13 @@ module Tasks
     let(:user)     { create :user }
 
     it_behaves_like "trackable submission" do
-      let!(:subject) { create :tasks_taskables_text_response, author: user }
+      let!(:task) {create(:text_task)}
+      let!(:subject) do
+        create(
+          :tasks_taskables_text_response, author: user,
+          request: task.taskable
+        )
+      end
     end
   end
 end

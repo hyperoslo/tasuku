@@ -6,9 +6,12 @@ module Tasks
       scope :by, ->(author) { where author: author }
 
       after_create do |model|
-        Tasks::Taskables::Taskable::Response.create do |response|
-          response.author = model.author
-          response.submittable = model
+        if model.request.task.present?
+          Tasks::Taskables::Taskable::Response.create do |response|
+            response.author = model.author
+            response.submittable = model
+            response.task = model.request.task
+          end
         end
       end
 

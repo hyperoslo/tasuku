@@ -6,7 +6,13 @@ module Tasks
     let(:image) {fixture_file_upload('doge.jpg', 'image/jpeg')}
 
     it_behaves_like "trackable submission" do
-      let!(:subject) {create(:tasks_taskables_image_response, author: user, image: image)}
+      let!(:task) {create(:image_task)}
+      let!(:subject) do
+        create(
+          :tasks_taskables_image_response, author: user,
+          image: image, request: task.taskable
+        )
+      end
     end
   end
 end
