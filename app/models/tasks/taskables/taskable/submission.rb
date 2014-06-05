@@ -4,6 +4,20 @@ module Tasks
 
     included do
       scope :by, ->(author) { where author: author }
+
+      after_create do |model|
+        Tasks::Taskables::Taskable::Response.create do |response|
+          response.author = model.author
+          response.submittable = model
+        end
+      end
+
+      before_destroy do |model|
+        Tasks::Taskables::Taskable::Response.where(
+          "submittable_id = ? and submittable_type = ? and author_id = ? and author_type = ?", 
+          model.id, model.class.name, model.author.id, model.author.class.name
+        ).delete_all
+      end
     end
 
     module ClassMethods

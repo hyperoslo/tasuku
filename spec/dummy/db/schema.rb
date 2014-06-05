@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140604075046) do
+ActiveRecord::Schema.define(version: 20140605095241) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -75,6 +75,15 @@ ActiveRecord::Schema.define(version: 20140604075046) do
     t.boolean  "multiple"
     t.boolean  "show_statistics", default: true
     t.string   "image"
+  end
+
+  create_table "tasks_taskables_taskable_responses", force: true do |t|
+    t.integer  "submittable_id"
+    t.string   "submittable_type"
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tasks_taskables_text_requests", force: true do |t|
