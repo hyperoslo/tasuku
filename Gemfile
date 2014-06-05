@@ -14,5 +14,3 @@ gem 'rails', '4.1.0.rc1'
 
 # To use debugger
 # gem 'debugger'
-gem 'guard', require: false
-gem 'guard-rspec'
