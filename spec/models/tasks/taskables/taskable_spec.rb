@@ -26,5 +26,24 @@ module Tasks
       end
 
     end
+
+    describe '#completed_by?' do
+      let(:taskable) { create :verification }
+      let(:user)     { create :user }
+
+      context 'with an incomplete task' do
+        it 'determines that the author has not completed it' do
+          expect(taskable).not_to be_completed_by user
+        end
+      end
+
+      context 'with a completed task' do
+        before { create :verification_confirmation, author: user, verification: taskable }
+
+        it 'determines that the author has completed it' do
+          expect(taskable).to be_completed_by user
+        end
+      end
+    end
   end
 end
