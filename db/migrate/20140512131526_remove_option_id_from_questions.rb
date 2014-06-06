@@ -8,8 +8,15 @@ class RemoveOptionIdFromQuestions < ActiveRecord::Migration
   end
 
   class Tasuku::Taskables::Question::Vote < ActiveRecord::Base
+    self.table_name = 'tasks_taskables_question_votes'
     belongs_to :option
     belongs_to :answer
+  end
+
+  class Tasuku::Taskables::Question::Option < ActiveRecord::Base
+    self.table_name = 'tasks_taskables_question_options'
+    belongs_to :vote
+    belongs_to :option
   end
 
   def up
