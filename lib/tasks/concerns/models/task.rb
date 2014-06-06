@@ -10,7 +10,7 @@ module Tasks::Concerns::Models::Task
         "tasks_taskables_taskable_responses.author_id = ? and
          tasks_taskables_taskable_responses.author_type = ?",
          author.id, author.class.name
-       )
+      ).uniq
     end
     scope :incomplete_by, ->(author) { all.reject { |task| task.completed_by? author }}
 
