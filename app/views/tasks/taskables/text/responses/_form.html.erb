@@ -1,5 +1,7 @@
 <%= form_for request.responses.build, url: tasks.text_request_responses_path(request_id: request.id), method: :post, html: { multipart: true } do |form| %>
   <%= form.text_area :text %>
 
-  <%= form.submit t('tasks.taskables.texts.responses.respond') %>
+  <%= form.submit t('tasks.taskables.texts.responses.respond'), data: {
+    disable_with: t('tasks.taskables.texts.responses.responding')
+  } %>
 <% end %>
