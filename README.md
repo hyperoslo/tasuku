@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Install the gem:
 
-    $ rails generate tasks:install
+    $ rails generate tasuku:install
 
 Run the migrations:
 
@@ -33,15 +33,15 @@ Then you can change the default configurations:
 ```ruby
 # config/routes.rb
 Rails.application.routes.draw do
-  mount Tasks::Engine, at: '/tasks'
+  mount Tasuku::Engine, at: '/tasks'
 end
 ```
 
 And the method to use in deriving the current user:
 
 ```ruby
-# config/initializers/tasks.rb
-Tasks.configure do |config|
+# config/initializers/tasuku.rb
+Tasuku.configure do |config|
   config.author = :current_user
 end
 ```
@@ -51,7 +51,7 @@ end
 Tasuku ships with views, but you can copy them to customize things to your liking:
 
 ```
-$ rails generate tasks:views
+$ rails generate tasuku:views
 ```
 
 Tasuku defaults to using your application's layout, so you'll need to prefix your own route helpers with `main_app` so Ruby on Rails knows where to look.
@@ -79,4 +79,4 @@ and if you're using this library we probably want to hire you.
 
 ## License
 
-Tasks is available under the MIT license. See the LICENSE file for more info.
+Tasuku is available under the MIT license. See the LICENSE file for more info.

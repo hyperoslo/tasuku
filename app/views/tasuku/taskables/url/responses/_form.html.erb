@@ -1,0 +1,5 @@
+<%= form_for request.responses.build, url: tasuku.url_request_responses_path(request_id: request.id), method: :post, html: { multipart: true } do |form| %>
+  <%= form.text_field :url %>
+
+  <%= form.submit t('tasuku.taskables.urls.responses.answer') %>
+<% end %>

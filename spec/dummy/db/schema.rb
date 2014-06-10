@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605124021) do
+ActiveRecord::Schema.define(version: 20140610121130) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "tasks_taskables_image_requests", force: true do |t|
+  create_table "tasuku_taskables_image_requests", force: true do |t|
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.string   "image"
   end
 
-  create_table "tasks_taskables_image_responses", force: true do |t|
+  create_table "tasuku_taskables_image_responses", force: true do |t|
     t.string   "image"
     t.integer  "request_id"
     t.integer  "author_id"
@@ -35,19 +35,19 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.datetime "updated_at"
   end
 
-  add_index "tasks_taskables_image_responses", ["author_id", "author_type"], name: "tasks_taskable_image_responses_author"
-  add_index "tasks_taskables_image_responses", ["request_id"], name: "index_tasks_taskables_image_responses_on_request_id"
+  add_index "tasuku_taskables_image_responses", ["author_id", "author_type"], name: "tasuku_taskable_image_responses_author"
+  add_index "tasuku_taskables_image_responses", ["request_id"], name: "index_tasuku_taskables_image_responses_on_request_id"
 
-  create_table "tasks_taskables_question_answers", force: true do |t|
+  create_table "tasuku_taskables_question_answers", force: true do |t|
     t.integer  "author_id"
     t.string   "author_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "tasks_taskables_question_answers", ["author_id", "author_type"], name: "tasks_taskable_question_answers_author"
+  add_index "tasuku_taskables_question_answers", ["author_id", "author_type"], name: "tasuku_taskable_question_answers_author"
 
-  create_table "tasks_taskables_question_options", force: true do |t|
+  create_table "tasuku_taskables_question_options", force: true do |t|
     t.text     "text"
     t.integer  "question_id"
     t.datetime "created_at"
@@ -55,19 +55,19 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.boolean  "correct",     default: false
   end
 
-  add_index "tasks_taskables_question_options", ["question_id"], name: "index_tasks_taskables_question_options_on_question_id"
+  add_index "tasuku_taskables_question_options", ["question_id"], name: "index_tasuku_taskables_question_options_on_question_id"
 
-  create_table "tasks_taskables_question_votes", force: true do |t|
+  create_table "tasuku_taskables_question_votes", force: true do |t|
     t.integer  "answer_id"
     t.integer  "option_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "tasks_taskables_question_votes", ["answer_id"], name: "index_tasks_taskables_question_votes_on_answer_id"
-  add_index "tasks_taskables_question_votes", ["option_id"], name: "index_tasks_taskables_question_votes_on_option_id"
+  add_index "tasuku_taskables_question_votes", ["answer_id"], name: "index_tasuku_taskables_question_votes_on_answer_id"
+  add_index "tasuku_taskables_question_votes", ["option_id"], name: "index_tasuku_taskables_question_votes_on_option_id"
 
-  create_table "tasks_taskables_questions", force: true do |t|
+  create_table "tasuku_taskables_questions", force: true do |t|
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.string   "image"
   end
 
-  create_table "tasks_taskables_taskable_responses", force: true do |t|
+  create_table "tasuku_taskables_taskable_responses", force: true do |t|
     t.integer  "submittable_id"
     t.string   "submittable_type"
     t.integer  "author_id"
@@ -87,9 +87,9 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.integer  "task_id"
   end
 
-  add_index "tasks_taskables_taskable_responses", ["task_id"], name: "index_tasks_taskables_taskable_responses_on_task_id"
+  add_index "tasuku_taskables_taskable_responses", ["task_id"], name: "index_tasuku_taskables_taskable_responses_on_task_id"
 
-  create_table "tasks_taskables_text_requests", force: true do |t|
+  create_table "tasuku_taskables_text_requests", force: true do |t|
     t.text     "text"
     t.text     "description"
     t.datetime "created_at"
@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.string   "image"
   end
 
-  create_table "tasks_taskables_text_responses", force: true do |t|
+  create_table "tasuku_taskables_text_responses", force: true do |t|
     t.text     "text"
     t.integer  "request_id"
     t.integer  "author_id"
@@ -106,9 +106,9 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.datetime "updated_at"
   end
 
-  add_index "tasks_taskables_text_responses", ["author_id", "author_type"], name: "tasks_taskable_text_responses_author", unique: true
+  add_index "tasuku_taskables_text_responses", ["author_id", "author_type"], name: "tasuku_taskable_text_responses_author", unique: true
 
-  create_table "tasks_taskables_url_requests", force: true do |t|
+  create_table "tasuku_taskables_url_requests", force: true do |t|
     t.text     "text"
     t.text     "description"
     t.datetime "created_at"
@@ -116,7 +116,7 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.string   "image"
   end
 
-  create_table "tasks_taskables_url_responses", force: true do |t|
+  create_table "tasuku_taskables_url_responses", force: true do |t|
     t.text     "url"
     t.integer  "request_id"
     t.integer  "author_id"
@@ -125,10 +125,10 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.datetime "updated_at"
   end
 
-  add_index "tasks_taskables_url_responses", ["author_id", "author_type"], name: "tasks_taskable_url_responses_author", unique: true
-  add_index "tasks_taskables_url_responses", ["request_id"], name: "index_tasks_taskables_url_responses_on_request_id"
+  add_index "tasuku_taskables_url_responses", ["author_id", "author_type"], name: "tasuku_taskable_url_responses_author", unique: true
+  add_index "tasuku_taskables_url_responses", ["request_id"], name: "index_tasuku_taskables_url_responses_on_request_id"
 
-  create_table "tasks_taskables_verification_confirmations", force: true do |t|
+  create_table "tasuku_taskables_verification_confirmations", force: true do |t|
     t.integer  "verification_id"
     t.integer  "author_id"
     t.string   "author_type"
@@ -136,19 +136,19 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.datetime "updated_at"
   end
 
-  add_index "tasks_taskables_verification_confirmations", ["author_id", "author_type"], name: "tasks_taskable_verification_confirmation_author"
-  add_index "tasks_taskables_verification_confirmations", ["verification_id"], name: "tasks_taskable_verification_confirmation_verification"
+  add_index "tasuku_taskables_verification_confirmations", ["author_id", "author_type"], name: "tasuku_taskable_verification_confirmation_author"
+  add_index "tasuku_taskables_verification_confirmations", ["verification_id"], name: "tasuku_taskable_verification_confirmation_verification"
 
-  create_table "tasks_taskables_verifications", force: true do |t|
+  create_table "tasuku_taskables_verifications", force: true do |t|
     t.integer  "verifiable_id"
     t.string   "verifiable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "tasks_taskables_verifications", ["verifiable_id", "verifiable_type"], name: "index_tasks_taskable_verifications_verifiable", unique: true
+  add_index "tasuku_taskables_verifications", ["verifiable_id", "verifiable_type"], name: "index_tasuku_taskable_verifications_verifiable", unique: true
 
-  create_table "tasks_tasks", force: true do |t|
+  create_table "tasuku_tasks", force: true do |t|
     t.integer  "taskable_id"
     t.string   "taskable_type"
     t.datetime "created_at"
@@ -156,7 +156,7 @@ ActiveRecord::Schema.define(version: 20140605124021) do
     t.boolean  "obligatory",    default: false, null: false
   end
 
-  add_index "tasks_tasks", ["taskable_id", "taskable_type"], name: "index_tasks_tasks_on_taskable_id_and_taskable_type"
+  add_index "tasuku_tasks", ["taskable_id", "taskable_type"], name: "index_tasuku_tasks_on_taskable_id_and_taskable_type"
 
   create_table "users", force: true do |t|
     t.datetime "created_at"

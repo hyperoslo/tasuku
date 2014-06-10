@@ -1,34 +1,34 @@
 nb:
   activerecord:
     models:
-      tasks/task:
+      tasuku/task:
         one: Oppgave
         other: Oppgaver
-      tasks/taskables/question:
+      tasuku/taskables/question:
         one: Spørsmål
         other: Spørsmål
-      tasks/taskables/question/option:
+      tasuku/taskables/question/option:
         one: Alternativ
         other: Alternativer
-      tasks/taskables/question/vote:
+      tasuku/taskables/question/vote:
         one: Stemme
         other: Stemmer
-      tasks/taskables/question/answer:
+      tasuku/taskables/question/answer:
         one: Svar
         other: Svar
-      tasks/taskables/verification:
+      tasuku/taskables/verification:
         one: Verifisering
         other: Verifiseringer
-      tasks/taskables/image/request:
+      tasuku/taskables/image/request:
         one: Bildeforespørsel
         other: Bildeforespørsler
-      tasks/taskables/image/response:
+      tasuku/taskables/image/response:
         one: Svar på bildeforespørsel
         other: Svar på bildeforespørsler
-      tasks/taskables/text/request:
+      tasuku/taskables/text/request:
         one: Tekstforespørsel
         other: Tekstforespørsler
-      tasks/taskables/text/response:
+      tasuku/taskables/text/response:
         one: Svar på tekstforespørsler
         other: Svar på tekstforespørsler
       tasks/taskables/verification/confirmation:
@@ -51,52 +51,51 @@ nb:
         responses: Svar
         votes: Stemmer
         description: Beskrivelse
-      tasks/task:
+      tasuku/task:
         <<: *DEFAULT_ATTRS
         taskable_type: Oppgavetype
         taskable: Oppgave
-      tasks/taskables/question:
+      tasuku/taskables/question:
         <<: *DEFAULT_ATTRS
         description: Beskrivelse
         multiple: Flere svar mulig?
         show_statistics: Vis statistikk
         options: Alternativer
-      tasks/taskables/question/option:
+      tasuku/taskables/question/option:
         <<: *DEFAULT_ATTRS
         question: Spørsmål
         correct: Korrekt?
         answers: Svar
-      tasks/taskables/question/vote:
+      tasuku/taskables/question/vote:
         <<: *DEFAULT_ATTRS
         option: Alternativ
         answer: Svar
-      tasks/taskables/question/answer:
+      tasuku/taskables/question/answer:
         <<: *DEFAULT_ATTRS
         option: Alternativ
         author: Forfatter
         option_id: Alternativ
-      tasks/taskables/verification:
+      tasuku/taskables/verification:
         <<: *DEFAULT_ATTRS
         verifiable: Verifisering
         confirmations: Bekreftelser
-      tasks/taskables/verification/confirmation:
+      tasuku/taskables/verification/confirmation:
         <<: *DEFAULT_ATTRS
-      tasks/taskables/image/request:
+      tasuku/taskables/image/request:
         <<: *DEFAULT_ATTRS
-      tasks/taskables/image/response:
+      tasuku/taskables/image/response:
         <<: *DEFAULT_ATTRS
         image: Bilde
-      tasks/taskables/text/request:
+      tasuku/taskables/text/request:
         <<: *DEFAULT_ATTRS
-      tasks/taskables/text/response:
+      tasuku/taskables/text/response:
         <<: *DEFAULT_ATTRS
         text: Svartekst
-      tasks/taskables/url/request:
+      tasuku/taskables/url/request:
         <<: *DEFAULT_ATTRS
-      tasks/taskables/url/response:
+      tasuku/taskables/url/response:
         <<: *DEFAULT_ATTRS
-
-  tasks:
+  tasuku:
     taskables:
       verifications:
         confirmations:

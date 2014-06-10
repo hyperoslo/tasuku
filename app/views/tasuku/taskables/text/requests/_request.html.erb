@@ -1,0 +1,19 @@
+<% if request.image? %>
+  <div class="image"><%= image_tag request.image %></div>
+<% end %>
+
+<div class="text"><%= request.text %></div>
+<div class="description"><%= request.description %></div>
+
+<% if request.completed_by? current_author %>
+  <%= t 'tasuku.taskables.texts.responses.already_responded' %>
+  <div class="response">
+    <% request.responses.by(current_user).each do |response| %>
+      <%= response.text %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="form">
+    <%= render partial: 'tasuku/taskables/text/responses/form', locals: { request: request } %>
+  </div>
+<% end %>

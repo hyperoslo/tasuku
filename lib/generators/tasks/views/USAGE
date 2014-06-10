@@ -1,5 +1,0 @@
-Description:
-    Copies the tasks view files
-
-Example:
-    rails generate tasks:views
