@@ -4,7 +4,7 @@ require 'views/tasuku/taskables/illustration_spec'
 describe 'tasuku/taskables/url/requests/_request.html.erb' do
   let(:user) { create :user }
 
-  context 'for url requests that have an image' do
+  context 'for url requests that have an image or video' do
     let(:url_request) { create :url_request, image: fixture("doge.jpg"), video_url: 'https://www.youtube.com/watch?v=z9Uz1icjwrM' }
 
     before do
@@ -18,7 +18,7 @@ describe 'tasuku/taskables/url/requests/_request.html.erb' do
     it_behaves_like 'illustrations'
   end
 
-  context 'for url requests that have no image' do
+  context 'for url requests that have no image or video' do
     let(:url_request) { create :url_request }
 
     before do

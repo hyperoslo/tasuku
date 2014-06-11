@@ -4,7 +4,7 @@ require 'views/tasuku/taskables/illustration_spec'
 describe 'tasuku/taskables/questions/_question.html.erb' do
   let(:user)     { create :user }
 
-  context 'for questions that have an illustration' do
+  context 'for questions that have an image or video' do
     let(:question) { create :question_with_options, image: fixture("doge.jpg"), video_url: 'https://www.youtube.com/watch?v=z9Uz1icjwrM' }
 
     before do
@@ -18,7 +18,7 @@ describe 'tasuku/taskables/questions/_question.html.erb' do
     it_behaves_like 'illustrations'
   end
 
-  context 'for questions that have no image' do
+  context 'for questions that have no image or video' do
     let(:question) { create :question_with_options }
 
     before do
