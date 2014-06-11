@@ -1,0 +1,7 @@
+<% if request.image? %>
+  <div class="image"><%= image_tag request.image %></div>
+<% end %>
+
+<% if request.video_id %>
+  <div class="video"><%= embed_video(request, '100%', '100%') %></div>
+<% end %>
