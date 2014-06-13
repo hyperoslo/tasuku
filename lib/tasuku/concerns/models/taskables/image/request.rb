@@ -8,6 +8,8 @@ module Tasuku
 
       has_many :responses
 
+      validates_presence_of :text
+
       responses are: :responses
 
       def to_s
