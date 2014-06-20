@@ -12,5 +12,7 @@
     </div>
   <% end %>
 
-  <%= form.submit t('tasuku.taskables.questions.answers.submit') %>
+  <%= form.submit t('tasuku.taskables.questions.answers.submit'), data: {
+    disable_with: t('tasuku.taskables.questions.answers.submitting')
+  } %>
 <% end %>

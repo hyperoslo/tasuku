@@ -100,11 +100,13 @@ nb:
       verifications:
         confirmations:
           confirm: 'Bekreft'
+          confirming: 'Bekrefter...'
       questions:
         answers:
-          submit: 'Svar'
           already_answered: 'Du har allerede svart på spørsmålet'
           can_only_vote_once: 'Du kan kun avgi ett svar'
+          submit: 'Svar'
+          submitting: 'Sender inn...'
       images:
         responses:
           already_uploaded: 'Du har allerede lastet opp et bilde'
@@ -115,7 +117,9 @@ nb:
           already_responded: 'Du har allerede sendt inn svartekst'
           response: 'Svar'
           respond: 'Svar'
+          responding: 'Sender inn...'
       urls:
         responses:
           already_answered: 'Du har allerede oppgitt en addresse'
           answer: 'Svar'
+          answering: 'Sender inn...'
