@@ -1,5 +1,0 @@
-<%= form_for confirmation, url: tasks.verification_confirmations_path(verification_id: confirmation.verification.id), method: :post do |form| %>
-  <%= form.submit t('tasks.taskables.verifications.confirmations.confirm'), data: {
-    disable_with: t('tasks.taskables.verifications.confirmations.confirming')
-  } %>
-<% end %>

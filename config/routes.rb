@@ -1,4 +1,4 @@
-Tasks::Engine.routes.draw do
+Tasuku::Engine.routes.draw do
   resources :tasks, only: [:show]
 
   scope module: :taskables do
