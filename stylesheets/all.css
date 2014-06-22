@@ -75,47 +75,53 @@ p {
   line-height: 22px; }
 
 /* line 36, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+.center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%); }
+
+/* line 41, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 .repository {
+  position: relative;
   width: 30%;
   margin: 0 auto; }
 
-/* line 40, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+/* line 46, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 h1, h2, h3 {
   font-family: "Permanent Marker";
   text-align: center; }
 
-/* line 44, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+/* line 50, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 h2, h3 {
   text-transform: uppercase; }
 
-/* line 47, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+/* line 53, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 h2 {
   font-size: 50px; }
 
-/* line 50, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+/* line 56, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 h3 {
   font-size: 15px; }
 
-/* line 53, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+/* line 59, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 .headline {
   margin-bottom: 30px; }
-  /* line 56, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+  /* line 62, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   .headline h2 {
     margin-bottom: 0; }
-  /* line 59, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+  /* line 65, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   .headline .phonetic {
     text-align: center; }
 
-/* line 62, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+/* line 68, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 .phonetic {
   opacity: 0.5;
   font-style: italic; }
 
-/* line 66, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+/* line 72, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 #logo {
   font-family: "Hiragino";
   font-size: 100px;
   width: 100px;
   margin: 0 auto;
-  padding: 30px;
   text-align: center; }
