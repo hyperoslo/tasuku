@@ -1,0 +1,19 @@
+$media-tablet: 768px !default
+$media-desktop: 1024px !default
+
+@mixin respond-to($media)
+  @if $media == desktop
+    @media screen and (min-width: $media-desktop)
+      @content
+
+  @if $media == mobile
+    @media screen and (max-width: $media-tablet - 1px)
+      @content
+
+  @else if $media == tablet
+    @media only screen and (min-width: $media-tablet) and (max-width: $media-desktop - 1px)
+      @content
+
+  @else if $media == non-desktop
+    @media only screen and (max-width: $media-desktop - 1px)
+      @content
