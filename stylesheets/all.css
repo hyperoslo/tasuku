@@ -110,13 +110,28 @@ h3 {
   font-style: italic; }
 
 /* line 66, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+#hyper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: block;
+  overflow: hidden;
+  width: 100px; }
+  /* line 4, /Users/jgorset/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bourbon-3.2.3/app/assets/stylesheets/addons/_hide-text.scss */
+  #hyper:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%; }
+
+/* line 74, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 #logo {
   font-family: "Hiragino";
   font-size: 100px;
   width: 100px;
   margin: 0 auto;
   text-align: center; }
-  /* line 73, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+  /* line 81, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   #logo .letter {
     -webkit-animation: pop 0.5s 1 ease-in-out;
     -moz-animation: pop 0.5s 1 ease-in-out;
@@ -124,31 +139,31 @@ h3 {
     -webkit-animation-fill-mode: backwards;
     -moz-animation-fill-mode: backwards;
     animation-fill-mode: backwards; }
-  /* line 77, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+  /* line 85, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   #logo .letter.first {
     -webkit-animation-delay: 0.3s;
     -moz-animation-delay: 0.3s;
     animation-delay: 0.3s; }
-  /* line 80, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+  /* line 88, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   #logo .letter.second {
     -webkit-animation-delay: 0.2s;
     -moz-animation-delay: 0.2s;
     animation-delay: 0.2s; }
-  /* line 83, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+  /* line 91, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   #logo .letter.third {
     -webkit-animation-delay: 0.1s;
     -moz-animation-delay: 0.1s;
     animation-delay: 0.1s; }
 
-/* line 87, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+/* line 95, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 .headline {
   margin-bottom: 30px;
   -webkit-animation: pop 0.5s 1 ease-in-out;
   -moz-animation: pop 0.5s 1 ease-in-out;
   animation: pop 0.5s 1 ease-in-out; }
-  /* line 91, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+  /* line 99, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   .headline h2 {
     margin-bottom: 0; }
-  /* line 94, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
+  /* line 102, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   .headline .phonetic {
     text-align: center; }
