@@ -11,7 +11,7 @@ $light: lighten($dark, 40%)
   0%
     opacity: 0
     +perspective(500px)
-    +transform(scale(0.9, 0.9) rotateY(60deg))
+    +transform(scale(0.8, 0.8) rotateY(60deg))
   100%
     opacity: 1
     +perspective(500px)
@@ -38,9 +38,6 @@ p
   top: 50%
   -webkit-transform: translateY(-50%)
 
-.banner
-  +animation(pop .5s 1 ease-in-out)
-
 .repository
   position: relative
   width: 30%
@@ -62,15 +59,6 @@ h2
 h3
   font-size: 15px
 
-.headline
-  margin-bottom: 30px
-  
-  h2
-    margin-bottom: 0
-
-  .phonetic
-    text-align: center
-
 .phonetic
   opacity: 0.5
   font-style: italic
@@ -81,3 +69,28 @@ h3
   width: 100px
   margin: 0 auto
   text-align: center
+
+  .letter
+    +animation(pop .5s 1 ease-in-out)
+    +animation-fill-mode(backwards)
+
+  .letter.first
+    +animation-delay(0.3s)
+
+  .letter.second
+    +animation-delay(0.2s)
+
+  .letter.third
+    +animation-delay(0.1s)
+  
+
+.headline
+  margin-bottom: 30px
+  +animation(pop .5s 1 ease-in-out)
+
+  h2
+    margin-bottom: 0
+
+  .phonetic
+    text-align: center
+
