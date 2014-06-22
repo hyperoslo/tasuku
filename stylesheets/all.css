@@ -53,7 +53,7 @@
 
 @font-face {
   font-family: "Hiragino";
-  src: url("/fonts/hiragino.otf"); }
+  src: url("../fonts/hiragino.otf"); }
 
 /* line 23, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 body {
