@@ -67,8 +67,8 @@ body {
   -moz-animation: pop 0.5s 1 ease-in-out;
   animation: pop 0.5s 1 ease-in-out;
   background-color: #475d5f;
-  background-image: -webkit-linear-gradient(-320deg, #475d5f, #6c8284);
-  background-image: linear-gradient(50deg,#475d5f, #6c8284); }
+  background-image: -webkit-linear-gradient(-315deg, #475d5f, #afc1c3);
+  background-image: linear-gradient(45deg,#475d5f, #afc1c3); }
 
 /* line 33, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
 p {
