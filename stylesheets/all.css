@@ -5,7 +5,7 @@
   0% {
     opacity: 0;
     -webkit-perspective: 500px;
-    -webkit-transform: scale(0.9, 0.9) rotateY(50deg); }
+    -webkit-transform: scale(0.9, 0.9) rotateY(60deg); }
 
   /* line 15, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   100% {
@@ -18,7 +18,7 @@
   0% {
     opacity: 0;
     -moz-perspective: 500px;
-    -moz-transform: scale(0.9, 0.9) rotateY(50deg); }
+    -moz-transform: scale(0.9, 0.9) rotateY(60deg); }
 
   /* line 15, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   100% {
@@ -33,11 +33,11 @@
     -webkit-perspective: 500px;
     -moz-perspective: 500px;
     perspective: 500px;
-    -webkit-transform: scale(0.9, 0.9) rotateY(50deg);
-    -moz-transform: scale(0.9, 0.9) rotateY(50deg);
-    -ms-transform: scale(0.9, 0.9) rotateY(50deg);
-    -o-transform: scale(0.9, 0.9) rotateY(50deg);
-    transform: scale(0.9, 0.9) rotateY(50deg); }
+    -webkit-transform: scale(0.9, 0.9) rotateY(60deg);
+    -moz-transform: scale(0.9, 0.9) rotateY(60deg);
+    -ms-transform: scale(0.9, 0.9) rotateY(60deg);
+    -o-transform: scale(0.9, 0.9) rotateY(60deg);
+    transform: scale(0.9, 0.9) rotateY(60deg); }
 
   /* line 15, /Users/jgorset/code/ruby/tasuku/source/stylesheets/all.css.sass */
   100% {
