@@ -4,7 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker:400)
 
 $dark: rgb(71, 93, 95)
-$light: rgb(108, 130, 132)
+$light: lighten($dark, 40%)
 
 +keyframes(pop)
   0%
@@ -28,7 +28,7 @@ body
   font-size: 14px
   color: #fff
   +animation(pop .5s 1 ease-in-out)
-  +linear-gradient(50deg, $dark, $light)
+  +linear-gradient(45deg, $dark, $light)
 
 p
   line-height: 22px
