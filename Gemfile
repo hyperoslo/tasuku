@@ -8,6 +8,9 @@ gem "middleman", "~>3.3.3"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
+# Easy deployment of Middleman sites to Github Pages
+gem "middleman-gh-pages"
+
 # Bourbon extension for Middleman
 gem "middleman-bourbon"
 
