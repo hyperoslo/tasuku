@@ -4,11 +4,13 @@ en:
       verifications:
         confirmations:
           confirm: 'Confirm'
+          confirming: 'Confirming...'
       questions:
         answers:
-          submit: 'Submit'
           already_answered: 'You have already answered this question'
           can_only_vote_once: 'You may only select one alternative'
+          submit: 'Submit'
+          submitting: 'Submitting...'
       images:
         responses:
           already_uploaded: 'You have already uploaded an image'
@@ -18,7 +20,9 @@ en:
         responses:
           already_responded: 'You have already submitted a text'
           respond: 'Submit'
+          responding: 'Responding...'
       urls:
         responses:
           already_answered: 'You have already answered'
           answer: 'Answer'
+          answering: 'Answering...'
