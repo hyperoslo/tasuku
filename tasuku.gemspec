@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'configatron', '~> 3.0'
   s.add_dependency 'carrierwave', '~> 0.10'
   s.add_dependency 'mini_magick', '~> 3.7'
-  s.add_dependency 'embeddable', '~> 0.0.6'
+  s.add_dependency 'embeddable', '~> 0.0.8'
 
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rspec-rails'
