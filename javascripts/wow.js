@@ -304,15 +304,3 @@
   })();
 
 }).call(this);
-(function() {
-  $(function() {
-    $(window).on('resize', function() {
-      return $('.banner').css({
-        height: $(window).height()
-      });
-    });
-    $(window).trigger('resize');
-    return new WOW().init();
-  });
-
-}).call(this);
