@@ -4,7 +4,7 @@ PATH
     tasuku (0.1.1)
       carrierwave (~> 0.10)
       configatron (~> 3.0)
-      embeddable (~> 0.0.6)
+      embeddable (~> 0.0.8)
       mini_magick (~> 3.7)
       rails (~> 4.0)
 
@@ -60,7 +60,7 @@ GEM
       thor
     diff-lcs (1.2.5)
     docile (1.1.3)
-    embeddable (0.0.7)
+    embeddable (0.0.8)
       activesupport (~> 4.0)
     erubis (2.7.0)
     factory_girl (4.4.0)

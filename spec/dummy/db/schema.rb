@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610121130) do
+ActiveRecord::Schema.define(version: 20140611084458) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140610121130) do
     t.datetime "updated_at"
     t.text     "description"
     t.string   "image"
+    t.string   "video_url"
   end
 
   create_table "tasuku_taskables_image_responses", force: true do |t|
@@ -75,6 +76,7 @@ ActiveRecord::Schema.define(version: 20140610121130) do
     t.boolean  "multiple"
     t.boolean  "show_statistics", default: true
     t.string   "image"
+    t.string   "video_url"
   end
 
   create_table "tasuku_taskables_taskable_responses", force: true do |t|
@@ -95,6 +97,7 @@ ActiveRecord::Schema.define(version: 20140610121130) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.string   "video_url"
   end
 
   create_table "tasuku_taskables_text_responses", force: true do |t|
@@ -114,6 +117,7 @@ ActiveRecord::Schema.define(version: 20140610121130) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.string   "video_url"
   end
 
   create_table "tasuku_taskables_url_responses", force: true do |t|

@@ -1,6 +1,4 @@
-<% if question.image? %>
-  <div class="image"><%= image_tag question.image %></div>
-<% end %>
+<%= render 'tasuku/taskables/illustration', request: question %>
 
 <div class="text"><%= question.text %></div>
 <div class="description"><%= question.description %></div>
