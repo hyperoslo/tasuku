@@ -6,3 +6,5 @@ $ ->
     $('.banner').css height: $(window).height()
 
   $(window).trigger 'resize'
+
+  new WOW().init()

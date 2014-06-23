@@ -14,6 +14,10 @@ gem "middleman-gh-pages"
 # Bourbon extension for Middleman
 gem "middleman-bourbon"
 
+# font-awesome-middleman provides the Font-Awesome web fonts and stylesheets as a
+# Middleman engine.
+gem "font-awesome-middleman"
+
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 

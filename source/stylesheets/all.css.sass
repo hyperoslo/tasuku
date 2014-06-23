@@ -1,5 +1,7 @@
 @import "bourbon"
 @import "mixins"
+@import "font-awesome"
+@import "animate"
 
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,700)
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker:400)
@@ -21,6 +23,9 @@ $light: lighten($dark, 40%)
   font-family: 'Hiragino'
   src: url('../fonts/hiragino_min.otf')
 
+*
+  +box-sizing(border-box)
+
 body
   width: 100%
   height: 100%
@@ -28,15 +33,14 @@ body
   font-family: 'Oxygen'
   font-size: 14px
   color: #fff
+  margin-bottom: 50px
   +linear-gradient(45deg, $dark, $light)
 
 p
   line-height: 22px
 
 .center
-  position: relative
-  top: 50%
-  -webkit-transform: translateY(-50%)
+  +vertical-align
 
 .repository
   position: relative
@@ -70,34 +74,88 @@ h3
   display: block
   width: 100px
 
-#logo
-  font-family: 'Hiragino'
-  font-size: 100px
-  width: 100px
-  margin: 0 auto
-  text-align: center
+#banner
 
-  .letter
-    +animation(pop .5s 1 ease-in-out)
-    +animation-fill-mode(backwards)
-
-  .letter.first
-    +animation-delay(0.3s)
-
-  .letter.second
-    +animation-delay(0.2s)
-
-  .letter.third
-    +animation-delay(0.1s)
-  
-
-.headline
-  margin-bottom: 30px
-  +animation(pop .5s 1 ease-in-out)
-
-  h2
-    margin-bottom: 0
-
-  .phonetic
+  #logo
+    font-family: 'Hiragino'
+    font-size: 100px
+    width: 100px
+    margin: 0 auto
     text-align: center
+
+    .letter
+      +animation(pop .5s 1 ease-in-out)
+      +animation-fill-mode(backwards)
+
+    .letter.first
+      +animation-delay(0.3s)
+
+    .letter.second
+      +animation-delay(0.2s)
+
+    .letter.third
+      +animation-delay(0.1s)
+    
+
+  .headline
+    margin-bottom: 30px
+    +animation(pop .5s 1 ease-in-out)
+
+    h2
+      margin-bottom: 0
+
+    .phonetic
+      text-align: center
+
+#features
+
+  .box
+    border: 3px solid rgba(255, 255, 255, 0.8)
+    width: 100%
+    border-radius: 10px
+    padding: 20px
+    +clearfix
+
+    .checkbox
+      float: left
+      width: 20%
+
+      .icon
+        font-size: 75px
+
+
+    .text
+      position: relative
+      top: 15px
+      float: right
+      width: 75%
+
+      .line
+        background: rgba(255, 255, 255, 0.8)
+        height: 7px
+        margin-bottom: 10px
+
+        &.short
+          width: 40%
+
+        &.long
+          width: 100%
+
+  nav
+
+    .link
+      font-size: 16px
+      margin-right: 5px
+      background: rgba(255, 255, 255, 0.1)
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+      padding: 7px 12px
+      cursor: pointer
+
+      .icon
+        margin-right: 5px
+    
+
+  .introduction
+    font-size: 18px
 

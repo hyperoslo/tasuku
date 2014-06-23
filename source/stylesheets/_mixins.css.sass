@@ -17,3 +17,8 @@ $media-desktop: 1024px !default
   @else if $media == non-desktop
     @media only screen and (max-width: $media-desktop - 1px)
       @content
+
+@mixin vertical-align
+  position: relative
+  top: 50%
+  -webkit-transform: translateY(-50%)
