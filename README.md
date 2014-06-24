@@ -6,6 +6,10 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/tasuku.svg)](https://codeclimate.com/github/hyperoslo/tasuku)
 [![Coverage Status](https://img.shields.io/coveralls/hyperoslo/tasuku.svg)](https://coveralls.io/r/hyperoslo/tasuku)
 
+Tasuku is a framework for building tasks in Ruby on Rails. It ships with an array of tasks
+ranging from reading articles to sharing photos. You can make your own tasks, too,
+and we'd love for you to contribute if you do.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -15,10 +19,6 @@ Add this line to your application's Gemfile:
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install tasuku
 
 Install the gem:
 
