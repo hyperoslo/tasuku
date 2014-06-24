@@ -1,10 +1,11 @@
 require 'spec_helper'
+require 'views/tasuku/taskables/illustration_spec'
 
 describe 'tasuku/taskables/questions/_question.html.erb' do
   let(:user)     { create :user }
 
-  context 'for questions that have an image' do
-    let(:question) { create :question_with_options, image: fixture("doge.jpg") }
+  context 'for questions that have an image or video' do
+    let(:question) { create :question_with_options, image: fixture("doge.jpg"), video_url: 'https://www.youtube.com/watch?v=z9Uz1icjwrM' }
 
     before do
       render partial: 'tasuku/taskables/questions/question.html.erb', locals: {
@@ -13,12 +14,11 @@ describe 'tasuku/taskables/questions/_question.html.erb' do
       }
     end
 
-    it 'renders the image' do
-      expect(rendered).to have_xpath "//img[contains(@src, \"#{question.image.url}\")]"
-    end
+    alias_method :request, :question
+    it_behaves_like 'illustrations'
   end
 
-  context 'for questions that have no image' do
+  context 'for questions that have no image or video' do
     let(:question) { create :question_with_options }
 
     before do
@@ -28,8 +28,7 @@ describe 'tasuku/taskables/questions/_question.html.erb' do
       }
     end
 
-    it 'does not renders an image' do
-      expect(rendered).not_to have_xpath "//img"
-    end
+    alias_method :request, :question
+    it_behaves_like 'no illustrations'
   end
 end
