@@ -7,6 +7,7 @@ module Tasuku
     before_action :set_question
 
     def create
+      return redirect_to :back, alert: I18n.t('tasuku.taskables.questions.answers.no_answers') unless params[:taskables_question_answer]
       answer = Taskables::Question::Answer.new
 
       answer_params[:option_ids].each do |num|
