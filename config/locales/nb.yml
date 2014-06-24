@@ -107,6 +107,7 @@ nb:
           can_only_vote_once: 'Du kan kun avgi ett svar'
           submit: 'Svar'
           submitting: 'Sender inn...'
+          no_answers: 'Du valgte ingen svar'
       images:
         responses:
           already_uploaded: 'Du har allerede lastet opp et bilde'

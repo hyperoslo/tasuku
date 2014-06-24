@@ -11,6 +11,7 @@ en:
           can_only_vote_once: 'You may only select one alternative'
           submit: 'Submit'
           submitting: 'Submitting...'
+          no_answers: 'No answer chosen'
       images:
         responses:
           already_uploaded: 'You have already uploaded an image'
