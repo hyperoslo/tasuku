@@ -40,12 +40,18 @@ module Tasuku
         let(:params)   { { question_id: question.id } }
 
         before { request.env['HTTP_REFERER'] = 'http://example.org' }
+        before { post :create, params }
 
-        it 'does not create  a new answer' do
-          post :create, params
-          expect(question.answers.count).to eq 0
+        it 'does not create a new answer' do
+          expect(question.answers.count).to be_zero
+        end
+
+        it 'redirects back' do
           expect(response).to redirect_to 'http://example.org'
-          expect(flash[:alert]).to eq(I18n.t('tasuku.taskables.questions.answers.no_answers'))
+        end
+
+        it 'renders an alert' do
+          expect(flash[:alert]).to eq I18n.t('tasuku.taskables.questions.answers.no_answers')
         end
       end
     end
