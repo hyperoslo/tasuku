@@ -39,6 +39,10 @@ body
 p
   line-height: 22px
 
+a
+  color: #fff
+  text-decoration: none
+
 .center
   +vertical-align
 
@@ -108,32 +112,34 @@ h3
       text-align: center
 
 #features
+  margin-bottom: 30px
 
   .box
     border: 3px solid rgba(255, 255, 255, 0.8)
     width: 100%
     border-radius: 10px
     padding: 20px
+    margin-bottom: 20px
     +clearfix
 
     .checkbox
       float: left
-      width: 20%
+      width: 15%
 
       .icon
-        font-size: 75px
-
+        font-size: 40px
 
     .text
-      position: relative
-      top: 15px
       float: right
-      width: 75%
+      width: 85%
 
       .line
         background: rgba(255, 255, 255, 0.8)
         height: 7px
         margin-bottom: 10px
+
+        &:last-of-type
+          margin-bottom: 0
 
         &.short
           width: 40%
@@ -141,21 +147,29 @@ h3
         &.long
           width: 100%
 
-  nav
-
-    .link
-      font-size: 16px
-      margin-right: 5px
-      background: rgba(255, 255, 255, 0.1)
-      border-top-left-radius: 5px
-      border-top-right-radius: 5px
-      padding: 7px 12px
-      cursor: pointer
-
-      .icon
-        margin-right: 5px
-    
-
   .introduction
-    font-size: 18px
+    font-size: 16px
 
+  p
+    margin-bottom: 20px
+
+  .download
+    margin-top: 10px
+    text-align: center
+
+#download
+  text-align: center
+
+  .link
+    font-size: 16px
+    background: rgba(255, 255, 255, 0.1)
+    padding: 10px 15px
+    border-radius: 5px
+    +transition(all .1s ease-in-out)
+
+    &:hover
+      background: rgba(255, 255, 255, 0.8)
+      color: $dark
+
+    .icon
+      margin-right: 10px
