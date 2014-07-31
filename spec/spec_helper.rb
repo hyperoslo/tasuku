@@ -24,6 +24,7 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
   config.include ActionDispatch::TestProcess
+  config.include Rails.application.routes.url_helpers
 
   config.fixture_path = "#{File.dirname(__FILE__)}/fixtures"
 end
