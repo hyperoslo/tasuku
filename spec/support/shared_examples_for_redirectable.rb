@@ -33,5 +33,14 @@ shared_examples 'redirectable' do
         expect(response).to redirect_to after_completion_path
       end
     end
+
+    context 'with application route' do
+      before { expect(subject).to receive(:after_completion_path_for).and_return test_path }
+
+      it 'redirects to the configured url' do
+        send(verb, action, params)
+        expect(response).to redirect_to test_path
+      end
+    end
   end
 end
