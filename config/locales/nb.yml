@@ -31,13 +31,13 @@ nb:
       tasuku/taskables/text/response:
         one: Svar på tekstforespørsler
         other: Svar på tekstforespørsler
-      tasks/taskables/verification/confirmation:
+      tasuku/taskables/verification/confirmation:
         one: Bekreftelse
         other: Bekreftelser
-      tasks/taskables/url/request:
+      tasuku/taskables/url/request:
         one: URL-forespørsel
         other: URL-forespørsler
-      tasks/taskables/url/response:
+      tasuku/taskables/url/response:
         one: Svar på URL-forespørsel
         other: Svar på URL-forespørsler
     attributes:
