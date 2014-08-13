@@ -1,3 +1,3 @@
-require "tasks/seeds"
+require "tasuku/seeds"
 
 User.create!
