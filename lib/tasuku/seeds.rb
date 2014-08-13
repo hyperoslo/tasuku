@@ -7,6 +7,9 @@ task          = Tasks::Task.create! taskable: url_request
 text_request  = Tasks::Taskables::Text::Request.create! text: 'Write something'
 task          = Tasks::Task.create! taskable: text_request
 
+code_request  = Tasks::Taskables::Code::Request.create! text: 'Enter the code', code: '1337'
+task          = Tasks::Task.create! taskable: code_request
+
 question      = Tasks::Taskables::Question.create! text: 'Choose something'
 option        = Tasks::Taskables::Question::Option.create! question: question, text: 'One option'
 option        = Tasks::Taskables::Question::Option.create! question: question, text: 'Another option'

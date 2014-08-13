@@ -4,4 +4,5 @@ module Tasuku::Concerns::Models::Taskables
   require 'tasuku/concerns/models/taskables/text'
   require 'tasuku/concerns/models/taskables/url'
   require 'tasuku/concerns/models/taskables/verification'
+  require 'tasuku/concerns/models/taskables/code'
 end
