@@ -11,9 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140613115558) do
+ActiveRecord::Schema.define(version: 20140813075643) do
 
   create_table "articles", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasuku_taskables_code_requests", force: true do |t|
+    t.string   "text"
+    t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasuku_taskables_code_responses", force: true do |t|
+    t.string   "code"
+    t.integer  "request_id"
+    t.integer  "author_id"
+    t.string   "author_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

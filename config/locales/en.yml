@@ -27,3 +27,8 @@ en:
           already_answered: 'You have already answered'
           answer: 'Answer'
           answering: 'Answering...'
+      codes:
+        responses:
+          invalid: 'Invalid code'
+          already_submitted: 'You have already submitted a code'
+          submit: 'Submit code'

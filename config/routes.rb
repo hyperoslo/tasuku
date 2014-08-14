@@ -31,5 +31,11 @@ Tasuku::Engine.routes.draw do
         resources :responses, only: [:create]
       end
     end
+
+    namespace :code do
+      resources :requests, only: [] do
+        resources :responses, only: [:create]
+      end
+    end
   end
 end

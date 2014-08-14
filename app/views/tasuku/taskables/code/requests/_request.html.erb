@@ -1,0 +1,9 @@
+<div class="text"><%= request.text %></div>
+
+<% if request.completed_by? current_author %>
+  <%= t 'tasks.taskables.codes.responses.already_submitted' %>
+<% else %>
+  <div class="form">
+    <%= render partial: 'tasuku/taskables/code/responses/form', locals: { request: request } %>
+  </div>
+<% end %>
