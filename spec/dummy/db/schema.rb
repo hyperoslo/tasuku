@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140613115558) do
+ActiveRecord::Schema.define(version: 20140813080116) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140613115558) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "correct",     default: false
+    t.text     "reply"
   end
 
   add_index "tasuku_taskables_question_options", ["question_id"], name: "index_tasuku_taskables_question_options_on_question_id"
