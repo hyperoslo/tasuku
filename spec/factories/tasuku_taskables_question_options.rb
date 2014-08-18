@@ -5,6 +5,7 @@ require 'faker'
 FactoryGirl.define do
   factory :tasuku_taskables_question_option, aliases: [:question_option], class: 'Tasuku::Taskables::Question::Option' do
     text Faker::Lorem.word
+    reply Faker::Lorem.word
     question nil
   end
 end
