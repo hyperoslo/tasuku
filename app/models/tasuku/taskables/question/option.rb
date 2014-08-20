@@ -7,3 +7,4 @@ module Tasuku
     validates_presence_of :text
   end
 end
+

@@ -10,6 +10,7 @@
       <ul>
 	  	<% answer.votes.each do |vote| %>
         <%= vote.option.text %>
+        <span class="reply"><%= vote.option.reply %></span>
       <% end %>
       </ul>
     <% end %>
