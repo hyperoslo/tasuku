@@ -124,3 +124,8 @@ nb:
           already_answered: 'Du har allerede oppgitt en addresse'
           answer: 'Svar'
           answering: 'Sender inn...'
+      codes:
+        responses:
+          invalid: 'Ugyldig kode'
+          already_submitted: 'Du har allerede oppgitt koden'
+          submit: 'Oppgi kode'

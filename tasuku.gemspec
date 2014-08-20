@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ['Johannes Gorset']
   s.email       = ['johannes@hyper.no']
   s.homepage    = 'http://github.com/hyperoslo/tasuku'
-  s.summary     = 'Easily set up custom solvable tasuku in your Rails app'
-  s.description = 'Easily set up custom solvable tasuku in your Ruby on Rails app.'
+  s.summary     = 'Easily set up custom solvable tasks in your Rails app'
+  s.description = 'Easily set up custom solvable tasks in your Ruby on Rails app.'
   s.license     = 'MIT'
 
   s.files      = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']

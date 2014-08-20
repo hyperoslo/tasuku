@@ -18,6 +18,22 @@ ActiveRecord::Schema.define(version: 20140813080116) do
     t.datetime "updated_at"
   end
 
+  create_table "tasuku_taskables_code_requests", force: true do |t|
+    t.string   "text"
+    t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasuku_taskables_code_responses", force: true do |t|
+    t.string   "code"
+    t.integer  "request_id"
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tasuku_taskables_image_requests", force: true do |t|
     t.text     "text"
     t.datetime "created_at"
