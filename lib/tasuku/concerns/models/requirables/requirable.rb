@@ -5,8 +5,8 @@ module Tasuku
     included do
       has_many :task_requirements
       has_many :requirements, through: :task_requirements
-      has_many :invers_tasks, class_name: "TaskRequirement", foreign_key: :requirement_id
-      has_many :required_for, through: :invers_tasks, source: :task
+      has_many :inverse_tasks, class_name: "TaskRequirement", foreign_key: :requirement_id
+      has_many :required_for, through: :inverse_tasks, source: :task
 
       accepts_nested_attributes_for :requirements, allow_destroy: true
 
