@@ -29,9 +29,9 @@ module Tasuku
             end
           end
 
-          describe "#locked_by" do
+          describe "#locked_by_tasks" do
             it "returns list of tasks to acomplish" do
-              expect(task.locked_by user).to eq([required_task])
+              expect(task.locked_by_tasks user).to eq([required_task])
             end
           end
         end
@@ -45,9 +45,9 @@ module Tasuku
             end
           end
 
-          describe "#locked_by" do
+          describe "#locked_by_tasks" do
             it "returns empty list" do
-              expect(task.locked_by user).to be_empty
+              expect(task.locked_by_tasks user).to be_empty
             end
           end
         end
