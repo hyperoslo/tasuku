@@ -1,34 +1,168 @@
 en:
+  activerecord:
+    models:
+      tasuku/task:
+        one: Task
+        other: Tasks
+
+      tasuku/taskables/question:
+        one: Question
+        other: Questions
+
+      tasuku/taskables/question/option:
+        one: Option
+        other: Options
+
+      tasuku/taskables/question/vote:
+        one: Vote
+        other: Votes
+
+      tasuku/taskables/question/answer:
+        one: Answer
+        other: Answer
+
+      tasuku/taskables/verification:
+        one: Verification
+        other: Verifications
+
+      tasuku/taskables/verification/confirmation:
+        one: Verification confirmation
+        other: Verification confirmations
+
+      tasuku/taskables/image/request:
+        one: Image request
+        other: Image requests
+
+      tasuku/taskables/image/response:
+        one: Image response
+        other: Image responses
+
+      tasuku/taskables/text/request:
+        one: Text request
+        other: Text requests
+
+      tasuku/taskables/text/response:
+        one: Text response
+        other: Text responses
+
+      tasuku/taskables/url/request:
+        one: URL request
+        other: URL requests
+
+      tasuku/taskables/url/response:
+        one: URL response
+        other: URL responses
+
+      tasuku/taskables/code/request:
+        one: Code request
+        other: Code requests
+
+      tasuku/taskables/code/response:
+        one: Code response
+        other: Code responses
+
+      tasuku/task_requirement:
+        one: Task requirement
+        other: Task requirements
+
+    attributes:
+      defaults: &DEFAULT_ATTRS
+        created_at: Created at
+        updated_at: Updated at
+        text: Text
+        verification: Verification
+        task: Task
+        request: Request
+        responses: Response
+        votes: Votes
+        description: Description
+
+      tasuku/task:
+        <<: *DEFAULT_ATTRS
+        taskable_type: Taskable type
+        taskable: Taskable
+
+      tasuku/taskables/question:
+        <<: *DEFAULT_ATTRS
+        multiple: Multiple choice
+        show_statistics: Show statistics
+        options: Options
+
+      tasuku/taskables/question/option:
+        <<: *DEFAULT_ATTRS
+        question: Question
+        correct: Correct answer
+        answers: Answers
+
+      tasuku/taskables/question/vote:
+        <<: *DEFAULT_ATTRS
+        option: Option
+        answer: Answer
+
+      tasuku/taskables/question/answer:
+        <<: *DEFAULT_ATTRS
+        option: Option
+        author: Author
+        option_id: Option
+
+      tasuku/taskables/verification:
+        <<: *DEFAULT_ATTRS
+        verifiable: Verifiable
+        confirmations: Confirmations
+
+      tasuku/taskables/verification/confirmation:
+        <<: *DEFAULT_ATTRS
+
+      tasuku/taskables/image/request:
+        <<: *DEFAULT_ATTRS
+
+      tasuku/taskables/image/response:
+        <<: *DEFAULT_ATTRS
+        image: Image
+
+      tasuku/taskables/text/request:
+        <<: *DEFAULT_ATTRS
+
+      tasuku/taskables/text/response:
+        <<: *DEFAULT_ATTRS
+        text: Text
+
+      tasuku/taskables/url/request:
+        <<: *DEFAULT_ATTRS
+
+      tasuku/taskables/url/response:
+        <<: *DEFAULT_ATTRS
+
   tasuku:
     taskables:
       verifications:
         confirmations:
-          confirm: 'Confirm'
-          confirming: 'Confirming...'
+          confirm: Confirm
+          confirming: Confirming...
       questions:
         answers:
-          already_answered: 'You have already answered this question'
-          can_only_vote_once: 'You may only select one alternative'
-          submit: 'Submit'
-          submitting: 'Submitting...'
-          no_answers: 'No answer chosen'
+          already_answered: You have already answered this question
+          can_only_vote_once: You may only select one alternative
+          submit: Submit
+          submitting: Submitting...
+          no_answers: No answer chosen
       images:
         responses:
-          already_uploaded: 'You have already uploaded an image'
-          upload: 'Upload'
-          uploading: 'Uploading...'
+          already_uploaded: You have already uploaded an image
+          upload: Upload
+          uploading: Uploading...
       texts:
         responses:
-          already_responded: 'You have already submitted a text'
-          respond: 'Submit'
-          responding: 'Responding...'
+          already_responded: You have already submitted a text
+          respond: Submit
+          responding: Responding...
       urls:
         responses:
-          already_answered: 'You have already answered'
-          answer: 'Answer'
-          answering: 'Answering...'
+          already_answered: You have already answered
+          answer: Answer
+          answering: Answering...
       codes:
         responses:
-          invalid: 'Invalid code'
-          already_submitted: 'You have already submitted a code'
-          submit: 'Submit code'
+          invalid: Invalid code
+          already_submitted: You have already submitted a code
+          submit: Submit code
