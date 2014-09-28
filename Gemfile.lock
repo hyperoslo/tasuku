@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tasuku (0.1.1)
+    tasuku (1.0.0)
       carrierwave (~> 0.10)
       configatron (~> 3.0)
       embeddable (~> 0.0.8)
@@ -99,7 +99,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25.1)
-    mini_magick (3.7.0)
+    mini_magick (3.8.1)
       subexec (~> 0.2.1)
     mini_portile (0.5.2)
     minitest (5.3.5)
