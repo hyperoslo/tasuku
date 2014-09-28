@@ -1,8 +1,6 @@
 # Change log
 All notable changes to this project will be documented in this file.
 
-## Unreleased
-
 ## 1.0.1 - 2014-09-28
 See 1.0.0 (accidentally pushed to Rubygems and yanked, now cannot be reused)
 
