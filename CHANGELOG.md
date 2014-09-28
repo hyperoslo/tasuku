@@ -3,7 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
-## 1.0.0
+## 1.0.1 - 2014-09-28
+See 1.0.0 (accidentally pushed to Rubygems and yanked, now cannot be reused)
+
+## 1.0.0 - 2014-09-28
 ### Added
 - You may now set prerequisites for completing tasks.
 - Submit buttons are now disabled upon being clicked to prevent accidental form resubmission.
