@@ -1,4 +1,5 @@
 module Tasuku::Concerns::Models::Taskables
+  require 'tasuku/concerns/models/taskables/taskable'
   require 'tasuku/concerns/models/taskables/image'
   require 'tasuku/concerns/models/taskables/question'
   require 'tasuku/concerns/models/taskables/text'
