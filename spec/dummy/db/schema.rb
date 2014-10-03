@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140926105940) do
+ActiveRecord::Schema.define(version: 20141003120620) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -134,7 +134,7 @@ ActiveRecord::Schema.define(version: 20140926105940) do
     t.datetime "updated_at"
   end
 
-  add_index "tasuku_taskables_text_responses", ["author_id", "author_type"], name: "tasuku_taskable_text_responses_author", unique: true
+  add_index "tasuku_taskables_text_responses", ["author_id", "author_type"], name: "tasuku_taskable_text_responses_author"
 
   create_table "tasuku_taskables_url_requests", force: true do |t|
     t.text     "text"
@@ -154,7 +154,7 @@ ActiveRecord::Schema.define(version: 20140926105940) do
     t.datetime "updated_at"
   end
 
-  add_index "tasuku_taskables_url_responses", ["author_id", "author_type"], name: "tasuku_taskable_url_responses_author", unique: true
+  add_index "tasuku_taskables_url_responses", ["author_id", "author_type"], name: "tasuku_taskable_url_responses_author"
   add_index "tasuku_taskables_url_responses", ["request_id"], name: "index_tasuku_taskables_url_responses_on_request_id"
 
   create_table "tasuku_taskables_verification_confirmations", force: true do |t|
