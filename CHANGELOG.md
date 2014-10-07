@@ -1,6 +1,15 @@
 # Change log
 All notable changes to this project will be documented in this file.
 
+## 1.1.0 - 2014-10-07
+### Added
+- You may now include `Tasuku::Concerns::Author` in your author model(s) to destroy
+associated responses automatically.
+
+### Fixed
+- Fixed a bug that caused submissions (such as `Tasuku::Taskables::Image::Response`) to not be
+deleted along with their `Tasuku::Taskables::Taskable::Response` proxy.
+
 ## 1.0.1 - 2014-09-28
 See 1.0.0 (accidentally pushed to Rubygems and yanked, now cannot be reused)
 
