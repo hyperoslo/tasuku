@@ -126,6 +126,6 @@ nb:
           answering: 'Sender inn...'
       codes:
         responses:
-          invalid: 'Ugyldig kode'
+          invalid: 'er ugyldig'
           already_submitted: 'Du har allerede oppgitt koden'
           submit: 'Oppgi kode'
