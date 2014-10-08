@@ -163,6 +163,6 @@ en:
           answering: Answering...
       codes:
         responses:
-          invalid: Invalid code
+          invalid: is invalid
           already_submitted: You have already submitted a code
           submit: Submit code
