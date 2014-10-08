@@ -16,7 +16,7 @@ module Tasuku::Concerns::Models::Task
 
     validates :taskable, presence: true
 
-    delegate :completed_by?, :submissions, to: :taskable
+    delegate :completed_by?, :responses, to: :taskable
 
     def to_s
       taskable.to_s
