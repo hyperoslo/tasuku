@@ -1,10 +1,10 @@
 # Tasuku
 
-[![Gem Version](https://img.shields.io/gem/v/tasuku.svg)](https://rubygems.org/gems/tasuku)
-[![Build Status](https://img.shields.io/travis/hyperoslo/tasuku.svg)](https://travis-ci.org/hyperoslo/tasuku)
-[![Dependency Status](https://img.shields.io/gemnasium/hyperoslo/tasuku.svg)](https://gemnasium.com/hyperoslo/tasuku)
-[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/tasuku.svg)](https://codeclimate.com/github/hyperoslo/tasuku)
-[![Coverage Status](https://img.shields.io/coveralls/hyperoslo/tasuku.svg)](https://coveralls.io/r/hyperoslo/tasuku)
+[![Gem Version](https://img.shields.io/gem/v/tasuku.svg?style=flat)](https://rubygems.org/gems/tasuku)
+[![Build Status](https://img.shields.io/travis/hyperoslo/tasuku.svg?style=flat)](https://travis-ci.org/hyperoslo/tasuku)
+[![Dependency Status](https://img.shields.io/gemnasium/hyperoslo/tasuku.svg?style=flat)](https://gemnasium.com/hyperoslo/tasuku)
+[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/tasuku.svg?style=flat)](https://codeclimate.com/github/hyperoslo/tasuku)
+[![Coverage Status](https://img.shields.io/coveralls/hyperoslo/tasuku.svg?style=flat)](https://coveralls.io/r/hyperoslo/tasuku)
 
 Tasuku is a framework for building tasks in Ruby on Rails. It ships with an array of tasks
 ranging from reading articles to sharing photos. You can make your own tasks, too,
