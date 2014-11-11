@@ -18,6 +18,7 @@ module Tasuku
       request is: :question
 
       def correct?
+        return true if question.options.none?(&:correct?)
         votes.all? { |vote| vote.option.correct? }
       end
 

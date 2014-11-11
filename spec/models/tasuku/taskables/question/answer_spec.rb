@@ -61,6 +61,7 @@ module Tasuku
           expect(answer).not_to be_correct
         end
       end
+
       context 'one correct option' do
         it 'should return true if all votes are correct' do
           first_option.update_attributes!(correct: true)
@@ -73,10 +74,11 @@ module Tasuku
           expect(answer).not_to be_correct
         end
       end
+
       context 'no correct options' do
-        it 'should always return false' do
+        it 'should always return true' do
           answer = create :question_answer, options: [first_option]
-          expect(answer).not_to be_correct
+          expect(answer).to be_correct
         end
       end
     end
