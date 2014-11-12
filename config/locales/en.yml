@@ -5,6 +5,22 @@ en:
         one: Task
         other: Tasks
 
+      tasuku/taskables/poll:
+        one: Poll
+        other: Polls
+
+      tasuku/taskables/poll/option:
+        one: Option
+        other: Options
+
+      tasuku/taskables/poll/vote:
+        one: Vote
+        other: Votes
+
+      tasuku/taskables/poll/answer:
+        one: Answer
+        other: Answer
+
       tasuku/taskables/question:
         one: Question
         other: Questions
@@ -81,6 +97,28 @@ en:
         <<: *DEFAULT_ATTRS
         taskable_type: Taskable type
         taskable: Taskable
+
+      tasuku/taskables/poll:
+        <<: *DEFAULT_ATTRS
+        multiple: Multiple choice
+        show_statistics: Show statistics
+        options: Options
+
+      tasuku/taskables/poll/option:
+        <<: *DEFAULT_ATTRS
+        poll: Poll
+        answers: Answers
+
+      tasuku/taskables/poll/vote:
+        <<: *DEFAULT_ATTRS
+        option: Option
+        answer: Answer
+
+      tasuku/taskables/poll/answer:
+        <<: *DEFAULT_ATTRS
+        option: Option
+        author: Author
+        option_id: Option
 
       tasuku/taskables/question:
         <<: *DEFAULT_ATTRS

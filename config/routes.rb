@@ -8,6 +8,12 @@ Tasuku::Engine.routes.draw do
       end
     end
 
+    resources :polls, only: [] do
+      scope module: :polls do
+        resources :answers, only: [:create]
+      end
+    end
+
     resources :questions, only: [] do
       scope module: :questions do
         resources :answers, only: [:create]

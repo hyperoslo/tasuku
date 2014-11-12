@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003120620) do
+ActiveRecord::Schema.define(version: 20141112115842) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -62,6 +62,39 @@ ActiveRecord::Schema.define(version: 20141003120620) do
 
   add_index "tasuku_taskables_image_responses", ["author_id", "author_type"], name: "tasuku_taskable_image_responses_author"
   add_index "tasuku_taskables_image_responses", ["request_id"], name: "index_tasuku_taskables_image_responses_on_request_id"
+
+  create_table "tasuku_taskables_poll_answers", force: true do |t|
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasuku_taskables_poll_options", force: true do |t|
+    t.text     "text"
+    t.integer  "poll_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "reply"
+  end
+
+  create_table "tasuku_taskables_poll_votes", force: true do |t|
+    t.integer  "answer_id"
+    t.integer  "option_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasuku_taskables_polls", force: true do |t|
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "description"
+    t.boolean  "multiple"
+    t.boolean  "show_statistics", default: true
+    t.string   "image"
+    t.string   "video_url"
+  end
 
   create_table "tasuku_taskables_question_answers", force: true do |t|
     t.integer  "author_id"
