@@ -8,14 +8,18 @@ module Tasuku
 
       validates :author_id, :author_type, presence: true
       validates :code, presence: true
-      validate :code_is_valid
+      validate :code_is_valid, if: lambda { |response| response.code.present? }
 
       request is: :request
+
+      def valid_code?
+        code == request.code
+      end
 
       private
 
       def code_is_valid
-        errors.add :code, I18n.t('tasuku.taskables.codes.responses.invalid') unless code == request.code
+        errors.add(:code, I18n.t('tasuku.taskables.codes.responses.invalid')) unless valid_code?
       end
     end
   end
