@@ -4,6 +4,18 @@ nb:
       tasuku/task:
         one: Oppgave
         other: Oppgaver
+      tasuku/taskables/poll:
+        one: Meningsmåling
+        other: Meningsmålinger
+      tasuku/taskables/poll/option:
+        one: Alternativ
+        other: Alternativer
+      tasuku/taskables/poll/vote:
+        one: Stemme
+        other: Stemmer
+      tasuku/taskables/poll/answer:
+        one: Svar
+        other: Svar
       tasuku/taskables/question:
         one: Spørsmål
         other: Spørsmål
@@ -55,6 +67,25 @@ nb:
         <<: *DEFAULT_ATTRS
         taskable_type: Oppgavetype
         taskable: Oppgave
+      tasuku/taskables/poll:
+        <<: *DEFAULT_ATTRS
+        description: Beskrivelse
+        multiple: Flere svar mulig?
+        show_statistics: Vis statistikk
+        options: Alternativer
+      tasuku/taskables/poll/option:
+        <<: *DEFAULT_ATTRS
+        poll: Meningsmåling
+        answers: Svar
+      tasuku/taskables/poll/vote:
+        <<: *DEFAULT_ATTRS
+        option: Alternativ
+        answer: Svar
+      tasuku/taskables/poll/answer:
+        <<: *DEFAULT_ATTRS
+        option: Alternativ
+        author: Forfatter
+        option_id: Alternativ
       tasuku/taskables/question:
         <<: *DEFAULT_ATTRS
         description: Beskrivelse

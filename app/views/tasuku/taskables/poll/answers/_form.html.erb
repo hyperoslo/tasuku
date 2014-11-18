@@ -1,0 +1,18 @@
+<%= form_for Tasuku::Taskables::Poll::Answer.new, url: tasuku.poll_answers_path(poll_id: poll.id), method: :post do |form| %>
+  <% poll.options.each do |option| %>
+    <div class="poll option">
+      <% if poll.multiple? %>
+        <%= check_box_tag 'taskables_poll_answer[option_ids][]', option.id,
+              false, id:  "taskables_poll_answer_option_id_#{option.id}" %>
+      <% else %>
+        <%= radio_button_tag 'taskables_poll_answer[option_ids][]', option.id,
+              false, id:  "taskables_poll_answer_option_id_#{option.id}" %>
+      <% end %>
+      <%= form.label :option_id, option.text, value: option.id %>
+    </div>
+  <% end %>
+
+  <%= form.submit t('tasuku.taskables.polls.answers.submit'), data: {
+    disable_with: t('tasuku.taskables.polls.answers.submitting')
+  } %>
+<% end %>

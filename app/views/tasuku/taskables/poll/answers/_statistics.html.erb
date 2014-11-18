@@ -1,0 +1,24 @@
+<table class="answers-statistics">
+  <% poll.options.each do |option| %>
+    <tr>
+      <td>
+        <%= option.text %>
+        <% poll.answers.by(current_user).each do |answer| %>
+          <% answer.votes.each do |vote| %>
+            <%= '*' if vote.option == option %>
+          <% end %>
+        <% end %>
+      </td>
+      <% percentage = ( 100 / poll.votes.count ) * option.votes.count %>
+      <td class="percentage-bar-container">
+        <span style="width: <%= percentage %>%;">
+          <%= percentage %>%
+          (<%= option.votes.count %>)
+        </span>
+      </td>
+      <td>
+        ✔
+      </td>
+    </tr>
+  <% end %>
+</table>
