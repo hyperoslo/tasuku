@@ -37,7 +37,13 @@ Rails.application.routes.draw do
 end
 ```
 
-And the method to use in deriving the current user:
+And finally the method to use in deriving the model instance that
+solving tasks will attributed to. Typically this is a user of some kind,
+but it could also be a group of users.
+
+If you're using [Devise](https://github.com/plataformatec/devise) for authentication,
+for example, you might have a method `current_user` that returns the right instance
+of your `User` model:
 
 ```ruby
 # config/initializers/tasuku.rb
