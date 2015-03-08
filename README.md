@@ -1,4 +1,4 @@
-![Tasuku](https://github.com/hyperoslo/tasuku/blob/master/docs/logo.png)
+![Tasuku](https://raw.githubusercontent.com/hyperoslo/tasuku/master/doc/logo.png)
 
 [![Gem Version](https://img.shields.io/gem/v/tasuku.svg?style=flat)](https://rubygems.org/gems/tasuku)
 [![Build Status](https://img.shields.io/travis/hyperoslo/tasuku.svg?style=flat)](https://travis-ci.org/hyperoslo/tasuku)
