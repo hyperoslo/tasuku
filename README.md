@@ -78,6 +78,8 @@ with other interesting things.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+Note: Remmember to create the test database under `spec/dummy`. Using `bundle exec rake db:setup RAILS_ENV=test`  
+
 ## Credits
 
 Hyper made this. We're a digital communications agency with a passion for good code,

@@ -6,7 +6,7 @@ module Tasuku
 
     describe "POST 'create'" do
       it 'routes' do
-        expect(post: '/verifications/1/confirmations').to route_to(
+        expect(post: '/taskables/verifications/1/confirmations').to route_to(
           action: 'create',
           controller: 'tasuku/taskables/verifications/confirmations',
           verification_id: '1'

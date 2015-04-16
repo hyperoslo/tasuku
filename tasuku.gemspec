@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'embeddable', '~> 0.0.8'
 
   s.add_development_dependency 'sqlite3'
-  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'rspec-rails', '2.14'
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'faker'
   s.add_development_dependency 'capybara'
