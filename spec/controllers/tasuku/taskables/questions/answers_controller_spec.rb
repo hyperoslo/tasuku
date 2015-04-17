@@ -20,7 +20,7 @@ module Tasuku
         let(:params)   { { question_id: question.id, taskables_question_answer: { option_ids: [option.id] } } }
 
         before { request.env['HTTP_REFERER'] = 'http://example.org' }
-        before { expect(subject).to receive(:current_user).and_return(user) }
+        before { allow(subject).to receive(:current_user).and_return(user) }
 
         it_behaves_like 'redirectable' do
           let(:action) { :create }
@@ -31,6 +31,20 @@ module Tasuku
           post :create, params
 
           expect(question.answers.count).to eq 1
+        end
+
+        context "with submitted answer" do
+          let(:user)     { create :user }
+          let(:question) { create :question_with_options }
+          let(:vote) { create :question_vote, option: question.options.first }
+          let(:question_answer) { create :question_answer, author: user, votes: [vote] }
+          let(:update_params) { { question_id: question.id, id: question_answer.id  } }
+
+          it 'updates a existing answer' do
+            put :update, update_params
+
+            expect(response).to redirect_to(:back)
+          end
         end
       end
 

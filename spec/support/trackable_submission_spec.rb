@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 RSpec.shared_examples "trackable submission" do
   describe "callbacks for response" do
@@ -8,7 +7,6 @@ RSpec.shared_examples "trackable submission" do
     end
 
     it "destroy response on trackable destroy" do
-      binding.pry
       subject.destroy
       expect(Tasuku::Taskables::Taskable::Response.count).to eq(0)
     end
