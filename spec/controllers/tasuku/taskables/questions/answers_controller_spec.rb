@@ -15,7 +15,7 @@ module Tasuku
 
       context 'with an answer' do
         let(:user)     { create :user }
-        let(:question) { create :question }
+        let(:question) { create :question_with_options }
         let(:option)   { create :question_option, question: question }
         let(:params)   { { question_id: question.id, taskables_question_answer: { option_ids: [option.id] } } }
 
@@ -34,16 +34,17 @@ module Tasuku
         end
 
         context "with submitted answer" do
-          let(:user)     { create :user }
-          let(:question) { create :question_with_options }
           let(:vote) { create :question_vote, option: question.options.first }
           let(:question_answer) { create :question_answer, author: user, votes: [vote] }
-          let(:update_params) { { question_id: question.id, id: question_answer.id  } }
+          let(:new_vote) { create :question_vote, option: question.options.last }
+          let(:update_params) { { question_id: question.id, id: question_answer.id, taskables_question_answer: { option_ids: [new_vote.id] }  } }
 
           it 'updates a existing answer' do
             put :update, update_params
+            question_answer.reload
 
             expect(response).to redirect_to(:back)
+            expect(question_answer.votes.first.option_id).to eq(new_vote.id)
           end
         end
       end
