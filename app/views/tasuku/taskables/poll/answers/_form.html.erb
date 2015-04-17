@@ -1,4 +1,4 @@
-<%= form_for Tasuku::Taskables::Poll::Answer.new, url: tasuku.taskebles_poll_answers_path(poll_id: poll.id), method: :post do |form| %>
+<%= form_for Tasuku::Taskables::Poll::Answer.new, url: tasuku.taskables_poll_answers_path(poll_id: poll.id), method: :post do |form| %>
   <% poll.options.each do |option| %>
     <div class="poll option">
       <% if poll.multiple? %>

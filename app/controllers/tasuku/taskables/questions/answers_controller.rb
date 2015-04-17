@@ -11,10 +11,8 @@ module Tasuku
 
       return redirect_to :back, alert: I18n.t('tasuku.taskables.questions.answers.no_answers') unless params[:taskables_question_answer]
 
-      # Delete the old votes
       answer.votes.destroy_all
-
-      # Build new votes
+      
       answer_params[:option_ids].each do |num|
         answer.votes.build option_id: num
       end
