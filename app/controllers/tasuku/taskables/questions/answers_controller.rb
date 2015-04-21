@@ -21,7 +21,7 @@ module Tasuku
 
       respond_to do |format|
         if answer.save
-          format.html { redirect_to redirect_path_for(@answer) }
+          format.html { redirect_to redirect_path_for(answer) }
         else
           format.html { redirect_to :back, alert: answer.errors.full_messages.to_sentence }
         end
