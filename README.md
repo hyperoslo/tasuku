@@ -17,7 +17,7 @@ that may be completed in various ways and you can go about doing that however yo
 tasks in a `Course` model. Other times we use [Feeder](https://github.com/hyperoslo/feeder) to mix them
 with other interesting things.
 
-![UML](https://raw.githubusercontent.com/hyperoslo/tasuku/d6650e2a57ee6ea4c1f4cd1a16492f058510f885/doc/uml.png)
+![UML](https://raw.githubusercontent.com/hyperoslo/tasuku/e19d7d35e5fc1aecd86349917d4a9b387743aa67/doc/uml.png)
 
 ## Installation
 
