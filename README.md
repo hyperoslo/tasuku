@@ -12,12 +12,12 @@ and we'd love for you to contribute if you do.
 
 ## Usage
 
-![UML](https://raw.githubusercontent.com/hyperoslo/tasuku/d6650e2a57ee6ea4c1f4cd1a16492f058510f885/doc/uml.png)
-
 Really it's up to you. Tasuku just supplies a [set of models](https://github.com/hyperoslo/tasuku/tree/master/app/models/tasuku/taskables)
 that kind be completed in various ways and you can go about doing that however you like. We sometimes organize
 tasks in a `Course` model. Other times we use [Feeder](https://github.com/hyperoslo/feeder) to mix them
 with other interesting things.
+
+![UML](https://raw.githubusercontent.com/hyperoslo/tasuku/d6650e2a57ee6ea4c1f4cd1a16492f058510f885/doc/uml.png)
 
 ## Installation
 
