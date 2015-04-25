@@ -13,7 +13,7 @@ and we'd love for you to contribute if you do.
 ## Usage
 
 Really it's up to you. Tasuku just supplies a [set of models](https://github.com/hyperoslo/tasuku/tree/master/app/models/tasuku/taskables)
-that kind be completed in various ways and you can go about doing that however you like. We sometimes organize
+that may be completed in various ways and you can go about doing that however you like. We sometimes organize
 tasks in a `Course` model. Other times we use [Feeder](https://github.com/hyperoslo/feeder) to mix them
 with other interesting things.
 
