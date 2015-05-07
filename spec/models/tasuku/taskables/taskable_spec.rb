@@ -47,6 +47,11 @@ module Tasuku
       end
 
       context 'with a incorrectly answered question task' do
+        before(:all) do
+          ::Tasuku.configure do |config|
+            config.update_answers = true
+          end
+        end
         before { create :question_answer, author: user, options: [taskable_question.options.first] }
 
         it 'determines that the author has not completed it' do

@@ -1,3 +1,4 @@
+#require 'pry'
 module Tasuku
   module Taskables::Taskable
     extend ActiveSupport::Concern
@@ -9,7 +10,8 @@ module Tasuku
     # Returns a Boolean.
     def completed_by? author
       response = responses.find_by(author: author)
-      if response && response.is_a?(::Tasuku::Taskables::Question::Answer)
+      #binding.pry
+      if ::Tasuku.config.update_answers && response && response.is_a?(::Tasuku::Taskables::Question::Answer)
         response.correct?
       else
         !!response

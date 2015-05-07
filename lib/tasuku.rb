@@ -13,6 +13,7 @@ module Tasuku
 
     def config
       @config ||= Configatron::Store.new author: :current_user
+      @config ||= Configatron::Store.new update_answers: false
       @config
     end
   end
