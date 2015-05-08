@@ -11,13 +11,13 @@ module Tasuku
 
       return redirect_to :back, alert: I18n.t('tasuku.taskables.questions.answers.no_answers') unless params[:taskables_question_answer]
 
-      answer.votes.destroy_all
-      
+      answer.votes.destroy_all if ::Tasuku.config.update_answers
+
       answer_params[:option_ids].each do |num|
         answer.votes.build option_id: num
       end
 
-      answer.author = send Tasks.config.author
+      answer.author = send ::Tasuku.config.author
 
       respond_to do |format|
         if answer.save
@@ -36,7 +36,7 @@ module Tasuku
         answer.votes.build option_id: num
       end
 
-      answer.author = send Tasks.config.author
+      answer.author = send ::Tasuku.config.author
 
       respond_to do |format|
         if answer.save

@@ -30,11 +30,6 @@ module Tasuku
       end
 
       describe '#can_only_vote_once_for_single_choice_questions' do
-        before(:all) do
-          ::Tasuku.configure do |config|
-            config.update_answers = false
-          end
-        end
 
         let!(:question) { create :question_with_options, multiple: false }
         let!(:answer)   { build :question_answer, author: user, options: [question.options.first, question.options.second] }

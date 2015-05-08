@@ -12,10 +12,25 @@ module Tasuku
     end
 
     def config
-      @config ||= Configatron::Store.new author: :current_user
-      @config ||= Configatron::Store.new update_answers: false
-      @config
+      @config ||= Configatron::Store.new author: :current_user, update_answers: false
     end
+
+    # Set temporary configuration options for the duration of the given block.
+    #
+    # options - A Hash describing temporary configuration options.
+    def temporarily options = {}
+
+      original = config.dup
+
+      options.each do |key, value|
+        @config.send "#{key}=", value
+      end
+
+      yield
+    ensure
+      @config = original
+    end
+
   end
 end
 
