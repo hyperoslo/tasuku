@@ -15,7 +15,7 @@ option        = Tasks::Taskables::Question::Option.create! question: question, t
 option        = Tasks::Taskables::Question::Option.create! question: question, text: 'Another option'
 task          = Tasks::Task.create! taskable: question
 
-quiz          = Tasuku::Taskables::Quiz.create! text: "A Quiz for you", description: "Because interwebs"
-quiz.questions << Tasks::Taskables::Question.create! text: 'Question for a quiz'
-quiz.questions << Tasks::Taskables::Question.create! text: 'Second quiz question'
-quiz.questions << Tasks::Taskables::Question.create! text: 'Third quiz question'
+quiz          = Tasks::Taskables::Quiz.create! text: 'A Quiz for you', description: 'Because interwebs'
+quiz.questions << Tasks::Taskables::Question.create!(text: 'Question for a quiz')
+quiz.questions << Tasks::Taskables::Question.create!(text: 'Second quiz question')
+quiz.questions << Tasks::Taskables::Question.create!(text: 'Third quiz question')

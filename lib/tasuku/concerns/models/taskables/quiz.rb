@@ -10,6 +10,11 @@ module Tasuku
 
       accepts_nested_attributes_for :questions, allow_destroy: true
 
+      def completed_by?(author)
+        if questions.present?
+          questions.all? { |question| question.completed_by?(author) }
+        end
+      end
 
     end
   end

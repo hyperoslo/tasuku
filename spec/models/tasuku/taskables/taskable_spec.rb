@@ -46,19 +46,29 @@ module Tasuku
         end
       end
 
-      context 'with a incorrectly answered question task' do
-        before { create :question_answer, author: user, options: [taskable_question.options.first] }
-        ::Tasuku.temporarily(update_answers: true) do
-          it 'determines that the author has not completed it' do
+      context 'with a incorrectly answered question task', focus: true do
+        before do
+          ::Tasuku.temporarily(update_answers: true) do
+            create :question_answer, author: user, options: [taskable_question.options.first]
+          end
+        end
+
+        it 'determines that the author has not completed it' do
+          ::Tasuku.temporarily(update_answers: true) do
             expect(taskable_question).not_to be_completed_by user
           end
         end
       end
 
       context 'with a correctly answered question task' do
-        before { create :question_answer, author: user, options: [taskable_question.options.last] }
-        ::Tasuku.temporarily(update_answers: true) do
-          it 'determines that the author has completed it' do
+        before do
+          ::Tasuku.temporarily(update_answers: true) do
+            create :question_answer, author: user, options: [taskable_question.options.last]
+          end
+        end
+
+        it 'determines that the author has completed it' do
+          ::Tasuku.temporarily(update_answers: true) do
             expect(taskable_question).to be_completed_by user
           end
         end

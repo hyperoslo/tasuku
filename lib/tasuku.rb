@@ -19,16 +19,11 @@ module Tasuku
     #
     # options - A Hash describing temporary configuration options.
     def temporarily options = {}
-
-      original = config.dup
-
-      options.each do |key, value|
-        @config.send "#{key}=", value
+      config.temp do
+        options.each do |key, value|
+          config.send "#{key}=", value
+        end
       end
-
-      yield
-    ensure
-      @config = original
     end
 
   end
