@@ -10,10 +10,16 @@ module Tasuku
 
       accepts_nested_attributes_for :questions, allow_destroy: true
 
+      validates_presence_of :text
+
       def completed_by?(author)
         if questions.present?
           questions.all? { |question| question.completed_by?(author) }
         end
+      end
+
+      def to_s
+        text
       end
 
     end

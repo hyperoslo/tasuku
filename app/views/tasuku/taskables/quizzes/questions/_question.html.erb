@@ -1,0 +1,26 @@
+<%= render 'tasuku/taskables/illustration', request: question %>
+
+<div class="text"><%= question.text %></div>
+<div class="description"><%= question.description %></div>
+
+<% if question.completed_by? current_author %>
+  <%= t 'tasuku.taskables.questions.answers.already_answered' %>
+  <div class="answer">
+    <% question.answers.by(current_author).each do |answer| %>
+      <ul>
+	  	<% answer.votes.each do |vote| %>
+        <%= vote.option.text %>
+        <span class="reply"><%= vote.option.reply %></span>
+      <% end %>
+      </ul>
+    <% end %>
+
+    <% if question.show_statistics? %>
+      <%= render 'tasuku/taskables/quizzes/questions/answers/statistics', question: question %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="options">
+    <%= render 'tasuku/taskables/quizzes/questions/answers/form', question: question %>
+  </div>
+<% end %>

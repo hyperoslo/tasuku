@@ -1,0 +1,28 @@
+
+<div class="text"><%= quiz.text %></div>
+<div class="description"><%= quiz.description %></div>
+
+<% if quiz.completed_by? current_author %>
+  <%= t 'tasuku.taskables.quiz.already_answered' %>
+  <div class="questions">
+  <ul>
+    <% quiz.questions.each do |question| %>
+      <li><%= question.answers.by(current_user).first.correct? %></li>
+    <% end %>
+  </ul>
+
+  </div>
+<% else %>
+<%= form_for quiz do |f| %>
+    <% quiz.questions.each do |question| %>
+
+      <div class="questions">
+        <%= render 'tasuku/taskables/quizzes/questions/answers/form', question: question, f: f %>
+      </div>
+
+    <% end %>
+    <%= f.submit t('tasuku.taskables.questions.answers.submit'), data: {
+      disable_with: t('tasuku.taskables.questions.answers.submitting')
+    } %>
+  <% end %>
+<% end %>

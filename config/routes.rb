@@ -20,6 +20,14 @@ Tasuku::Engine.routes.draw do
       end
     end
 
+    resources :quizzes, only: [:create, :update] do
+      scope module: :quizzes do
+        resource :questions, only: [] do
+          resources :answers, only: [:create, :update]
+        end
+      end
+    end
+
     namespace :image do
       resources :requests, only: [] do
         resources :responses, only: [:create]

@@ -1,0 +1,16 @@
+<%= question.text %>
+<%= question.description %>
+<div class="options">
+<% question.options.each do |option| %>
+  <div class="question option">
+    <% if question.multiple? %>
+      <%= check_box_tag 'taskables_question_answer[option_ids][]', option.id,
+            false, id:  "taskables_question_answer_option_id_#{option.id}" %>
+    <% else %>
+      <%= radio_button_tag 'taskables_question_answer[option_ids][]', option.id,
+            false, id:  "taskables_question_answer_option_id_#{option.id}" %>
+    <% end %>
+    <%= f.label :option_id, option.text, value: option.id %>
+  </div>
+<% end %>
+</div>

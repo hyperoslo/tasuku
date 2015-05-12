@@ -52,6 +52,10 @@ nb:
       tasuku/taskables/url/response:
         one: Svar på URL-forespørsel
         other: Svar på URL-forespørsler
+      tasuku/taskables/quiz:
+        one: Quiz
+        other: Quiz
+
     attributes:
       defaults: &DEFAULT_ATTRS
         created_at: Opprettet
