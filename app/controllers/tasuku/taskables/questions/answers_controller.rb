@@ -22,8 +22,10 @@ module Tasuku
       respond_to do |format|
         if answer.save
           format.html { redirect_to redirect_path_for(answer) }
+          format.json { render json: answer }
         else
           format.html { redirect_to :back, alert: answer.errors.full_messages.to_sentence }
+          format.json { render json: answer.errors }
         end
       end
     end
@@ -41,8 +43,10 @@ module Tasuku
       respond_to do |format|
         if answer.save
           format.html { redirect_to redirect_path_for(answer) }
+          format.json { render json: answer }
         else
           format.html { redirect_to :back, alert: answer.errors.full_messages.to_sentence }
+          format.json { render json: answer.errors }
         end
       end
     end

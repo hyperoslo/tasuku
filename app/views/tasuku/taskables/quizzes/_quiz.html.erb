@@ -1,6 +1,7 @@
-
-<div class="text"><%= quiz.text %></div>
-<div class="description"><%= quiz.description %></div>
+<div class="quiz-top">
+  <div class="text"><%= quiz.text %></div>
+  <div class="description"><%= quiz.description %></div>
+</div>
 
 <% if quiz.completed_by? current_author %>
   <%= t 'tasuku.taskables.quiz.already_answered' %>
@@ -13,16 +14,7 @@
 
   </div>
 <% else %>
-<%= form_for quiz do |f| %>
-    <% quiz.questions.each do |question| %>
-
-      <div class="questions">
-        <%= render 'tasuku/taskables/quizzes/questions/answers/form', question: question, f: f %>
-      </div>
-
-    <% end %>
-    <%= f.submit t('tasuku.taskables.questions.answers.submit'), data: {
-      disable_with: t('tasuku.taskables.questions.answers.submitting')
-    } %>
+  <% quiz.questions.each do |question| %>
+    <%= render 'tasuku/taskables/quizzes/questions/question', question: question %>
   <% end %>
 <% end %>
