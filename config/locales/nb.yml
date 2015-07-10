@@ -43,6 +43,12 @@ nb:
       tasuku/taskables/text/response:
         one: Svar på tekstforespørsler
         other: Svar på tekstforespørsler
+      tasuku/taskables/code/request:
+        one: Kodeforespørsel
+        other: Kodeforespørsler
+      tasuku/taskables/code/response:
+        one: Svar på kodeforespørsler
+        other: Svar på kodeforespørsler
       tasuku/taskables/verification/confirmation:
         one: Bekreftelse
         other: Bekreftelser
@@ -61,6 +67,7 @@ nb:
         created_at: Opprettet
         updated_at: Oppdatert
         text: Tekst
+        code: Kode
         verification: Verifisering
         task: Oppgave
         request: Forespørsel
@@ -126,6 +133,11 @@ nb:
       tasuku/taskables/text/response:
         <<: *DEFAULT_ATTRS
         text: Svartekst
+      tasuku/taskables/code/request:
+        <<: *DEFAULT_ATTRS
+      tasuku/taskables/code/response:
+        <<: *DEFAULT_ATTRS
+        text: Svarkode
       tasuku/taskables/url/request:
         <<: *DEFAULT_ATTRS
       tasuku/taskables/url/response:
@@ -163,4 +175,8 @@ nb:
         responses:
           invalid: 'er ugyldig'
           already_submitted: 'Du har allerede oppgitt koden'
+          already_responded: 'Du har allerede oppgitt koden'
           submit: 'Oppgi kode'
+          respond: 'Svar'
+          response: 'Svar'
+          responding: 'Sender inn...'
