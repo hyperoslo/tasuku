@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.shared_examples "trackable submission" do
   describe "callbacks for response" do
     it "create response on trackable create" do

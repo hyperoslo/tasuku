@@ -1,3 +1,3 @@
-<%= form_for confirmation, url: tasuku.verification_confirmations_path(verification_id: confirmation.verification.id), method: :post do |form| %>
+<%= form_for confirmation, url: tasuku.taskables_verification_confirmations_path(verification_id: confirmation.verification.id), method: :post do |form| %>
   <%= form.submit t('tasuku.taskables.verifications.confirmations.confirm') %>
 <% end %>

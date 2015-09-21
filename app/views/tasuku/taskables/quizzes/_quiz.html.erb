@@ -1,0 +1,20 @@
+<div class="quiz-top">
+  <div class="text"><%= quiz.text %></div>
+  <div class="description"><%= quiz.description %></div>
+</div>
+
+<% if quiz.completed_by? current_author %>
+  <%= t 'tasuku.taskables.quiz.already_answered' %>
+  <div class="questions">
+  <ul>
+    <% quiz.questions.each do |question| %>
+      <li><%= question.answers.by(current_user).first.correct? %></li>
+    <% end %>
+  </ul>
+
+  </div>
+<% else %>
+  <% quiz.questions.each do |question| %>
+    <%= render 'tasuku/taskables/quizzes/questions/question', question: question %>
+  <% end %>
+<% end %>

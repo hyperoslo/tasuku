@@ -1,0 +1,8 @@
+<div class="question">
+  <%= render 'tasuku/taskables/illustration', request: question %>
+
+  <div class="text"><%= question.text %></div>
+  <div class="description"><%= question.description %></div>
+
+  <%= render 'tasuku/taskables/quizzes/questions/answers/form', question: question %>
+</div>

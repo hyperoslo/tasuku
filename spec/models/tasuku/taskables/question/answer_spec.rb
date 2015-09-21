@@ -14,6 +14,7 @@ module Tasuku
     end
 
     describe 'validations' do
+
       describe '#can_only_answer_each_question_once' do
         let!(:question)          { create :question_with_options }
         let!(:answer)           { create :question_answer, author: user, options: [question.options.first] }
@@ -29,6 +30,7 @@ module Tasuku
       end
 
       describe '#can_only_vote_once_for_single_choice_questions' do
+
         let!(:question) { create :question_with_options, multiple: false }
         let!(:answer)   { build :question_answer, author: user, options: [question.options.first, question.options.second] }
 

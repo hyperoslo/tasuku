@@ -9,6 +9,9 @@ module Tasuku
       has_many :options
       has_many :votes, through: :options
 
+      has_many :quiz_questions
+      has_many :quizzes, through: :quiz_questions
+
       validates_presence_of :text
 
       accepts_nested_attributes_for :options, allow_destroy: true

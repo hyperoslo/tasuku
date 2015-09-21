@@ -6,7 +6,7 @@ module Tasuku
 
     describe "POST 'create'" do
       it 'routes' do
-        expect(post: '/code/requests/1/responses').to route_to(
+        expect(post: '/taskables/code/requests/1/responses').to route_to(
           action: 'create',
           controller: 'tasuku/taskables/code/responses',
           request_id: '1'

@@ -6,7 +6,7 @@ module Tasuku
 
     describe "POST 'create'" do
       it 'routes' do
-        expect(post: '/image/requests/1/responses').to route_to(
+        expect(post: '/taskables/image/requests/1/responses').to route_to(
           action: 'create',
           controller: 'tasuku/taskables/image/responses',
           request_id: '1'
@@ -24,6 +24,7 @@ module Tasuku
         it_behaves_like 'redirectable' do
           let(:action) { :create }
           let(:verb)   { :post }
+          let(:update_answer) { false }
         end
 
         it 'creates a new response' do

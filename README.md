@@ -80,6 +80,8 @@ helpers with `main_app` so Ruby on Rails knows where to look.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+Note: Remember to create the test database under `spec/dummy`, using `bundle exec rake db:setup RAILS_ENV=test`  
+
 ## Credits
 
 Hyper made this. We're a digital communications agency with a passion for good code,

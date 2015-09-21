@@ -81,6 +81,10 @@ en:
         one: Task requirement
         other: Task requirements
 
+      tasuku/taskables/quiz:
+        one: Quiz
+        other: Quizzes
+
     attributes:
       defaults: &DEFAULT_ATTRS
         created_at: Created at

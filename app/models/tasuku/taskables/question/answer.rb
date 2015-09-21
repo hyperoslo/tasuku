@@ -18,13 +18,16 @@ module Tasuku
       request is: :question
 
       def correct?
+        return false if votes.empty?
         votes.all? { |vote| vote.option.correct? }
       end
 
       private
 
       def can_only_answer_each_question_once
-        errors.add :base, I18n.t('tasuku.taskables.questions.answers.already_answered') if question && question.answers.find_by(author: author)
+        if question && question.answers.find_by(author: author)
+          errors.add :base, I18n.t('tasuku.taskables.questions.answers.already_answered') 
+        end
       end
 
       def can_only_vote_once_for_single_choice_questions
