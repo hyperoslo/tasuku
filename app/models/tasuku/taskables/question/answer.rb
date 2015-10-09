@@ -15,7 +15,13 @@ module Tasuku
         votes.first.option.question if votes.any?
       end
 
-      request is: :question
+      def request
+        if question.quizzes.present?
+          question.quizzes.first
+        else
+          question
+        end
+      end
 
       def correct?
         return false if votes.empty?

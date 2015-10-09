@@ -89,5 +89,26 @@ module Tasuku
         create :question_answer, author: user, options: [task.taskable.options.first]
       end
     end
+
+    describe '#request' do
+      context 'when answer to question' do
+        let(:question) { create :question_with_options }
+        let(:answer) { build :question_answer, author: user, options: [question.options.first] }
+
+        it 'should return question as a request' do
+          expect(answer.request).to eq question
+        end
+      end
+
+      context 'when answer to quiz' do
+        let(:quiz) { create :tasuku_taskables_quiz_with_questions }
+        let(:question) { quiz.questions.first }
+        let(:answer) { build :question_answer, author: user, options: [question.options.first] }
+
+        it 'should return quiz as a request' do
+          expect(answer.request).to eq quiz
+        end
+      end
+    end
   end
 end
